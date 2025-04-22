@@ -3,57 +3,50 @@ import cv2
 import pytesseract
 import csv
 from glob import glob
-from typing import List, Tuple, Optional
+from typing import List
 from ocr_postprocessing import clean_ocr_text, extract_product_and_price
 
-
 def run_ocr_on_image(image_path: str, lang: str = "heb+eng") -> List[str]:
-    """
-    Run Tesseract OCR on an image with preprocessing.
-    """
     image = cv2.imread(image_path)
     if image is None:
         print(f"[WARN] Could not read image: {image_path}")
         return []
 
-    # Step 1: Convert to grayscale
+    # Grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # Step 2: Resize (2x scale for better OCR on small fonts)
+    # Upscale (2x)
     height, width = gray.shape
     gray = cv2.resize(gray, (width * 2, height * 2), interpolation=cv2.INTER_LINEAR)
 
-    # Step 3: Adaptive thresholding (binarize)
+    # Adaptive Thresholding
     thresh = cv2.adaptiveThreshold(
-        gray, 255,
-        cv2.ADAPTIVE_THRESH_MEAN_C,
-        cv2.THRESH_BINARY_INV,
+        gray,
+        255,
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY,
         blockSize=15,
-        C=10
+        C=8
     )
 
-    # Step 4: Optional dilation (strengthen digits if needed)
+    # Dilation (enhance contours)
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
     processed = cv2.dilate(thresh, kernel, iterations=1)
 
-    # Step 5: Run OCR
+    # OCR
     config = '--psm 6'
     text = pytesseract.image_to_string(processed, config=config, lang=lang)
     lines = text.splitlines()
     return [line.strip() for line in lines if line.strip()]
 
 
-
 def process_folder(folder_path: str, output_csv: str = "ocr_results.csv"):
-    """
-    Process all cropped product images in a folder and save results to CSV.
-    """
     product_crops = sorted(glob(os.path.join(folder_path, "product_*.png")))
     all_results = []
 
     for crop_path in product_crops:
-        screenshot_id = os.path.basename(folder_path)
         crop_filename = os.path.basename(crop_path)
+        screenshot_id = os.path.basename(folder_path)
 
         print(f"\n[INFO] Processing {crop_filename}...")
 
@@ -67,7 +60,9 @@ def process_folder(folder_path: str, output_csv: str = "ocr_results.csv"):
         for line in cleaned_lines:
             print(f"  CLEANED: {line}")
 
+        full_text = " ".join(cleaned_lines)
         product_info = extract_product_and_price(cleaned_lines)
+
         if not product_info:
             print("[DEBUG] No product/price pairs found in this image.")
 
@@ -76,23 +71,27 @@ def process_folder(folder_path: str, output_csv: str = "ocr_results.csv"):
                 "screenshot_id": screenshot_id,
                 "crop": crop_filename,
                 "product_name": name,
-                "price": price
+                "price": price,
+                "full_ocr_text": full_text
             })
 
-    # Save to CSV
+    # === Save results ===
+    output_csv_path = os.path.abspath(output_csv)
+
     if all_results:
-        with open(output_csv, mode="w", newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=["screenshot_id", "crop", "product_name", "price"])
+        with open(output_csv_path, mode="w", newline='', encoding='utf-8') as f:
+            fieldnames = ["screenshot_id", "crop", "product_name", "price", "full_ocr_text"]
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(all_results)
-        print(f"\n[INFO] Saved {len(all_results)} results to {output_csv}")
+
+        print(f"\n✅ OCR results saved: {output_csv_path} ({len(all_results)} entries)")
     else:
-        print("\n[INFO] No valid product results found.")
+        print(f"\n[INFO] No valid product results found. Nothing saved to {output_csv_path}")
 
 
 if __name__ == "__main__":
     import argparse
-
     parser = argparse.ArgumentParser(description="Run OCR over product crops")
     parser.add_argument("folder", help="Folder containing product_*.png")
     args = parser.parse_args()

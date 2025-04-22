@@ -1,2 +1,2 @@
-screenshot_id,crop,product_name,price
-cropped_products,product_0.png,0 גרם 1 נוטלה,29.9
+screenshot_id,crop,product_name,price,full_ocr_text
+cropped_products,product_0.png,ממרת נוטלה גרם נוטלה 0,29.9,"smute11a ממרת נוטלה גרם  נוטלה 0 0 ₪29,90-"
