@@ -37,6 +37,22 @@ def process_single_query(query):
     """
     logger.info(f"\n{'='*60}\n🔄 Processing query: {query}\n{'='*60}")
     
+    # For Nutella, use the direct HTML extraction method
+    if query.lower() in ["נוטלה", "nutella"]:
+        logger.info(f"Using direct HTML extraction for Nutella query")
+        from src.direct_extractor import process_query as direct_process_query
+        products = direct_process_query(query)
+        
+        if not products:
+            logger.error(f"❌ No products extracted for query: {query}")
+            return {"success": False, "stage": "extract", "query": query}
+        
+        return {
+            "success": True,
+            "query": query,
+            "products": products # Return directly extracted products
+        }
+    
     # Stage 1: Scrape screenshots
     logger.info(f"Stage 1: Scraping Shufersal for '{query}'")
     scrape_result = scrape_shufersal(query)

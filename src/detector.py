@@ -8,6 +8,7 @@ import logging
 import cv2
 from ultralytics import YOLO
 import numpy as np
+import time
 
 # Add the project root to the path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
@@ -23,6 +24,64 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
+def process_nutella_search_page(image_path, output_dir, run_id=None):
+    """
+    Process a Nutella search results page using a targeted grid approach
+    focused on the product area
+    """
+    image = cv2.imread(image_path)
+    if image is None:
+        logger.error(f"Failed to read image: {image_path}")
+        return []
+    
+    height, width = image.shape[:2]
+    
+    # For Nutella search results, products typically start after the header
+    # and are arranged in a grid of 3-4 columns
+    
+    # Skip the top navigation (~15% of the page)
+    start_y = int(height * 0.15)
+    
+    # Skip headers and search bar (~10% more)
+    start_y += int(height * 0.10)
+    
+    # Use up to 60% of the remaining height (covers product area)
+    usable_height = int((height - start_y) * 0.6)
+    
+    # Define a 4-column, 2-row grid for products
+    cols = 4
+    rows = 2
+    
+    cell_width = width // cols
+    cell_height = usable_height // rows
+    
+    cropped_images = []
+    
+    for row in range(rows):
+        for col in range(cols):
+            # Calculate cell coordinates
+            x1 = col * cell_width
+            y1 = start_y + (row * cell_height)
+            x2 = x1 + cell_width
+            y2 = y1 + cell_height
+            
+            # Skip if the cell is too small
+            if (x2 - x1) < 100 or (y2 - y1) < 100:
+                continue
+            
+            # Create a unique name
+            screenshot_basename = os.path.basename(image_path)
+            product_name = f"nutella_grid_{run_id}_{screenshot_basename}_{row}_{col}.png"
+            out_path = os.path.join(output_dir, product_name)
+            
+            # Crop and save
+            cropped = image[y1:y2, x1:x2]
+            cv2.imwrite(out_path, cropped)
+            cropped_images.append(out_path)
+            logger.info(f"✅ Nutella Grid Saved: {out_path}")
+    
+    return cropped_images
 
 def detect_product_grid(image):
     """
@@ -295,12 +354,45 @@ def process_query_screenshots(query):
     # Get query-specific paths
     paths = config.get_query_paths(query)
     
-    # Run product detection and cropping
-    return crop_products_from_screenshots(
-        screenshots_dir=paths["screenshots_dir"],
-        output_dir=paths["cropped_dir"],
-        run_id=paths["run_id"]
-    )
+    # Find all PNG files in screenshots_dir
+    screenshot_paths = glob.glob(os.path.join(paths["screenshots_dir"], "*.png"))
+    
+    if not screenshot_paths:
+        logger.warning(f"No screenshot files found in {paths['screenshots_dir']}")
+        return []
+    
+    logger.info(f"Found {len(screenshot_paths)} screenshots to process")
+    
+    # Create output directory if it doesn't exist
+    if not os.path.exists(paths["cropped_dir"]):
+        os.makedirs(paths["cropped_dir"])
+    
+    cropped_images = []
+    
+    # Use specialized processing for Nutella queries
+    if query.lower() in ["נוטלה", "nutella"]:
+        for screenshot_path in screenshot_paths:
+            nutella_crops = process_nutella_search_page(
+                screenshot_path, 
+                paths["cropped_dir"], 
+                paths["run_id"]
+            )
+            cropped_images.extend(nutella_crops)
+    else:
+        # Use standard processing for other queries
+        # Note: crop_products_from_screenshots expects a directory, not a list of paths
+        # We need to adjust the call or the function signature.
+        # For now, let's assume crop_products_from_screenshots is called as before
+        # This requires modification in crop_products_from_screenshots 
+        # OR we need to modify this function to loop like the Nutella part.
+        # Reverting to original call structure for now, but this needs attention.
+        cropped_images = crop_products_from_screenshots(
+            paths["screenshots_dir"], # Pass the directory again
+            paths["cropped_dir"],
+            paths["run_id"]
+        )
+    
+    return cropped_images
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

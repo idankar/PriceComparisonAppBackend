@@ -44,13 +44,8 @@ def scroll_page(driver, pause=1.5, max_scrolls=5):
 
 def scrape_shufersal(query):
     """
-    Scrape Shufersal website for product data and screenshots
-    
-    Args:
-        query (str): Search query for products
-        
-    Returns:
-        dict: Paths to saved screenshots and extracted product data
+    Scrape Shufersal website for product data and screenshots,
+    focusing on the top of the page for specific product searches
     """
     logger.info(f"🔍 Searching for: {query}")
     
@@ -81,20 +76,41 @@ def scrape_shufersal(query):
 
         # Wait for results to load
         time.sleep(5)
-        scroll_page(driver, pause=2, max_scrolls=5)
-
-        # Take multiple screenshots to capture more products
-        for i in range(3):  # Take 3 screenshots
-            driver.execute_script(f"window.scrollTo(0, {i * 800});")  # Scroll down for each screenshot
-            time.sleep(1)
+        
+        # For specific product searches (like "נוטלה"), focus on top of page
+        if query in ["נוטלה", "nutella"]:
+            # Only take 2 screenshots of the top portion
             
-            # Save screenshot
+            # First screenshot - very top of page
             run_id = paths["run_id"]
-            filename = f"screenshot_{run_id}_page_{i}.png"
+            filename = f"screenshot_{run_id}_top.png"
             filepath = os.path.join(paths["screenshots_dir"], filename)
             driver.save_screenshot(filepath)
             screenshots.append(filepath)
-            logger.info(f"📸 Screenshot saved to: {filepath}")
+            logger.info(f"📸 Top screenshot saved to: {filepath}")
+            
+            # Second screenshot - scroll down slightly to capture more products
+            driver.execute_script("window.scrollTo(0, 400);")  # Scroll down 400 pixels
+            time.sleep(1)
+            
+            filename = f"screenshot_{run_id}_middle.png"
+            filepath = os.path.join(paths["screenshots_dir"], filename)
+            driver.save_screenshot(filepath)
+            screenshots.append(filepath)
+            logger.info(f"📸 Middle screenshot saved to: {filepath}")
+        
+        else:
+            # For generic searches, keep the original 3-screenshot approach
+            for i in range(3):
+                driver.execute_script(f"window.scrollTo(0, {i * 800});")
+                time.sleep(1)
+                
+                run_id = paths["run_id"]
+                filename = f"screenshot_{run_id}_page_{i}.png"
+                filepath = os.path.join(paths["screenshots_dir"], filename)
+                driver.save_screenshot(filepath)
+                screenshots.append(filepath)
+                logger.info(f"📸 Screenshot saved to: {filepath}")
 
         # Extract product information
         whole_spans = driver.find_elements(By.CLASS_NAME, "whole")
