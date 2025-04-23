@@ -12,8 +12,8 @@ from typing import List, Dict, Any
 
 # Add the project root to the path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-import config
-from src.postprocess import clean_ocr_text, extract_product_and_price
+from . import config
+from .postprocess import clean_ocr_text, extract_product_and_price
 
 # Set up logging
 logging.basicConfig(

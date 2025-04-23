@@ -10,7 +10,7 @@ from PIL import Image
 import torch
 from transformers import DonutProcessor, VisionEncoderDecoderModel
 
-import config
+from src import config
 
 # Set up logging
 logging.basicConfig(

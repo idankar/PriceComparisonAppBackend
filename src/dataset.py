@@ -13,7 +13,7 @@ from rapidfuzz import process, fuzz
 
 # Add the project root to the path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-import config
+from . import config
 
 # Set up logging
 logging.basicConfig(
@@ -101,172 +101,124 @@ def convert_csv_to_donut_format(master_csv=None):
     
     # Ensure output directories exist
     config.ensure_dir(config.DONUT_DATA_DIR)
-    #!/usr/bin/env python3
-# batch_generate_dataset.py - Main pipeline for generating training data
-
-import os
-import sys
-import time
-import logging
-import argparse
-from typing import List
-
-from src.scraper import scrape_shufersal
-from src.detector import process_query_screenshots
-from src.ocr import process_query
-from src.dataset import convert_csv_to_donut_format, clean_donut_labels
-import config
-
-# Set up logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(os.path.join(config.LOGS_DIR, "batch.log")),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
-
-def process_single_query(query):
-    """
-    Process a single query through the entire pipeline
+    # Read all entries from the master CSV file
+    with open(master_csv, newline='', encoding='utf-8') as csvfile:
+        reader = csv.DictReader(csvfile)
+        for row in reader:
+            crop_path = row.get("crop", "").strip()
+            product_name = row.get("product_name", "").strip()
+            price = row.get("price", "").strip()
+            full_ocr_text = row.get("full_ocr_text", "").strip()
+            
+            if not crop_path or not product_name or not price:
+                logger.warning(f"Skipping incomplete row: {row}")
+                continue
+            
+            # Find the original crop image
+            query = row.get("query", "unknown")
+            query_dir = os.path.join(config.CROPPED_DIR, "by_query", query)
+            original_path = None
+            
+            # First try exact path
+            if os.path.exists(os.path.join(query_dir, crop_path)):
+                original_path = os.path.join(query_dir, crop_path)
+            else:
+                # Try to find it by searching all query directories
+                for root, _, files in os.walk(config.CROPPED_DIR):
+                    if crop_path in files:
+                        original_path = os.path.join(root, crop_path)
+                        break
+            
+            if not original_path:
+                logger.warning(f"Original image not found for: {crop_path}")
+                continue
+            
+            # Clean and normalize product name
+            clean_product_name = clean_name(product_name, full_ocr_text)
+            normalized_name = fuzzy_match(clean_product_name)
+            
+            # Generate unique image filename
+            base_name = slugify(normalized_name)
+            filename = f"{base_name}.png"
+            counter = 1
+            
+            while os.path.exists(os.path.join(config.DONUT_IMAGES_DIR, filename)):
+                filename = f"{base_name}_{counter}.png"
+                counter += 1
+            
+            # Copy image to Donut images directory
+            dest_path = os.path.join(config.DONUT_IMAGES_DIR, filename)
+            shutil.copy2(original_path, dest_path)
+            
+            # Add entry to Donut data
+            donut_data.append({
+                "image": filename,
+                "label": {
+                    "name": normalized_name,
+                    "price": price
+                },
+                "full_ocr_text": full_ocr_text
+            })
     
-    Args:
-        query (str): Search query for products
-        
+    # Save raw Donut data
+    with open(config.TRAIN_JSON, "w", encoding="utf-8") as f:
+        json.dump(donut_data, f, ensure_ascii=False, indent=2)
+    
+    logger.info(f"✅ Created Donut training data with {len(donut_data)} entries: {config.TRAIN_JSON}")
+    
+    return donut_data
+
+def clean_donut_labels():
+    """
+    Clean and standardize Donut labels
+    
     Returns:
-        dict: Results from each pipeline stage
+        list: Cleaned Donut format data
     """
-    logger.info(f"\n{'='*60}\n🔄 Processing query: {query}\n{'='*60}")
+    if not os.path.exists(config.TRAIN_JSON):
+        logger.error(f"Donut training data not found: {config.TRAIN_JSON}")
+        return []
     
-    # Stage 1: Scrape screenshots
-    logger.info(f"Stage 1: Scraping Shufersal for '{query}'")
-    scrape_result = scrape_shufersal(query)
-    screenshots = scrape_result["screenshots"]
+    # Load raw Donut data
+    with open(config.TRAIN_JSON, encoding="utf-8") as f:
+        data = json.load(f)
     
-    if not screenshots:
-        logger.error(f"❌ No screenshots captured for query: {query}")
-        return {"success": False, "stage": "scrape", "query": query}
+    cleaned = []
+    used_filenames = set()
     
-    # Stage 2: Detect and crop products
-    logger.info(f"Stage 2: Detecting and cropping products for '{query}'")
-    cropped_images = process_query_screenshots(query)
-    
-    if not cropped_images:
-        logger.warning(f"⚠️ No products detected in screenshots for query: {query}")
-        return {"success": False, "stage": "detect", "query": query}
-    
-    # Stage 3: OCR processing
-    logger.info(f"Stage 3: Running OCR on cropped products for '{query}'")
-    ocr_results = process_query(query)
-    
-    if not ocr_results:
-        logger.warning(f"⚠️ No valid OCR results for query: {query}")
-        return {"success": False, "stage": "ocr", "query": query}
-    
-    return {
-        "success": True,
-        "query": query,
-        "screenshots": screenshots,
-        "cropped_images": cropped_images,
-        "ocr_results": ocr_results
-    }
+    for entry in data:
+        raw_name = entry["label"]["name"]
+        full_ocr_text = entry.get("full_ocr_text", "")
+        price = entry["label"]["price"]
 
-def run_batch_queries(queries, pause_seconds=5):
-    """
-    Run multiple queries through the pipeline
-    
-    Args:
-        queries (list): List of search queries
-        pause_seconds (int): Pause between queries in seconds
-        
-    Returns:
-        dict: Results summary
-    """
-    results = {
-        "total_queries": len(queries),
-        "successful_queries": 0,
-        "failed_queries": 0,
-        "total_products": 0,
-        "query_results": []
-    }
-    
-    for i, query in enumerate(queries, 1):
-        logger.info(f"\n🔄 Processing query {i}/{len(queries)}: '{query}'")
-        
-        query_result = process_single_query(query)
-        results["query_results"].append(query_result)
-        
-        if query_result["success"]:
-            results["successful_queries"] += 1
-            results["total_products"] += len(query_result.get("ocr_results", []))
-        else:
-            results["failed_queries"] += 1
-            logger.warning(f"⚠️ Query '{query}' failed at stage: {query_result['stage']}")
-        
-        # Pause between queries (except after the last one)
-        if i < len(queries):
-            logger.info(f"Pausing for {pause_seconds} seconds before next query...")
-            time.sleep(pause_seconds)
-    
-    # After all queries, convert results to Donut format
-    logger.info("\n🔄 Converting all results to Donut format")
-    donut_data = convert_csv_to_donut_format()
-    
-    if donut_data:
-        logger.info("🔄 Cleaning and standardizing Donut labels")
-        cleaned_data = clean_donut_labels()
-        results["donut_entries"] = len(cleaned_data)
-    else:
-        results["donut_entries"] = 0
-    
-    return results
+        # Clean and normalize
+        name = clean_name(raw_name, full_ocr_text)
+        name = fuzzy_match(name)
 
-def main():
-    parser = argparse.ArgumentParser(description="Generate training data for price comparison")
-    parser.add_argument("--queries_file", help="Path to file containing queries, one per line")
-    parser.add_argument("--queries", nargs="+", help="List of search queries")
-    parser.add_argument("--pause", type=int, default=5, help="Pause between queries in seconds")
-    args = parser.parse_args()
-    
-    # Initialize directories
-    config.init_directories()
-    
-    # Get queries from file or command line
-    queries = []
-    if args.queries_file and os.path.exists(args.queries_file):
-        with open(args.queries_file, 'r', encoding='utf-8') as f:
-            queries = [line.strip() for line in f if line.strip()]
-    elif args.queries:
-        queries = args.queries
-    else:
-        # Default queries
-        queries = [
-            "נוטלה",
-            "מילקי",
-            "קוקה קולה",
-            "קוטג'",
-            "גבינה",
-            "לחם",
-        ]
-    
-    logger.info(f"Starting batch processing with {len(queries)} queries")
-    
-    # Run the batch process
-    result = run_batch_queries(queries, args.pause)
-    
-    # Log summary
-    logger.info("\n" + "="*60)
-    logger.info(f"✅ Batch processing complete!")
-    logger.info(f"Total queries: {result['total_queries']}")
-    logger.info(f"Successful queries: {result['successful_queries']}")
-    logger.info(f"Failed queries: {result['failed_queries']}")
-    logger.info(f"Total products detected: {result['total_products']}")
-    logger.info(f"Final Donut dataset entries: {result['donut_entries']}")
-    logger.info("="*60)
-    
-    return result
+        # Create unique filename
+        base_name = slugify(name)
+        filename = f"{base_name}.png"
+        suffix = 1
+        while filename in used_filenames:
+            filename = f"{base_name}_{suffix}.png"
+            suffix += 1
+        used_filenames.add(filename)
 
-if __name__ == "__main__":
-    main()
+        # Rename image file if needed
+        old_path = os.path.join(config.DONUT_IMAGES_DIR, entry["image"])
+        new_path = os.path.join(config.DONUT_IMAGES_DIR, filename)
+        if os.path.exists(old_path) and old_path != new_path:
+            shutil.move(old_path, new_path)
+
+        # Update entry
+        entry["image"] = filename
+        entry["label"]["name"] = name
+        cleaned.append(entry)
+    
+    # Save cleaned Donut data
+    with open(config.TRAIN_CLEANED_JSON, "w", encoding="utf-8") as f:
+        json.dump(cleaned, f, ensure_ascii=False, indent=2)
+    
+    logger.info(f"✅ Cleaned and renamed {len(cleaned)} labels: {config.TRAIN_CLEANED_JSON}")
+    
+    return cleaned

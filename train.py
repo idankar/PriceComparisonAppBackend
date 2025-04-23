@@ -11,7 +11,7 @@ from torch.utils.data import Dataset
 import torch
 from transformers import DonutProcessor, VisionEncoderDecoderModel, Seq2SeqTrainer, Seq2SeqTrainingArguments
 
-import config
+from src import config
 
 # Set up logging
 logging.basicConfig(
