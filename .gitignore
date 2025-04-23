@@ -28,13 +28,12 @@ data/donut_data/images/
 
 # Models
 models/
-donut_model/
 
 # Logs
 logs/
 
-# Old files backup
-old_files/
+# Backup
+backup/
 
 # YOLO weights
 *.pt
@@ -45,14 +44,9 @@ old_files/
 env/
 venv/
 ENV/
-compare_env/
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
-
-# OS generated files
-.DS_Store
-Thumbs.db 
