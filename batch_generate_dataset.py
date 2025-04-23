@@ -37,11 +37,12 @@ def process_single_query(query):
     """
     logger.info(f"\n{'='*60}\n🔄 Processing query: {query}\n{'='*60}")
     
-    # For Nutella, use the direct HTML extraction method
+    # For Nutella products, use the direct API extraction method
     if query.lower() in ["נוטלה", "nutella"]:
-        logger.info(f"Using direct HTML extraction for Nutella query")
-        from src.direct_extractor import process_query as direct_process_query
-        products = direct_process_query(query)
+        logger.info(f"Using direct API extraction for '{query}'")
+        from src.api_extractor import process_query as api_process_query
+        
+        products = api_process_query(query)
         
         if not products:
             logger.error(f"❌ No products extracted for query: {query}")
@@ -50,7 +51,7 @@ def process_single_query(query):
         return {
             "success": True,
             "query": query,
-            "products": products # Return directly extracted products
+            "products": products
         }
     
     # Stage 1: Scrape screenshots
