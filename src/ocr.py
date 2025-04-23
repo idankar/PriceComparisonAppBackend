@@ -9,10 +9,14 @@ import logging
 import cv2
 import pytesseract
 from typing import List, Dict, Any
+import re
 
 # Add the project root to the path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from . import config
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import config
 from .postprocess import clean_ocr_text, extract_product_and_price
 
 # Set up logging
@@ -45,29 +49,70 @@ def run_ocr_on_image(image_path: str, lang: str = "heb+eng") -> List[str]:
     # Grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-    # Upscale (2x)
+    # Increase resolution for better text detection
     height, width = gray.shape
-    gray = cv2.resize(gray, (width * 2, height * 2), interpolation=cv2.INTER_LINEAR)
+    gray = cv2.resize(gray, (width * 3, height * 3), interpolation=cv2.INTER_LINEAR)
 
-    # Adaptive Thresholding
-    thresh = cv2.adaptiveThreshold(
+    # Apply different thresholding methods and combine results
+    _, binary = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    adaptive = cv2.adaptiveThreshold(
         gray,
         255,
         cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
         cv2.THRESH_BINARY,
-        blockSize=15,
-        C=8
+        blockSize=25,  # Larger block size
+        C=10  # Higher constant for more contrast
     )
 
-    # Dilation (enhance contours)
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
-    processed = cv2.dilate(thresh, kernel, iterations=1)
+    # Combine binary and adaptive to get best of both
+    combined = cv2.bitwise_or(binary, adaptive)
 
-    # OCR
-    config_params = '--psm 6'
-    text = pytesseract.image_to_string(processed, config=config_params, lang=lang)
-    lines = text.splitlines()
-    return [line.strip() for line in lines if line.strip()]
+    # OCR with multiple page segmentation modes and combine results
+    config1 = '--psm 6'  # Assume a single uniform block of text
+    config2 = '--psm 11' # Sparse text with no orientation or layout
+    config3 = '--psm 3'  # Fully automatic page segmentation
+
+    text1 = pytesseract.image_to_string(combined, config=config1, lang=lang)
+    text2 = pytesseract.image_to_string(combined, config=config2, lang=lang)
+    text3 = pytesseract.image_to_string(combined, config=config3, lang=lang)
+
+    # Combine results
+    all_lines = []
+    for text in [text1, text2, text3]:
+        all_lines.extend([line.strip() for line in text.splitlines() if line.strip()])
+
+    # Remove duplicates while preserving order
+    seen = set()
+    lines = []
+    for line in all_lines:
+        if line not in seen:
+            seen.add(line)
+            lines.append(line)
+
+    return lines
+
+# In src/ocr.py, add a function to detect if we're looking at Nutella search results
+def is_nutella_search_page(ocr_lines):
+    """Check if this appears to be a Nutella search results page"""
+    search_indicators = [
+        'תוצאות חיפוש עבור:"נוטלה"',
+        'נוטלה',
+        'ביסקוויט נוטלה',
+        'ממרח נוטלה'
+    ]
+    
+    page_score = 0
+    for line in ocr_lines:
+        for indicator in search_indicators:
+            if indicator in line:
+                page_score += 1
+    
+    # If we have multiple indicators, it's likely a search results page
+    # Check if the score suggests it's a search page vs just a single product mention
+    is_search_page = page_score >= 2
+    if is_search_page:
+        logger.info("Detected potential Nutella search results page based on keyword score.")
+    return is_search_page
 
 def process_images(images_dir: str, output_csv: str, query: str = None) -> List[Dict[str, Any]]:
     """
@@ -110,24 +155,72 @@ def process_images(images_dir: str, output_csv: str, query: str = None) -> List[
         # Combine all text for reference
         full_text = " ".join(cleaned_lines)
         
-        # Extract product name and price
-        product_info = extract_product_and_price(cleaned_lines)
+        # Add special processing for search results pages
+        if is_nutella_search_page(cleaned_lines):
+            logger.info(f"Applying special search page processing for: {crop_filename}")
+            # Find specific patterns in the search results format
+            # Use re directly here
+            product_pattern = r'(ביסקוויט נוטלה|ממרח נוטלה|נוטלה בי רדי|נוטלה)\s+(\d+)\s+גרם'
+            price_pattern = r'₪\s*(\d+\.\d+)'
+            
+            products = []
+            prices = []
+            
+            for line in cleaned_lines: # Use cleaned_lines here
+                product_match = re.search(product_pattern, line)
+                if product_match:
+                    # Construct a meaningful name like "Nutella 750 גרם"
+                    name = f"{product_match.group(1)} {product_match.group(2)} גרם"
+                    products.append(name)
+                
+                price_match = re.search(price_pattern, line)
+                if price_match:
+                    try:
+                        prices.append(float(price_match.group(1)))
+                    except ValueError:
+                        logger.warning(f"Could not parse price {price_match.group(1)} on search page")
+            
+            logger.info(f"Found {len(products)} products and {len(prices)} prices via search page patterns.")
+            # Match products with prices if counts are similar
+            if len(products) > 0 and abs(len(products) - len(prices)) <= 3:
+                # Use shorter list length
+                count = min(len(products), len(prices))
+                logger.info(f"Matching {count} products/prices from search page.")
+                for i in range(count):
+                    result = {
+                        "query": query,
+                        "crop": crop_filename,
+                        "product_name": products[i],
+                        "price": prices[i],
+                        "full_ocr_text": full_text
+                    }
+                    all_results.append(result)
+                    logger.info(f"Found product (search page): {products[i]}, price: {prices[i]}")
+            else:
+                logger.warning("Product/price counts differ too much on search page, skipping specific extraction.")
+                # Fallback or just skip?
+                # Maybe try standard extraction as fallback?
+                # For now, just logging and skipping this special path if counts mismatch badly.
 
-        if not product_info:
-            logger.warning(f"No product/price pairs found in image: {crop_filename}")
-            continue
+        else: # Not a search page, use standard extraction
+            # Extract product name and price using the standard method
+            product_info = extract_product_and_price(cleaned_lines)
 
-        # Add each product to results
-        for name, price in product_info:
-            result = {
-                "query": query,
-                "crop": crop_filename,
-                "product_name": name,
-                "price": price,
-                "full_ocr_text": full_text
-            }
-            all_results.append(result)
-            logger.info(f"Found product: {name}, price: {price}")
+            if not product_info:
+                logger.warning(f"No product/price pairs found in image (standard): {crop_filename}")
+                # No continue here, let the outer loop proceed
+            else:
+                 # Add each product to results
+                for name, price in product_info:
+                    result = {
+                        "query": query,
+                        "crop": crop_filename,
+                        "product_name": name,
+                        "price": price,
+                        "full_ocr_text": full_text
+                    }
+                    all_results.append(result)
+                    logger.info(f"Found product (standard): {name}, price: {price}")
 
     # Save results to CSV
     if all_results:

@@ -13,7 +13,10 @@ from rapidfuzz import process, fuzz
 
 # Add the project root to the path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from . import config
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import config
 
 # Set up logging
 logging.basicConfig(
@@ -29,15 +32,17 @@ logger = logging.getLogger(__name__)
 # Known product names for fuzzy matching
 KNOWN_NAMES = [
     "ממרח נוטלה",
-    "שוקולד פרה",
-    "חלב תנובה",
-    "קוטג'",
-    "יוגורט",
-    "קפה נמס",
-    "ביסלי",
-    "תפוצ׳יפס",
-    "עוגיות",
-    "מיץ תפוזים",
+    "נוטלה",
+    "ביסקוויט נוטלה",
+    "ביסקוויס נוטלה",
+    "נוטלה בי רדי",
+    "ממרח אגוזי לוז נוטלה",
+    "ממרח אגוזי לוז וקקאו נוטלה",
+    "נוטלה ביסקוויט",
+    "נוטלה ביסקוויס",
+    "nutella",
+    "nutella biscuit",
+    "נוטלה ממרח"
 ]
 
 def slugify(text):
@@ -59,7 +64,19 @@ def smart_dedup(text: str) -> str:
     return " ".join(seen)
 
 def clean_name(name: str, full_ocr_text: str) -> str:
-    """Clean and normalize product name"""
+    # Define Nutella keywords for more specific filtering
+    nutella_keywords = ["נוטלה", "nutella", "ממרח נוטלה", "nute11a"]
+    
+    # Check if product is actually a Nutella-related product
+    is_nutella = False
+    for keyword in nutella_keywords:
+        if keyword in name.lower() or keyword in full_ocr_text.lower():
+            is_nutella = True
+            break
+    
+    if not is_nutella:
+        return "UNKNOWN"  # This will be filtered out later
+    
     # Extract quantity from full OCR block
     quantity = extract_quantity(full_ocr_text)
 
@@ -68,6 +85,25 @@ def clean_name(name: str, full_ocr_text: str) -> str:
 
     # Deduplicate and normalize
     base = smart_dedup(name.strip())
+
+    # Clean up long strings with too many random words
+    words = base.split()
+    if len(words) > 8:  # If name has too many words
+        # Try to find the closest segment containing 'Nutella'
+        nutella_index = -1
+        for i, word in enumerate(words):
+            if "נוטלה" in word or "nutella" in word.lower():
+                nutella_index = i
+                break
+        
+        if nutella_index >= 0:
+            # Take a window of words around the Nutella mention
+            start = max(0, nutella_index - 2)
+            end = min(len(words), nutella_index + 4)
+            base = " ".join(words[start:end])
+        else:
+            # Just take the first few words if no Nutella found
+            base = " ".join(words[:6])
 
     # Attach quantity if not already included
     if quantity and quantity not in base:
@@ -191,12 +227,29 @@ def clean_donut_labels():
         full_ocr_text = entry.get("full_ocr_text", "")
         price = entry["label"]["price"]
 
+        # Skip entries with UNKNOWN names or non-Nutella products
+        if raw_name == "UNKNOWN" or (
+            "נוטלה" not in raw_name.lower() and 
+            "nutella" not in raw_name.lower() and
+            "ממרח" not in raw_name.lower()):
+            continue
+            
+        # Skip entries with zero price
+        try:
+            if float(price) <= 0:
+                continue
+        except (ValueError, TypeError):
+            continue
+
         # Clean and normalize
         name = clean_name(raw_name, full_ocr_text)
         name = fuzzy_match(name)
 
         # Create unique filename
         base_name = slugify(name)
+        if not base_name:
+            continue  # Skip if the name becomes empty after slugification
+            
         filename = f"{base_name}.png"
         suffix = 1
         while filename in used_filenames:

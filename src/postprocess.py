@@ -25,21 +25,21 @@ def clean_ocr_text(lines: List[str]) -> List[str]:
             cleaned_lines.append(line.strip())
     return cleaned_lines
 
+# In src/postprocess.py, update extract_product_and_price function
+
 def extract_product_and_price(lines: List[str]) -> List[Tuple[str, Optional[float]]]:
     """
     Extract product name and price from cleaned OCR lines.
     Looks for price patterns and merges up to two meaningful lines above it.
-    
-    Args:
-        lines (list): Cleaned OCR text lines
-        
-    Returns:
-        list: Pairs of product name and price
     """
     results = []
     price_patterns = [
-        r'₪\s*[:/]?\s*([\d.,]+)',
-        r'([\d]{1,3}(?:[.,][\d]{1,2}))'
+        r'₪\s*([\d.,]+)',            # Standard shekel price
+        r'w\s*([\d.,]+)',            # 'w' is often detected instead of ₪
+        r'([\d.,]+)\s*₪',            # Price followed by shekel
+        r'שח\s*(?:ל-|7-)\s*100',      # Price per 100g in Hebrew
+        r'(\d+[.,]\d+)(?:\s*שח|₪)?',  # Number that looks like a price
+        r'(?:₪|w)?\s*(\d+[.,]\d+)'   # Price with or without a symbol
     ]
 
     for i, line in enumerate(lines):
@@ -47,23 +47,40 @@ def extract_product_and_price(lines: List[str]) -> List[Tuple[str, Optional[floa
         for pat in price_patterns:
             match = re.search(pat, line)
             if match:
+                # Ensure the pattern captured group 1 (the price string)
+                if match.lastindex is None or match.lastindex < 1:
+                    # This pattern matched but didn't capture a price value (e.g., 'per 100g')
+                    continue # Skip to the next pattern
+
                 price_str = match.group(1).replace(',', '.')
+                # Also update the price extraction logic
                 try:
-                    price = float(price_str)
+                    price_val = float(price_str)
+                    # Only accept prices in reasonable range for Nutella (5-70 NIS)
+                    if 5.0 <= price_val <= 70.0:
+                        price = price_val # Assign valid price
+                        break # Found a valid price for this line, stop checking patterns
+                    else:
+                        # Price out of range, reset price and continue check other patterns
+                        price = None 
                 except ValueError:
+                    # Cannot convert to float, reset price and continue check other patterns
                     price = None
-                break
 
         if price is not None:
             title_lines = []
-            for j in range(i - 1, -1, -1):
-                if re.search(r'[א-ת]', lines[j]):
+            # Look for product names in lines above the price
+            for j in range(i - 1, max(0, i - 5), -1):
+                if re.search(r'[א-תA-Za-z0-9]', lines[j]) or "nutella" in lines[j].lower():
                     title_lines.insert(0, lines[j])
                     if len(title_lines) == 2:
                         break
 
             product_name = " ".join(title_lines) if title_lines else "UNKNOWN"
             product_name = product_name.replace("|", "").replace("  ", " ").strip()
-            results.append((product_name, price))
+            
+            # Check again if the product name has Nutella-related keywords
+            if "נוטלה" in product_name.lower() or "nutella" in product_name.lower() or "ממרח" in product_name.lower():
+                results.append((product_name, price))
 
     return results
