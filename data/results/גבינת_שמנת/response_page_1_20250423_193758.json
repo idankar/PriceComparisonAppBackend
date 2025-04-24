@@ -1,0 +1,3972 @@
+{
+  "results": [
+    {
+      "code": "P_7290011499624",
+      "name": "גבינת שמנת 30%טבעי",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%93%D7%A3-%D7%94%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-30%25%D7%98%D7%91%D7%A2%D7%99/p/P_7290011499624",
+      "description": "גבינת שמנת 30%טבעי",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "גבינת שמנת 30% טבעי200גר",
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 16.9,
+        "priceType": "BUY",
+        "formattedValue": "16.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7290011499624",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/IWV54_S_P_7290011499624_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/IWV54_M_P_7290011499624_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/IWV54_S_P_7290011499624_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/IWV54_M_P_7290011499624_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/IWV54_L_P_7290011499624_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/IWV54_Z_P_7290011499624_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת 30%טבעי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת 30%טבעי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גבינת שמנת 30%טבעי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גבינת שמנת 30%טבעי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת 30%טבעי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת 30%טבעי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7290011499624",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 8.45,
+        "priceType": "BUY",
+        "formattedValue": "8.45 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 16.9,
+        "priceType": "BUY",
+        "formattedValue": "16.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "200 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A0104",
+        "A010404",
+        "categories",
+        "A",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/IWV54_L_P_7290011499624_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/IWV54_M_P_7290011499624_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/IWV54_S_P_7290011499624_1.png",
+      "baseProductDescription": "גבינת שמנת 30%טבעי",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 302.0,
+      "fats": 30.0,
+      "healthy": null,
+      "sodium": 370.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_554969",
+      "name": "גבינת שמנת 30% שומן",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%9E%D7%A2%D7%93%D7%A0%D7%99%D7%99%D7%94/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%95%D7%9C%D7%91%D7%A0%D7%95%D7%AA-/%D7%92%D7%91%D7%99%D7%A0%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-30%25-%D7%A9%D7%95%D7%9E%D7%9F/p/P_554969",
+      "description": "גבינת שמנת 30% שומן",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "גב.שמנת 30%שומן במשקל",
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_554969",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/NXY38_S_P_554969_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/NXY38_M_P_554969_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/NXY38_S_P_554969_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/NXY38_M_P_554969_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/NXY38_L_P_554969_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/NXY38_Z_P_554969_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת 30% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת 30% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גבינת שמנת 30% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גבינת שמנת 30% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת 30% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת 30% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "554969",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_WEIGHT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 5.2,
+        "priceType": "BUY",
+        "formattedValue": "5.20 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "מחיר לפי משקל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "categories",
+        "A010502",
+        "A",
+        "A0105",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/NXY38_L_P_554969_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/NXY38_M_P_554969_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/NXY38_S_P_554969_1.png",
+      "baseProductDescription": "גבינת שמנת 30% שומן",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 302.0,
+      "fats": null,
+      "healthy": null,
+      "sodium": 370.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7290019635369",
+      "name": "גבינת שמנת 16%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%93%D7%A3-%D7%94%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-16%25/p/P_7290019635369",
+      "description": "גבינת שמנת 16%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 16.9,
+        "priceType": "BUY",
+        "formattedValue": "16.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7290019635369",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAC60_S_P_7290019635369_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAC60_M_P_7290019635369_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAC60_S_P_7290019635369_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAC60_M_P_7290019635369_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/GAC60_L_P_7290019635369_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/GAC60_Z_P_7290019635369_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת 16%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת 16%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גבינת שמנת 16%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גבינת שמנת 16%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת 16%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת 16%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7290019635369",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 8.45,
+        "priceType": "BUY",
+        "formattedValue": "8.45 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 16.9,
+        "priceType": "BUY",
+        "formattedValue": "16.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "200 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A0104",
+        "A010404",
+        "categories",
+        "A",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/GAC60_L_P_7290019635369_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAC60_M_P_7290019635369_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAC60_S_P_7290019635369_1.png",
+      "baseProductDescription": "גבינת שמנת 16%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 194.0,
+      "fats": 16.0,
+      "healthy": null,
+      "sodium": 400.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "PRESERVATIVES_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7290019635116",
+      "name": "גבינת שמנת זיתים 5%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%93%D7%A3-%D7%94%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%96%D7%99%D7%AA%D7%99%D7%9D-5%25/p/P_7290019635116",
+      "description": "גבינת שמנת זיתים 5%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7290019635116",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/FQJ50_S_P_7290019635116_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/FQJ50_M_P_7290019635116_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/FQJ50_S_P_7290019635116_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/FQJ50_M_P_7290019635116_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/FQJ50_L_P_7290019635116_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/FQJ50_Z_P_7290019635116_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת זיתים 5%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת זיתים 5%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גבינת שמנת זיתים 5%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גבינת שמנת זיתים 5%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת זיתים 5%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת זיתים 5%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7290019635116",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 7.75,
+        "priceType": "BUY",
+        "formattedValue": "7.75 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "200 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A0104",
+        "A010404",
+        "categories",
+        "A",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/FQJ50_L_P_7290019635116_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/FQJ50_M_P_7290019635116_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/FQJ50_S_P_7290019635116_1.png",
+      "baseProductDescription": "גבינת שמנת זיתים 5%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 96.0,
+      "fats": 5.0,
+      "healthy": null,
+      "sodium": 400.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "PRESERVATIVES_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7290019635376",
+      "name": "גבינת שמנת גורגונזולה24%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%93%D7%A3-%D7%94%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%92%D7%95%D7%A8%D7%92%D7%95%D7%A0%D7%96%D7%95%D7%9C%D7%9424%25/p/P_7290019635376",
+      "description": "גבינת שמנת גורגונזולה24%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 16.9,
+        "priceType": "BUY",
+        "formattedValue": "16.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7290019635376",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAJ58_S_P_7290019635376_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAJ58_M_P_7290019635376_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAJ58_S_P_7290019635376_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAJ58_M_P_7290019635376_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/GAJ58_L_P_7290019635376_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/GAJ58_Z_P_7290019635376_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת גורגונזולה24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת גורגונזולה24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גבינת שמנת גורגונזולה24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גבינת שמנת גורגונזולה24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת גורגונזולה24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת גורגונזולה24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7290019635376",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 8.45,
+        "priceType": "BUY",
+        "formattedValue": "8.45 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 16.9,
+        "priceType": "BUY",
+        "formattedValue": "16.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "200 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A0104",
+        "A010404",
+        "categories",
+        "A",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/GAJ58_L_P_7290019635376_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAJ58_M_P_7290019635376_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAJ58_S_P_7290019635376_1.png",
+      "baseProductDescription": "גבינת שמנת גורגונזולה24%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 258.0,
+      "fats": 24.0,
+      "healthy": null,
+      "sodium": 400.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "PRESERVATIVES_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7290019635383",
+      "name": "גבינת שמנת ריבת בצל 24%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%93%D7%A3-%D7%94%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA/%D7%92%D7%91%D7%99%D7%A0%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%A8%D7%99%D7%91%D7%AA-%D7%91%D7%A6%D7%9C-24%25/p/P_7290019635383",
+      "description": "גבינת שמנת ריבת בצל 24%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 16.9,
+        "priceType": "BUY",
+        "formattedValue": "16.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7290019635383",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAQ56_S_P_7290019635383_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAQ56_M_P_7290019635383_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAQ56_S_P_7290019635383_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAQ56_M_P_7290019635383_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/GAQ56_L_P_7290019635383_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/GAQ56_Z_P_7290019635383_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת ריבת בצל 24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת ריבת בצל 24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גבינת שמנת ריבת בצל 24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גבינת שמנת ריבת בצל 24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת ריבת בצל 24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת ריבת בצל 24%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7290019635383",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 8.45,
+        "priceType": "BUY",
+        "formattedValue": "8.45 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 16.9,
+        "priceType": "BUY",
+        "formattedValue": "16.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "200 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A0104",
+        "A010404",
+        "categories",
+        "A",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/GAQ56_L_P_7290019635383_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GAQ56_M_P_7290019635383_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GAQ56_S_P_7290019635383_1.png",
+      "baseProductDescription": "גבינת שמנת ריבת בצל 24%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 264.0,
+      "fats": 24.0,
+      "healthy": null,
+      "sodium": 400.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "PRESERVATIVES_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_5992902",
+      "name": "גבינת שמנת ירקות 30%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%9E%D7%A2%D7%93%D7%A0%D7%99%D7%99%D7%94/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%95%D7%9C%D7%91%D7%A0%D7%95%D7%AA-/%D7%92%D7%91%D7%99%D7%A0%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%99%D7%A8%D7%A7%D7%95%D7%AA-30%25/p/P_5992902",
+      "description": "גבינת שמנת ירקות 30%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_5992902",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/YFF36_S_P_5992902_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/YFF36_M_P_5992902_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/YFF36_S_P_5992902_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/YFF36_M_P_5992902_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/YFF36_L_P_5992902_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/YFF36_Z_P_5992902_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת ירקות 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת ירקות 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גבינת שמנת ירקות 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גבינת שמנת ירקות 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת ירקות 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת ירקות 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "5992902",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_WEIGHT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 5.2,
+        "priceType": "BUY",
+        "formattedValue": "5.20 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "מחיר לפי משקל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "categories",
+        "A010502",
+        "A",
+        "A0105",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/YFF36_L_P_5992902_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/YFF36_M_P_5992902_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/YFF36_S_P_5992902_1.png",
+      "baseProductDescription": "גבינת שמנת ירקות 30%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": null,
+      "fats": null,
+      "healthy": null,
+      "sodium": null,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_5992889",
+      "name": "גבינת שמנת שום שמיר 30%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%9E%D7%A2%D7%93%D7%A0%D7%99%D7%99%D7%94/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%95%D7%9C%D7%91%D7%A0%D7%95%D7%AA-/%D7%92%D7%91%D7%99%D7%A0%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%A9%D7%95%D7%9D-%D7%A9%D7%9E%D7%99%D7%A8-30%25/p/P_5992889",
+      "description": "גבינת שמנת שום שמיר 30%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "גב.שמנת שום שמיר 30%משקל",
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_5992889",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/YES50_S_P_5992889_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/YES50_M_P_5992889_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/YES50_S_P_5992889_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/YES50_M_P_5992889_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/YES50_L_P_5992889_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/YES50_Z_P_5992889_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת שום שמיר 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גבינת שמנת שום שמיר 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גבינת שמנת שום שמיר 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גבינת שמנת שום שמיר 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת שום שמיר 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גבינת שמנת שום שמיר 30%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "5992889",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_WEIGHT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 5.2,
+        "priceType": "BUY",
+        "formattedValue": "5.20 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "מחיר לפי משקל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "categories",
+        "A010502",
+        "A",
+        "A0105",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/YES50_L_P_5992889_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/YES50_M_P_5992889_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/YES50_S_P_5992889_1.png",
+      "baseProductDescription": "גבינת שמנת שום שמיר 30%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 302.0,
+      "fats": null,
+      "healthy": null,
+      "sodium": 365.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_554976",
+      "name": "גב.שמנת 30%שומן זיתים",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%9E%D7%A2%D7%93%D7%A0%D7%99%D7%99%D7%94/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%95%D7%9C%D7%91%D7%A0%D7%95%D7%AA-/%D7%92%D7%91-%D7%A9%D7%9E%D7%A0%D7%AA-30%25%D7%A9%D7%95%D7%9E%D7%9F-%D7%96%D7%99%D7%AA%D7%99%D7%9D/p/P_554976",
+      "description": "גבינת שמנת זיתים 30% שומן",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "גב.שמנת 30%זיתים במשקל",
+      "manufacturer": null,
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_554976",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/NYF36_S_P_554976_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/NYF36_M_P_554976_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/NYF36_S_P_554976_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/NYF36_M_P_554976_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/NYF36_L_P_554976_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/NYF36_Z_P_554976_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גב.שמנת 30%שומן זיתים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גב.שמנת 30%שומן זיתים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גב.שמנת 30%שומן זיתים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גב.שמנת 30%שומן זיתים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גב.שמנת 30%שומן זיתים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גב.שמנת 30%שומן זיתים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "554976",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_WEIGHT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 5.2,
+        "priceType": "BUY",
+        "formattedValue": "5.20 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "מחיר לפי משקל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "categories",
+        "A010502",
+        "A",
+        "A0105",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/NYF36_L_P_554976_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/NYF36_M_P_554976_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/NYF36_S_P_554976_1.png",
+      "baseProductDescription": "גבינת שמנת זיתים 30% שומן",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 302.0,
+      "fats": null,
+      "healthy": null,
+      "sodium": 400.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7296073453123",
+      "name": "גב.שמנת גד 30% ארוז",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%9E%D7%A2%D7%93%D7%A0%D7%99%D7%99%D7%94/%D7%92%D7%91%D7%99%D7%A0%D7%95%D7%AA-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%95%D7%9C%D7%91%D7%A0%D7%95%D7%AA-/%D7%92%D7%91-%D7%A9%D7%9E%D7%A0%D7%AA-%D7%92%D7%93-30%25-%D7%90%D7%A8%D7%95%D7%96/p/P_7296073453123",
+      "description": "גד גבינת שמנת 30% מחלבת גד",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "מחלבות גד",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7296073453123",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/VSM52_S_P_7296073453123_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/VSM52_M_P_7296073453123_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/VSM52_S_P_7296073453123_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/VSM52_M_P_7296073453123_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/VSM52_L_P_7296073453123_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/VSM52_Z_P_7296073453123_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גב.שמנת גד 30% ארוז",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "גב.שמנת גד 30% ארוז",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "גב.שמנת גד 30% ארוז",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "גב.שמנת גד 30% ארוז",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גב.שמנת גד 30% ארוז",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "גב.שמנת גד 30% ארוז",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7296073453123",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מחלבות גד"
+      },
+      "brandName": "מחלבות גד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_PACKAGE",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 5.2,
+        "priceType": "BUY",
+        "formattedValue": "5.20 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 52.0,
+        "priceType": "BUY",
+        "formattedValue": "52.00 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "כ - 300 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "categories",
+        "A010502",
+        "A",
+        "A0105",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/VSM52_L_P_7296073453123_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/VSM52_M_P_7296073453123_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/VSM52_S_P_7296073453123_1.png",
+      "baseProductDescription": "גד גבינת שמנת 30% מחלבת גד",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 302.0,
+      "fats": null,
+      "healthy": null,
+      "sodium": 370.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": 350.0,
+      "minWeight": 250.0,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    }
+  ],
+  "pagination": {
+    "pageSize": 10,
+    "currentPage": 0,
+    "sort": "relevance",
+    "numberOfPages": 133,
+    "totalNumberOfResults": 1325
+  },
+  "facets": [
+    {
+      "code": "categories-2",
+      "name": "קטגוריה",
+      "priority": 100,
+      "category": false,
+      "multiSelect": true,
+      "visible": true,
+      "topValues": null,
+      "values": [
+        {
+          "code": "A01",
+          "name": "חלב וביצים",
+          "count": 590,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA01",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A01"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B03",
+          "name": "טיפוח פנים",
+          "count": 228,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB03",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B03"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A31",
+          "name": "פארם וטיפוח",
+          "count": 180,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA31",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A31"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F09",
+          "name": "ויטמינים ותוספי תזונה",
+          "count": 161,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AF09",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:F09"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A22",
+          "name": "בישול אפיה ושימורים",
+          "count": 105,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA22",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A22"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B09",
+          "name": "טיפוח הגוף והשיער",
+          "count": 76,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB09",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B09"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A16",
+          "name": "מזון מקורר קפואים ונקניקים",
+          "count": 72,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA16",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A16"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A28",
+          "name": "אורגני ובריאות",
+          "count": 67,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA28",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A28"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A24",
+          "name": "רשימות",
+          "count": 56,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA24",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A24"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F10",
+          "name": "מוצרי מקרר וביצים",
+          "count": 48,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AF10",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:F10"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A15",
+          "name": "מוצרים בפיקוח",
+          "count": 41,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA15",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A15"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G18",
+          "name": "סלון ואווירה",
+          "count": 40,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AG18",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:G18"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B12",
+          "name": "בישום",
+          "count": 34,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB12",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B12"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A42",
+          "name": "פסח בשופרסל Online",
+          "count": 30,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA42",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A42"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B04",
+          "name": "רחצה והגיינה",
+          "count": 29,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB04",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B04"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A32",
+          "name": "עולם התינוקות",
+          "count": 27,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA32",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A32"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G14",
+          "name": "מטבח, אירוח וחד פעמי",
+          "count": 24,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AG14",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:G14"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B08",
+          "name": "תינוקות וילדים",
+          "count": 22,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB08",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B08"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A43",
+          "name": "יום העצמאות",
+          "count": 20,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA43",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A43"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A25",
+          "name": "חטיפים מתוקים ודגני בוקר",
+          "count": 19,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA25",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A25"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B05",
+          "name": "גברים",
+          "count": 19,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB05",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B05"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A34",
+          "name": "ניקיון הבית וחד פעמי",
+          "count": 18,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA34",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A34"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G02",
+          "name": "חשמל למטבח",
+          "count": 18,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AG02",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:G02"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B06",
+          "name": "ויטמינים ותוספי תזונה",
+          "count": 17,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB06",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B06"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A10",
+          "name": "לחמים ומוצרי מאפה",
+          "count": 16,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA10",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A10"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A38",
+          "name": "ויטמינים ותוספי תזונה ",
+          "count": 16,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA38",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A38"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B02",
+          "name": "איפור ",
+          "count": 16,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB02",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B02"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G17",
+          "name": "חדר שינה",
+          "count": 16,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AG17",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:G17"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B07",
+          "name": "בית מרקחת ואופטיקה",
+          "count": 15,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB07",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B07"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A36",
+          "name": "מעושר בחלבון",
+          "count": 9,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA36",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A36"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F03",
+          "name": "בישול אפיה ממרחים ושימורים",
+          "count": 9,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AF03",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:F03"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G20",
+          "name": "DIY ולמשרד ",
+          "count": 8,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AG20",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:G20"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B10",
+          "name": "OUTLET",
+          "count": 7,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB10",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B10"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "C55",
+          "name": "חגיגת כדורגל",
+          "count": 7,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AC55",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:C55"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B30",
+          "name": "עיצוב שיער מקצועי",
+          "count": 5,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AB30",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:B30"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F11",
+          "name": "מן המקפיא",
+          "count": 5,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AF11",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:F11"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G29",
+          "name": " מתחדשים עם PILOT ",
+          "count": 4,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AG29",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:G29"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F12",
+          "name": "ללא גלוטן",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AF12",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:F12"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G01",
+          "name": "חשמל לבית",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AG01",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:G01"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G99",
+          "name": "הכל לבית – במשלוח של הסופר ",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AG99",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:G99"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A07",
+          "name": "מוצרי בשר, עוף ודגים ",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA07",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A07"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A13",
+          "name": "משקאות אלכוהול ויין",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA13",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A13"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A50",
+          "name": "מה חדש",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA50",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A50"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A91",
+          "name": "ONLINE PREMIUM",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%92%D7%91%D7%99%D7%A0%D7%AA+%D7%A9%D7%9E%D7%A0%D7%AA%3Arelevance%3Acategories-2%3AA91",
+            "query": {
+              "value": "&#x5d2;&#x5d1;&#x5d9;&#x5e0;&#x5ea;&#x20;&#x5e9;&#x5de;&#x5e0;&#x5ea;:relevance:categories-2:A91"
+            }
+          },
+          "selected": false
+        }
+      ]
+    }
+  ]
+}

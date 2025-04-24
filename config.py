@@ -89,3 +89,120 @@ def init_directories():
 
 # Initialize directories when importing this module
 init_directories()
+# config.py
+import os
+import logging
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("app.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# Base directories
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+
+# Create main data directory if it doesn't exist
+os.makedirs(DATA_DIR, exist_ok=True)
+
+# Screenshots directories
+SCREENSHOTS_DIR = os.path.join(DATA_DIR, "screenshots")
+SCREENSHOTS_BY_QUERY_DIR = os.path.join(SCREENSHOTS_DIR, "by_query")
+
+# Cropped images directories
+CROPPED_DIR = os.path.join(DATA_DIR, "cropped")
+CROPPED_BY_QUERY_DIR = os.path.join(CROPPED_DIR, "by_query")
+
+# OCR results directories
+OCR_RESULTS_DIR = os.path.join(DATA_DIR, "ocr_results")
+OCR_RESULTS_BY_QUERY_DIR = os.path.join(OCR_RESULTS_DIR, "by_query")
+MASTER_OCR_CSV = os.path.join(OCR_RESULTS_DIR, "master_ocr_results.csv")
+
+# Logs directory
+LOGS_DIR = os.path.join(BASE_DIR, "logs")
+
+# Temp directory
+TEMP_DIR = os.path.join(DATA_DIR, "temp")
+
+# Model directories
+MODELS_DIR = os.path.join(BASE_DIR, "models")
+YOLO_MODEL_PATH = os.path.join(MODELS_DIR, "yolo", "yolov5s.pt")
+
+# Donut model directories
+DONUT_DIR = os.path.join(BASE_DIR, "donut")
+DONUT_TRAIN_DIR = os.path.join(DONUT_DIR, "train")
+DONUT_VAL_DIR = os.path.join(DONUT_DIR, "val")
+DONUT_MODEL_DIR = os.path.join(DONUT_DIR, "model")
+
+# Create directories
+for directory in [
+    SCREENSHOTS_DIR, SCREENSHOTS_BY_QUERY_DIR,
+    CROPPED_DIR, CROPPED_BY_QUERY_DIR,
+    OCR_RESULTS_DIR, OCR_RESULTS_BY_QUERY_DIR,
+    LOGS_DIR, TEMP_DIR, MODELS_DIR,
+    DONUT_DIR, DONUT_TRAIN_DIR, DONUT_VAL_DIR, DONUT_MODEL_DIR
+]:
+    os.makedirs(directory, exist_ok=True)
+
+# Browser settings
+HEADLESS = True  # Run browser in headless mode
+SCREENSHOT_WIDTH = 1920
+SCREENSHOT_HEIGHT = 1080
+DEFAULT_BROWSER_TIMEOUT = 30  # seconds
+
+# OCR settings
+TESSERACT_CMD = r'tesseract'  # Update if tesseract is in a different location
+TESSERACT_CONFIG = r'--oem 1 --psm 11 -l heb+eng'
+
+# API extraction settings
+API_MAX_RETRIES = 3
+API_RETRY_DELAY = 2  # seconds
+
+def get_query_paths(query):
+    """
+    Get all paths for a specific query
+    
+    Args:
+        query (str): Search query
+        
+    Returns:
+        dict: Dictionary of paths
+    """
+    # Handle spaces and special characters in query for directory naming
+    query_dir = query.replace(' ', '_')
+    
+    # Screenshots paths
+    screenshots_dir = os.path.join(SCREENSHOTS_BY_QUERY_DIR, query_dir)
+    
+    # Cropped paths
+    cropped_dir = os.path.join(CROPPED_BY_QUERY_DIR, query_dir)
+    
+    # OCR paths
+    ocr_dir = os.path.join(OCR_RESULTS_BY_QUERY_DIR, query_dir)
+    timestamp = logger.handlers[0].formatter.converter().strftime("%Y%m%d_%H%M%S")
+    ocr_csv = os.path.join(ocr_dir, f"ocr_results_{query_dir}_{timestamp}.csv")
+    
+    return {
+        "query": query,
+        "screenshots_dir": screenshots_dir,
+        "cropped_dir": cropped_dir,
+        "ocr_dir": ocr_dir,
+        "ocr_csv": ocr_csv
+    }
+
+def ensure_dir(directory):
+    """
+    Ensure a directory exists
+    
+    Args:
+        directory (str): Directory path
+    """
+    if not os.path.exists(directory):
+        os.makedirs(directory, exist_ok=True)
+        logger.info(f"Created directory: {directory}")

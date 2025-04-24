@@ -1,186 +1,157 @@
-#!/usr/bin/env python3
-# batch_generate_dataset.py - Main pipeline for generating training data
+# In batch_generate_dataset.py
 
+import argparse
+import json
+import logging
 import os
 import sys
 import time
-import logging
-import argparse
-from typing import List
-
-from src.scraper import scrape_shufersal
-from src.detector import process_query_screenshots
-from src.ocr import process_query
-from src.dataset import convert_csv_to_donut_format, clean_donut_labels
-import config
+from concurrent.futures import ThreadPoolExecutor
+from tqdm import tqdm
 
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(os.path.join(config.LOGS_DIR, "batch.log")),
+        logging.FileHandler("batch_processing.log"),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
-def process_single_query(query):
-    """
-    Process a single query through the entire pipeline
-    
-    Args:
-        query (str): Search query for products
-        
-    Returns:
-        dict: Results from each pipeline stage
-    """
-    logger.info(f"\n{'='*60}\n🔄 Processing query: {query}\n{'='*60}")
-    
-    # For Nutella products, use the direct API extraction method
-    if query.lower() in ["נוטלה", "nutella"]:
-        logger.info(f"Using direct API extraction for '{query}'")
-        from src.api_extractor import process_query as api_process_query
-        
-        products = api_process_query(query)
-        
-        if not products:
-            logger.error(f"❌ No products extracted for query: {query}")
-            return {"success": False, "stage": "extract", "query": query}
-        
-        return {
-            "success": True,
-            "query": query,
-            "products": products
-        }
-    
-    # Stage 1: Scrape screenshots
-    logger.info(f"Stage 1: Scraping Shufersal for '{query}'")
-    scrape_result = scrape_shufersal(query)
-    screenshots = scrape_result["screenshots"]
-    
-    if not screenshots:
-        logger.error(f"❌ No screenshots captured for query: {query}")
-        return {"success": False, "stage": "scrape", "query": query}
-    
-    # Stage 2: Detect and crop products
-    logger.info(f"Stage 2: Detecting and cropping products for '{query}'")
-    cropped_images = process_query_screenshots(query)
-    
-    if not cropped_images:
-        logger.warning(f"⚠️ No products detected in screenshots for query: {query}")
-        return {"success": False, "stage": "detect", "query": query}
-    
-    # Stage 3: OCR processing
-    logger.info(f"Stage 3: Running OCR on cropped products for '{query}'")
-    ocr_results = process_query(query)
-    
-    if not ocr_results:
-        logger.warning(f"⚠️ No valid OCR results for query: {query}")
-        return {"success": False, "stage": "ocr", "query": query}
-    
-    return {
-        "success": True,
-        "query": query,
-        "screenshots": screenshots,
-        "cropped_images": cropped_images,
-        "ocr_results": ocr_results
-    }
+# Load the product queries
+def load_queries(queries_file='product_queries.json'):
+    with open(queries_file, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
-def run_batch_queries(queries, pause_seconds=5):
+def process_query_batch(queries, max_workers=3, delay_between_queries=5):
     """
-    Run multiple queries through the pipeline
+    Process a batch of queries with parallel execution
     
     Args:
-        queries (list): List of search queries
-        pause_seconds (int): Pause between queries in seconds
+        queries (list): List of product queries
+        max_workers (int): Maximum number of parallel workers
+        delay_between_queries (int): Delay in seconds between queries to avoid rate limiting
         
     Returns:
-        dict: Results summary
+        dict: Summary of results
     """
+    logger.info(f"Starting batch processing with {len(queries)} queries")
+    
     results = {
-        "total_queries": len(queries),
-        "successful_queries": 0,
-        "failed_queries": 0,
-        "total_products": 0,
-        "query_results": []
+        "total": len(queries),
+        "successful": 0,
+        "failed": 0,
+        "products_found": 0
     }
     
-    for i, query in enumerate(queries, 1):
-        logger.info(f"\n🔄 Processing query {i}/{len(queries)}: '{query}'")
-        
-        query_result = process_single_query(query)
-        results["query_results"].append(query_result)
-        
-        if query_result["success"]:
-            results["successful_queries"] += 1
-            results["total_products"] += len(query_result.get("ocr_results", []))
-        else:
-            results["failed_queries"] += 1
-            logger.warning(f"⚠️ Query '{query}' failed at stage: {query_result['stage']}")
-        
-        # Pause between queries (except after the last one)
-        if i < len(queries):
-            logger.info(f"Pausing for {pause_seconds} seconds before next query...")
-            time.sleep(pause_seconds)
+    # Import the API extractor
+    from src.api_extractor import process_query
     
-    # After all queries, convert results to Donut format
-    logger.info("\n🔄 Converting all results to Donut format")
-    donut_data = convert_csv_to_donut_format()
+    def process_single_query(query):
+        logger.info(f"Processing query: {query}")
+        try:
+            # Use the API extractor
+            products = process_query(query)
+            
+            if products:
+                logger.info(f"✅ Successfully extracted {len(products)} products for '{query}'")
+                return {"success": True, "query": query, "products": products}
+            else:
+                logger.error(f"❌ No products extracted for query: {query}")
+                return {"success": False, "query": query}
+                
+        except Exception as e:
+            logger.error(f"❌ Error processing query '{query}': {str(e)}")
+            return {"success": False, "query": query, "error": str(e)}
     
-    if donut_data:
-        logger.info("🔄 Cleaning and standardizing Donut labels")
-        cleaned_data = clean_donut_labels()
-        results["donut_entries"] = len(cleaned_data)
-    else:
-        results["donut_entries"] = 0
+    # Process queries with parallel execution
+    successful_queries = 0
+    failed_queries = 0
+    total_products = 0
+    
+    # Use tqdm for a progress bar
+    with tqdm(total=len(queries)) as pbar:
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = []
+            
+            # Submit all tasks
+            for query in queries:
+                futures.append(executor.submit(process_single_query, query))
+                # Add slight delay to avoid overwhelming the API
+                time.sleep(delay_between_queries)
+            
+            # Process results as they complete
+            for future in futures:
+                result = future.result()
+                if result["success"]:
+                    successful_queries += 1
+                    if "products" in result:
+                        total_products += len(result["products"])
+                else:
+                    failed_queries += 1
+                
+                pbar.update(1)
+    
+    # Update results summary
+    results["successful"] = successful_queries
+    results["failed"] = failed_queries
+    results["products_found"] = total_products
+    
+    logger.info("=" * 60)
+    logger.info(f"✅ Batch processing complete!")
+    logger.info(f"Total queries: {results['total']}")
+    logger.info(f"Successful queries: {results['successful']}")
+    logger.info(f"Failed queries: {results['failed']}")
+    logger.info(f"Total products detected: {results['products_found']}")
+    logger.info("=" * 60)
     
     return results
 
-def main():
-    parser = argparse.ArgumentParser(description="Generate training data for price comparison")
-    parser.add_argument("--queries_file", help="Path to file containing queries, one per line")
-    parser.add_argument("--queries", nargs="+", help="List of search queries")
-    parser.add_argument("--pause", type=int, default=5, help="Pause between queries in seconds")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Batch process product queries")
+    parser.add_argument("--queries", nargs="+", help="List of product queries to process", default=[])
+    parser.add_argument("--queries-file", help="JSON file containing product queries", default="product_queries.json")
+    parser.add_argument("--max-workers", type=int, help="Maximum number of parallel workers", default=3)
+    parser.add_argument("--delay", type=int, help="Delay between queries in seconds", default=5)
+    parser.add_argument("--start-idx", type=int, help="Start index in the queries file", default=0)
+    parser.add_argument("--end-idx", type=int, help="End index in the queries file", default=None)
+    
     args = parser.parse_args()
     
-    # Initialize directories
-    config.init_directories()
-    
-    # Get queries from file or command line
-    queries = []
-    if args.queries_file and os.path.exists(args.queries_file):
-        with open(args.queries_file, 'r', encoding='utf-8') as f:
-            queries = [line.strip() for line in f if line.strip()]
-    elif args.queries:
+    # Load queries based on arguments
+    if args.queries:
         queries = args.queries
+    elif hasattr(args, 'queries_file') and os.path.exists(args.queries_file):
+        # Load queries from the JSON file
+        try:
+            with open(args.queries_file, 'r', encoding='utf-8') as f:
+                all_queries = json.load(f)
+        except Exception as e:
+            logger.error(f"Error loading JSON file {args.queries_file}: {e}")
+            sys.exit(1)
+            
+        # Apply start and end indices
+        start_idx = args.start_idx
+        end_idx = args.end_idx
+        
+        queries = all_queries[start_idx:end_idx]
+        logger.info(f"Loaded {len(queries)} queries from {args.queries_file} (indices {start_idx}:{end_idx if end_idx is not None else 'end'})")
     else:
-        # Default queries
-        queries = [
-            "נוטלה",
-            "מילקי",
-            "קוקה קולה",
-            "קוטג'",
-            "גבינה",
-            "לחם",
-        ]
+        # Default query behavior
+        queries = ["נוטלה"]  # Default to Nutella
+        logger.info("No queries provided via arguments or file, defaulting to Nutella.")
     
-    logger.info(f"Starting batch processing with {len(queries)} queries")
+    # Process the queries
+    process_query_batch(queries, max_workers=args.max_workers, delay_between_queries=args.delay)
     
-    # Run the batch process
-    result = run_batch_queries(queries, args.pause)
-    
-    # Log summary
-    logger.info("\n" + "="*60)
-    logger.info(f"✅ Batch processing complete!")
-    logger.info(f"Total queries: {result['total_queries']}")
-    logger.info(f"Successful queries: {result['successful_queries']}")
-    logger.info(f"Failed queries: {result['failed_queries']}")
-    logger.info(f"Total products detected: {result['total_products']}")
-    logger.info(f"Final Donut dataset entries: {result['donut_entries']}")
-    logger.info("="*60)
-    
-    return result
-
-if __name__ == "__main__":
-    main()
+    # Convert results to Donut format
+    from src.dataset import convert_csv_to_donut_format, clean_donut_labels
+    logger.info("🔄 Converting all results to Donut format")
+    try:
+        convert_csv_to_donut_format()
+        clean_donut_labels()
+        logger.info("✅ Successfully created Donut dataset")
+    except Exception as e:
+        logger.error(f"❌ Error creating Donut dataset: {str(e)}")

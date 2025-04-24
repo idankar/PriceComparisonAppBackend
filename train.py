@@ -1,171 +1,134 @@
-#!/usr/bin/env python3
-# train.py - Donut model training script
-
+# train.py
 import os
-import sys
-import json
-import logging
 import argparse
-from PIL import Image
-from torch.utils.data import Dataset
+import logging
 import torch
+import json
 from transformers import DonutProcessor, VisionEncoderDecoderModel, Seq2SeqTrainer, Seq2SeqTrainingArguments
-
-from src import config
+from datasets import Dataset
+import config
 
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(os.path.join(config.LOGS_DIR, "train.log")),
+        logging.FileHandler("donut_training.log"),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
-class DonutDataset(Dataset):
-    def __init__(self, examples, processor):
-        self.examples = []
-        self.processor = processor
-        
-        for entry in examples:
-            image_path = os.path.join(config.DONUT_IMAGES_DIR, entry["image"])
-            
-            if not os.path.exists(image_path):
-                logger.warning(f"Image not found: {image_path}")
-                continue
-                
-            try:
-                image = Image.open(image_path).convert("RGB")
-                pixel_values = processor(image, return_tensors="pt").pixel_values[0]
-
-                target_str = json.dumps(entry["label"], ensure_ascii=False)
-                decoder_input_ids = processor.tokenizer(
-                    target_str,
-                    add_special_tokens=False,
-                    max_length=128,
-                    truncation=True,
-                    return_tensors="pt"
-                ).input_ids[0]
-
-                self.examples.append({
-                    "pixel_values": pixel_values.clone().detach(),
-                    "labels": decoder_input_ids.clone().detach()
-                })
-                
-                if len(self.examples) % 10 == 0:
-                    logger.info(f"Loaded {len(self.examples)} examples")
-                    
-            except Exception as e:
-                logger.error(f"Error processing {image_path}: {str(e)}")
-                continue
-
-    def __len__(self):
-        return len(self.examples)
-
-    def __getitem__(self, idx):
-        return self.examples[idx]
-
-def train_donut_model(input_json=None, output_dir=None, num_epochs=20, batch_size=1):
+def load_dataset(json_path):
     """
-    Train a Donut model on the provided dataset
-    
-    Args:
-        input_json (str): Path to the training data JSON
-        output_dir (str): Path to save the trained model
-        num_epochs (int): Number of training epochs
-        batch_size (int): Batch size for training
-        
-    Returns:
-        str: Path to the saved model
+    Load the dataset from the JSON file
     """
-    if input_json is None:
-        input_json = config.TRAIN_CLEANED_JSON
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
     
-    if output_dir is None:
-        output_dir = os.path.join(config.MODELS_DIR, f"donut_model_{int(time.time())}")
+    # Convert to HuggingFace dataset format
+    examples = []
+    for item in data:
+        image_path = item["image_path"]
+        # Convert ground truth to string
+        gt_str = json.dumps(item["ground_truth"], ensure_ascii=False)
+        
+        examples.append({
+            "image_path": image_path,
+            "ground_truth": gt_str
+        })
     
-    # Create output directory
-    config.ensure_dir(output_dir)
+    return Dataset.from_list(examples)
+
+def train_donut(args):
+    """
+    Train the Donut model
+    """
+    logger.info("Starting Donut training")
     
-    # Load training data
-    logger.info(f"Loading training data from {input_json}")
-    with open(input_json, "r", encoding="utf-8") as f:
-        raw_data = json.load(f)
+    # Load datasets
+    train_json = os.path.join(config.DONUT_TRAIN_DIR, "train.json")
+    val_json = os.path.join(config.DONUT_VAL_DIR, "val.json")
     
-    logger.info(f"Found {len(raw_data)} examples in the training data")
+    train_dataset = load_dataset(train_json)
+    val_dataset = load_dataset(val_json)
     
-    # Initialize model and processor
-    logger.info(f"Initializing model and processor from {config.DONUT_MODEL}")
-    processor = DonutProcessor.from_pretrained(config.DONUT_MODEL)
-    model = VisionEncoderDecoderModel.from_pretrained(config.DONUT_MODEL)
+    logger.info(f"Loaded {len(train_dataset)} training examples and {len(val_dataset)} validation examples")
     
-    # Set necessary configurations
-    model.config.decoder_start_token_id = processor.tokenizer.pad_token_id
+    # Initialize processor and model
+    processor = DonutProcessor.from_pretrained("naver-clova-ix/donut-base")
+    model = VisionEncoderDecoderModel.from_pretrained("naver-clova-ix/donut-base")
+    
+    # Set special tokens
+    processor.tokenizer.add_special_tokens({"pad_token": "[PAD]"})
+    model.config.decoder_start_token_id = processor.tokenizer.convert_tokens_to_ids(["[BOS]"])[0]
     model.config.pad_token_id = processor.tokenizer.pad_token_id
     
-    # Prepare dataset
-    logger.info("Preparing dataset")
-    train_dataset = DonutDataset(raw_data, processor)
-    logger.info(f"Dataset prepared with {len(train_dataset)} examples")
+    # Prepare dataset for training
+    def preprocess_data(examples):
+        images = [os.path.join(os.getcwd(), image_path) for image_path in examples["image_path"]]
+        texts = examples["ground_truth"]
+        
+        # Encode the images and texts
+        encoding = processor(
+            images=images, 
+            text=texts,
+            padding="max_length",
+            max_length=512,
+            truncation=True,
+            return_tensors="pt"
+        )
+        
+        return {
+            "pixel_values": encoding.pixel_values,
+            "labels": encoding.labels
+        }
     
-    # Set up training arguments
+    # Apply preprocessing
+    train_dataset = train_dataset.map(preprocess_data, batched=True, batch_size=args.batch_size)
+    val_dataset = val_dataset.map(preprocess_data, batched=True, batch_size=args.batch_size)
+    
+    # Set training arguments
     training_args = Seq2SeqTrainingArguments(
-        output_dir=output_dir,
-        per_device_train_batch_size=batch_size,
-        num_train_epochs=num_epochs,
-        logging_steps=10,
-        save_steps=50,
-        save_total_limit=2,
-        fp16=torch.cuda.is_available(),
+        output_dir=os.path.join(config.DONUT_MODEL_DIR, "checkpoints"),
+        per_device_train_batch_size=args.batch_size,
+        per_device_eval_batch_size=args.batch_size,
         predict_with_generate=True,
-        generation_max_length=128,
+        evaluation_strategy="epoch",
+        save_strategy="epoch",
+        num_train_epochs=args.num_epochs,
+        fp16=torch.cuda.is_available(),
+        logging_dir=os.path.join(config.DONUT_MODEL_DIR, "logs"),
+        logging_steps=100,
+        save_total_limit=2,
     )
     
-    # Set up trainer
+    # Initialize trainer
     trainer = Seq2SeqTrainer(
         model=model,
         args=training_args,
         train_dataset=train_dataset,
-        tokenizer=processor.tokenizer,
-        data_collator=lambda data: {
-            "pixel_values": torch.stack([f["pixel_values"] for f in data]),
-            "labels": torch.nn.utils.rnn.pad_sequence(
-                [f["labels"] for f in data],
-                batch_first=True,
-                padding_value=processor.tokenizer.pad_token_id
-            )
-        }
+        eval_dataset=val_dataset,
     )
     
-    # Start training
-    logger.info("Starting training")
+    # Train the model
+    logger.info("Starting training...")
     trainer.train()
     
-    # Save final model
-    logger.info(f"Training complete, saving model to {output_dir}")
+    # Save the model
+    output_dir = os.path.join(config.DONUT_MODEL_DIR, "final")
+    os.makedirs(output_dir, exist_ok=True)
+    
     model.save_pretrained(output_dir)
     processor.save_pretrained(output_dir)
     
-    return output_dir
-
-def main():
-    parser = argparse.ArgumentParser(description="Train Donut model for price comparison")
-    parser.add_argument("--input_json", default=None, help="Path to the training data JSON")
-    parser.add_argument("--output_dir", default=None, help="Path to save the trained model")
-    parser.add_argument("--num_epochs", type=int, default=20, help="Number of training epochs")
-    parser.add_argument("--batch_size", type=int, default=1, help="Batch size for training")
-    args = parser.parse_args()
-    
-    model_path = train_donut_model(
-        input_json=args.input_json,
-        output_dir=args.output_dir,
-        num_epochs=args.num_epochs,
-        batch_size=args.batch_size
-    )
-    
-    logger.info(f"Model training complete! Saved to: {model_path}")
+    logger.info(f"Model saved to {output_dir}")
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Train Donut model")
+    parser.add_argument("--num_epochs", type=int, default=30, help="Number of training epochs")
+    parser.add_argument("--batch_size", type=int, default=4, help="Batch size for training")
+    
+    args = parser.parse_args()
+    
+    train_donut(args)

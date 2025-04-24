@@ -116,93 +116,106 @@ def fuzzy_match(name: str) -> str:
     best, score, _ = process.extractOne(name, KNOWN_NAMES, scorer=fuzz.token_sort_ratio)
     return best if score > 85 else name
 
-def convert_csv_to_donut_format(master_csv=None):
+def convert_csv_to_donut_format(master_csv=None, max_samples_per_product=100):
     """
-    Convert OCR CSV results to Donut training JSON format
+    Create a balanced dataset with examples from different products
     
     Args:
-        master_csv (str, optional): Path to master CSV file. If None, use default.
-        
-    Returns:
-        list: Donut format data
+        master_csv (str): Path to the master CSV file
+        max_samples_per_product (int): Maximum samples to use per product type
     """
+    import os
+    import csv
+    import json
+    import random
+    import logging
+    import config
+
+    logger = logging.getLogger(__name__)
+
     if master_csv is None:
         master_csv = config.MASTER_OCR_CSV
-    
+
     if not os.path.exists(master_csv):
         logger.error(f"Master CSV file not found: {master_csv}")
-        return []
-    
-    donut_data = []
-    
-    # Ensure output directories exist
-    config.ensure_dir(config.DONUT_DATA_DIR)
-    # Read all entries from the master CSV file
-    with open(master_csv, newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for row in reader:
-            crop_path = row.get("crop", "").strip()
-            product_name = row.get("product_name", "").strip()
-            price = row.get("price", "").strip()
-            full_ocr_text = row.get("full_ocr_text", "").strip()
-            
-            if not crop_path or not product_name or not price:
-                logger.warning(f"Skipping incomplete row: {row}")
+        return
+
+    logger.info(f"Converting {master_csv} to Donut format")
+
+    # Create output directories
+    os.makedirs(config.DONUT_TRAIN_DIR, exist_ok=True)
+    os.makedirs(config.DONUT_VAL_DIR, exist_ok=True)
+
+    # Read the master CSV
+    with open(master_csv, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
+    logger.info(f"Read {len(rows)} rows from master CSV")
+
+    # Group products by query for balanced representation
+    product_groups = {}
+    for row in rows:
+        query = row.get("query", "").strip()
+        product_groups.setdefault(query, []).append(row)
+
+    logger.info(f"Found {len(product_groups)} unique product types")
+
+    # Sample from each group to create a balanced dataset
+    balanced_rows = []
+    for query, query_rows in product_groups.items():
+        if len(query_rows) > max_samples_per_product:
+            sampled = random.sample(query_rows, max_samples_per_product)
+            logger.info(f"Sampling {len(sampled)} out of {len(query_rows)} for '{query}'")
+            balanced_rows.extend(sampled)
+        else:
+            logger.info(f"Using all {len(query_rows)} samples for '{query}'")
+            balanced_rows.extend(query_rows)
+
+    logger.info(f"Created balanced dataset with {len(balanced_rows)} samples")
+
+    # Shuffle and split into train/val
+    random.shuffle(balanced_rows)
+    split_idx = int(len(balanced_rows) * 0.8)
+    train_rows, val_rows = balanced_rows[:split_idx], balanced_rows[split_idx:]
+    logger.info(f"Split into {len(train_rows)} training and {len(val_rows)} validation samples")
+
+    train_examples, val_examples = [], []
+    missing = 0
+
+    def _process(rows_list, examples_list):
+        nonlocal missing
+        for row in rows_list:
+            img = row.get("image_path")
+            if not img or not os.path.exists(img):
+                missing += 1
                 continue
-            
-            # Find the original crop image
-            query = row.get("query", "unknown")
-            query_dir = os.path.join(config.CROPPED_DIR, "by_query", query)
-            original_path = None
-            
-            # First try exact path
-            if os.path.exists(os.path.join(query_dir, crop_path)):
-                original_path = os.path.join(query_dir, crop_path)
-            else:
-                # Try to find it by searching all query directories
-                for root, _, files in os.walk(config.CROPPED_DIR):
-                    if crop_path in files:
-                        original_path = os.path.join(root, crop_path)
-                        break
-            
-            if not original_path:
-                logger.warning(f"Original image not found for: {crop_path}")
-                continue
-            
-            # Clean and normalize product name
-            clean_product_name = clean_name(product_name, full_ocr_text)
-            normalized_name = fuzzy_match(clean_product_name)
-            
-            # Generate unique image filename
-            base_name = slugify(normalized_name)
-            filename = f"{base_name}.png"
-            counter = 1
-            
-            while os.path.exists(os.path.join(config.DONUT_IMAGES_DIR, filename)):
-                filename = f"{base_name}_{counter}.png"
-                counter += 1
-            
-            # Copy image to Donut images directory
-            dest_path = os.path.join(config.DONUT_IMAGES_DIR, filename)
-            shutil.copy2(original_path, dest_path)
-            
-            # Add entry to Donut data
-            donut_data.append({
-                "image": filename,
-                "label": {
-                    "name": normalized_name,
-                    "price": price
-                },
-                "full_ocr_text": full_ocr_text
-            })
-    
-    # Save raw Donut data
-    with open(config.TRAIN_JSON, "w", encoding="utf-8") as f:
-        json.dump(donut_data, f, ensure_ascii=False, indent=2)
-    
-    logger.info(f"✅ Created Donut training data with {len(donut_data)} entries: {config.TRAIN_JSON}")
-    
-    return donut_data
+            label = {
+                "product_name": row.get("product_name", ""),
+                "price": row.get("price", ""),
+                "brand": row.get("brand", ""),
+                "unit_description": row.get("unit_description", "")
+            }
+            examples_list.append({"image_path": img, "ground_truth": label})
+
+    _process(train_rows, train_examples)
+    _process(val_rows, val_examples)
+
+    if missing > 0:
+        logger.warning(f"Skipped {missing} entries due to missing images")
+
+    # Save to JSON
+    train_path = os.path.join(config.DONUT_TRAIN_DIR, "train.json")
+    val_path = os.path.join(config.DONUT_VAL_DIR, "val.json")
+    with open(train_path, 'w', encoding='utf-8') as f:
+        json.dump(train_examples, f, ensure_ascii=False, indent=2)
+    with open(val_path, 'w', encoding='utf-8') as f:
+        json.dump(val_examples, f, ensure_ascii=False, indent=2)
+
+    logger.info(f"Saved {len(train_examples)} training examples to {train_path}")
+    logger.info(f"Saved {len(val_examples)} validation examples to {val_path}")
+
+    return {"train_examples": len(train_examples), "val_examples": len(val_examples)}
 
 def clean_donut_labels():
     """
