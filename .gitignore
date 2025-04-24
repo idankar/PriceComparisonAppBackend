@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
+# env/ # Covered by broader patterns below
 build/
 develop-eggs/
 dist/
@@ -21,22 +21,28 @@ var/
 *.egg
 
 # Data files
-data/screenshots/
-data/cropped/
+# data/screenshots/ # Moved/obsolete
+# data/cropped/ # Moved/obsolete
 data/ocr_results/
-data/donut_data/images/
+data/raw_images/
+data/labeled/
+data/augmented/
+data/donut/
+# data/donut_data/images/ # Covered by data/donut/
 
 # Models
 models/
+*.pt # YOLO weights & potentially other models
 
-# Logs
+# Logs & Temp
 logs/
+*.log
+*.tmp
+*.pid
+nohup.out
 
 # Backup
 backup/
-
-# YOLO weights
-*.pt
 
 # Environment
 .env
@@ -44,9 +50,15 @@ backup/
 env/
 venv/
 ENV/
+compare_env/ # Added specific env dir
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+
+# API Keys & Sensitive Info
+*.key
+api_keys.json
+# Add any other sensitive filenames here
