@@ -1,0 +1,852 @@
+[
+  {
+    "product_id": "P_3029815",
+    "image_path": "data/annotation/images/חלב/P_3029815.jpg",
+    "api_data": {
+      "name": "חלב מועשר יטבתה 3% כד",
+      "brand": "יטבתה",
+      "description": "חלב מועשר יטבתה 3% כד",
+      "unit_description": "2 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_4760161882131",
+    "image_path": "data/annotation/images/פסטה/P_4760161882131.jpg",
+    "api_data": {
+      "name": "פסטה פנה ריגטה",
+      "brand": "favelli",
+      "description": "פסטה פנה ריגטה",
+      "unit_description": "400 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073229674",
+    "image_path": "data/annotation/images/פסטה/P_7296073229674.jpg",
+    "api_data": {
+      "name": "פסטה לינגוויני",
+      "brand": "MORINI",
+      "description": "פסטה לינגוויני",
+      "unit_description": "500 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_6451491",
+    "image_path": "data/annotation/images/לחם/P_6451491.jpg",
+    "api_data": {
+      "name": "לחם מחמצת זיתי קלמטה",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת זיתי קלמטה",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073641582",
+    "image_path": "data/annotation/images/לחם/P_7296073641582.jpg",
+    "api_data": {
+      "name": "לחם מחמצת כוסמין פרוס",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת כוסמין פרוס",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073612728",
+    "image_path": "data/annotation/images/לחם/P_7296073612728.jpg",
+    "api_data": {
+      "name": "לחם מחמצת דגנים",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת דגנים",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290114311472",
+    "image_path": "data/annotation/images/גבינה/P_7290114311472.jpg",
+    "api_data": {
+      "name": "גבינה לבנה 5% מהדרין",
+      "brand": "טרה",
+      "description": "גבינה לבנה 5% מהדרין",
+      "unit_description": "500 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_6451934",
+    "image_path": "data/annotation/images/לחם/P_6451934.jpg",
+    "api_data": {
+      "name": "לחם מחמצת אגוזים",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת אגוזים",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_8004690058008",
+    "image_path": "data/annotation/images/פסטה/P_8004690058008.jpg",
+    "api_data": {
+      "name": "פסטה ג'מלי",
+      "brand": "לה מוליזנה",
+      "description": "פסטה ג'מלי",
+      "unit_description": "500 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073641575",
+    "image_path": "data/annotation/images/לחם/P_7296073641575.jpg",
+    "api_data": {
+      "name": "לחם מחמצת דגנים פרוס",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת דגנים פרוס",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290116930695",
+    "image_path": "data/annotation/images/חלב/P_7290116930695.jpg",
+    "api_data": {
+      "name": "חלב נטול לקטוז 2% מהדרין",
+      "brand": "תנובה",
+      "description": "חלב נטול לקטוז 2% מהדרין",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_42435",
+    "image_path": "data/annotation/images/חלב/P_42435.jpg",
+    "api_data": {
+      "name": "חלב מפוסטר 1% בקרטון",
+      "brand": "תנובה",
+      "description": "חלב מפוסטר 1% בקרטון",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073612711",
+    "image_path": "data/annotation/images/לחם/P_7296073612711.jpg",
+    "api_data": {
+      "name": "לחם מחמצת אגוזים",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת אגוזים",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_42015",
+    "image_path": "data/annotation/images/חלב/P_42015.jpg",
+    "api_data": {
+      "name": "חלב מפוסטר3% מהדרין שקית",
+      "brand": "תנובה",
+      "description": "חלב מפוסטר3% מהדרין שקית",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290102398065",
+    "image_path": "data/annotation/images/חלב/P_7290102398065.jpg",
+    "api_data": {
+      "name": "חלב 3% בקרטון מהדרין",
+      "brand": "טרה",
+      "description": "חלב 3% בקרטון מהדרין",
+      "unit_description": "2 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_60828",
+    "image_path": "data/annotation/images/פסטה/P_60828.jpg",
+    "api_data": {
+      "name": "פסטה קרניים בינוניות",
+      "brand": "אסם",
+      "description": "פסטה קרניים בינוניות",
+      "unit_description": "500 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_42411",
+    "image_path": "data/annotation/images/חלב/P_42411.jpg",
+    "api_data": {
+      "name": "חלב בקבוק 3% יטבתה",
+      "brand": "יטבתה",
+      "description": "חלב בקבוק 3% יטבתה",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073641612",
+    "image_path": "data/annotation/images/לחם/P_7296073641612.jpg",
+    "api_data": {
+      "name": "לחם מחמצת שיפון פרוס",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת שיפון פרוס",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_48185",
+    "image_path": "data/annotation/images/גבינה/P_48185.jpg",
+    "api_data": {
+      "name": "גבינה לבנה רכה 5% שומן",
+      "brand": "תנובה",
+      "description": "גבינה לבנה רכה 5% שומן",
+      "unit_description": "250 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_6451675",
+    "image_path": "data/annotation/images/לחם/P_6451675.jpg",
+    "api_data": {
+      "name": "לחם מחמצת סלק",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת סלק",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290102398331",
+    "image_path": "data/annotation/images/חלב/P_7290102398331.jpg",
+    "api_data": {
+      "name": "חלב מועשר דל לקטוז 2%",
+      "brand": "טרה",
+      "description": "חלב מועשר דל לקטוז 2%",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_2824466",
+    "image_path": "data/annotation/images/יוגורט/P_2824466.jpg",
+    "api_data": {
+      "name": "יוגורט ביו 0% שומן דנונה",
+      "brand": "דנונה",
+      "description": "יוגורט ביו 0% שומן",
+      "unit_description": "200 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_2824183",
+    "image_path": "data/annotation/images/גבינה/P_2824183.jpg",
+    "api_data": {
+      "name": "גבינה לבנה סקי 5% שומן",
+      "brand": "סקי",
+      "description": "גבינה לבנה סקי 5% שומן",
+      "unit_description": "500 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_4760161882155",
+    "image_path": "data/annotation/images/פסטה/P_4760161882155.jpg",
+    "api_data": {
+      "name": "פסטה פרפלה",
+      "brand": "favelli",
+      "description": "פסטה פרפלה",
+      "unit_description": "400 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290011499327",
+    "image_path": "data/annotation/images/גבינה/P_7290011499327.jpg",
+    "api_data": {
+      "name": "גבינה בולגרית מעודנת 5%",
+      "brand": "מחלבות גד",
+      "description": "גבינה בולגרית מעודנת 5%",
+      "unit_description": "250 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290117860946",
+    "image_path": "data/annotation/images/יוגורט/P_7290117860946.jpg",
+    "api_data": {
+      "name": "תחליב רחצה יוגורט וקוקוס",
+      "brand": "הוואי",
+      "description": "תחליב רחצה יוגורט וקוקוס",
+      "unit_description": "700 מ\"ל"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073612735",
+    "image_path": "data/annotation/images/לחם/P_7296073612735.jpg",
+    "api_data": {
+      "name": "לחם מחמצת כוסמין",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת כוסמין",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290116934280",
+    "image_path": "data/annotation/images/גבינה/P_7290116934280.jpg",
+    "api_data": {
+      "name": "גבינה לבנה שמיר ושום 5%",
+      "brand": "תנובה",
+      "description": "גבינה לבנה שמיר ושום 5%",
+      "unit_description": "250 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290119375295",
+    "image_path": "data/annotation/images/יוגורט/P_7290119375295.jpg",
+    "api_data": {
+      "name": "יוגורט דיאט מנגו אפרסק",
+      "brand": "דנונה",
+      "description": "יוגורט דיאט מנגו אפרסק",
+      "unit_description": "150 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290019621478",
+    "image_path": "data/annotation/images/פסטה/P_7290019621478.jpg",
+    "api_data": {
+      "name": "מנת פסטה אלפרדו",
+      "brand": "בלה איטליה",
+      "description": "מנת פסטה אלפרדו",
+      "unit_description": "74 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073641568",
+    "image_path": "data/annotation/images/לחם/P_7296073641568.jpg",
+    "api_data": {
+      "name": "לחם מחמצת אגוזים פרוס",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת אגוזים פרוס",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290114311328",
+    "image_path": "data/annotation/images/חלב/P_7290114311328.jpg",
+    "api_data": {
+      "name": "חלב נטול לקטוז מועשר 2%",
+      "brand": "טרה",
+      "description": "חלב נטול לקטוז מועשר 2%",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290114311458",
+    "image_path": "data/annotation/images/חלב/P_7290114311458.jpg",
+    "api_data": {
+      "name": "חלב מועשר סידן+D קרטון3%",
+      "brand": "טרה",
+      "description": "חלב מועשר סידן+D קרטון3%",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290107932080",
+    "image_path": "data/annotation/images/חלב/P_7290107932080.jpg",
+    "api_data": {
+      "name": "חלב יטבתה מועשר3% בקבוק",
+      "brand": "יטבתה",
+      "description": "חלב יטבתה מועשר3% בקבוק",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290102390465",
+    "image_path": "data/annotation/images/יוגורט/P_7290102390465.jpg",
+    "api_data": {
+      "name": "יוג.קציפת אפרסק+פסיפלורה",
+      "brand": "מולר",
+      "description": "מולר פרופ יוגורט עם קציפת אפרסק פסיפלורה",
+      "unit_description": "150 מ\"ל"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290102395224",
+    "image_path": "data/annotation/images/יוגורט/P_7290102395224.jpg",
+    "api_data": {
+      "name": "יוגורט מולר נטורל 1.7%",
+      "brand": "מולר",
+      "description": "מארז שמינייה מולר יוגורט ביו 1.7% שומן",
+      "unit_description": "8 * 150 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_5839078",
+    "image_path": "data/annotation/images/יוגורט/P_5839078.jpg",
+    "api_data": {
+      "name": "יוגורט דנונה ביו 3%",
+      "brand": "דנונה",
+      "description": "מארז שמינייה יוגורט ביו 3% שומן",
+      "unit_description": "8 * 150 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_51352",
+    "image_path": "data/annotation/images/חלב/P_51352.jpg",
+    "api_data": {
+      "name": "חלב של פעם מלא4%-3.6%",
+      "brand": "תנובה",
+      "description": "חלב של פעם מלא 4%-3.6%",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_3321155",
+    "image_path": "data/annotation/images/יוגורט/P_3321155.jpg",
+    "api_data": {
+      "name": "יוגורט קראנצ פקאן",
+      "brand": "דנונה",
+      "description": "יוגורט קראנצ פקאן",
+      "unit_description": "183 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_6451484",
+    "image_path": "data/annotation/images/לחם/P_6451484.jpg",
+    "api_data": {
+      "name": "לחם מחמצת אגוזים צימוקים",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת אגוזים וצימוקים",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_4129545",
+    "image_path": "data/annotation/images/גבינה/P_4129545.jpg",
+    "api_data": {
+      "name": "גבינה לבנה למריחה 3%",
+      "brand": "תנובה",
+      "description": "גבינה לבנה למריחה 3%",
+      "unit_description": "250 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_60880",
+    "image_path": "data/annotation/images/פסטה/P_60880.jpg",
+    "api_data": {
+      "name": "פסטה ספגטי מס' 8",
+      "brand": "אסם",
+      "description": "פסטה ספגטי מס' 8",
+      "unit_description": "500 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073153337",
+    "image_path": "data/annotation/images/פסטה/P_7296073153337.jpg",
+    "api_data": {
+      "name": "פסטה בוקאטיני",
+      "brand": "MORINI",
+      "description": "פסטה בוקאטיני",
+      "unit_description": "500 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_47942",
+    "image_path": "data/annotation/images/גבינה/P_47942.jpg",
+    "api_data": {
+      "name": "גבינה 9% שומן כשר מהדרין",
+      "brand": "תנובה",
+      "description": "גבינה 9% שומן כשר מהדרין",
+      "unit_description": "250 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290102390427",
+    "image_path": "data/annotation/images/יוגורט/P_7290102390427.jpg",
+    "api_data": {
+      "name": "יוגורט פרופ מולר תות שדה",
+      "brand": "מולר",
+      "description": "מולר פרופ יוגורט עם קציפת תות",
+      "unit_description": "150 מ\"ל"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_40974",
+    "image_path": "data/annotation/images/חלב/P_40974.jpg",
+    "api_data": {
+      "name": "חלב טרי 2% דל לקטוז",
+      "brand": "תנובה",
+      "description": "חלב טרי 2% דל לקטוז",
+      "unit_description": "1 ליטר"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_408316",
+    "image_path": "data/annotation/images/יוגורט/P_408316.jpg",
+    "api_data": {
+      "name": "יוגורט ביו 3% שומן דנונה",
+      "brand": "דנונה",
+      "description": "יוגורט ביו 3% שומן",
+      "unit_description": "200 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7296073641605",
+    "image_path": "data/annotation/images/לחם/P_7296073641605.jpg",
+    "api_data": {
+      "name": "לחם מחמצת צרפתי פרוס",
+      "brand": "שופרסל",
+      "description": "לחם מחמצת צרפתי פרוס",
+      "unit_description": null
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290119377480",
+    "image_path": "data/annotation/images/יוגורט/P_7290119377480.jpg",
+    "api_data": {
+      "name": "יוגורט פרו עם שוקולד",
+      "brand": "דנונה",
+      "description": "יוגורט חלבון פרו עם תוספת פתיתי שוקולד",
+      "unit_description": "178 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  },
+  {
+    "product_id": "P_7290114311489",
+    "image_path": "data/annotation/images/גבינה/P_7290114311489.jpg",
+    "api_data": {
+      "name": "גבינה לבנה 5% למריחה",
+      "brand": "טרה",
+      "description": "גבינה לבנה 5% למריחה",
+      "unit_description": "750 גרם"
+    },
+    "visible_info": {
+      "product_name": "",
+      "brand": "",
+      "amount": "",
+      "unit": ""
+    },
+    "notes": ""
+  }
+]

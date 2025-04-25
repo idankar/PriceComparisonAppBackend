@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Annotation Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .image-container {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-container {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+        }
+        .progress-bar {
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background-color: #4CAF50;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button.skip {
+            background-color: #f44336;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .api-data {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .api-data p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Annotation Game</h1>
+    
+    <div class="progress-bar">
+        <div class="progress" style="width: {{ progress }}%">{{ progress }}%</div>
+    </div>
+    
+    <p>Product {{ index + 1 }} of {{ total }}</p>
+    
+    <div class="container">
+        <div class="image-container">
+            <h2>Product Image</h2>
+            <img src="{{ image_url }}" alt="Product Image">
+        </div>
+        
+        <div class="form-container">
+            <h2>Information Verification</h2>
+            
+            <div class="api-data">
+                <h3>API Data (Reference Only)</h3>
+                <p><strong>Product:</strong> {{ api_data.name }}</p>
+                <p><strong>Brand:</strong> {{ api_data.brand }}</p>
+                <p><strong>Description:</strong> {{ api_data.description }}</p>
+                <p><strong>Unit:</strong> {{ api_data.unit_description }}</p>
+            </div>
+            
+            <form id="annotation-form">
+                <div class="form-group">
+                    <label for="product_name">Visible Product Name:</label>
+                    <input type="text" id="product_name" name="product_name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="brand">Visible Brand:</label>
+                    <input type="text" id="brand" name="brand">
+                </div>
+                
+                <div class="form-group">
+                    <label for="amount">Visible Amount:</label>
+                    <input type="text" id="amount" name="amount">
+                </div>
+                
+                <div class="form-group">
+                    <label for="unit">Visible Unit:</label>
+                    <input type="text" id="unit" name="unit">
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                
+                <button type="button" id="submit-btn">Submit</button>
+                <button type="button" class="skip" id="skip-btn">Skip</button>
+                <button type="button" id="missing-btn">Missing Information</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="missing-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add Missing Information</h2>
+            
+            <div class="form-group">
+                <label for="missing-category">Category:</label>
+                <select id="missing-category">
+                    <option value="product_name">Product Name</option>
+                    <option value="brand">Brand</option>
+                    <option value="amount">Amount</option>
+                    <option value="unit">Unit</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="missing-info">Information:</label>
+                <input type="text" id="missing-info">
+            </div>
+            
+            <button type="button" id="add-missing-btn">Add</button>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('annotation-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const skipBtn = document.getElementById('skip-btn');
+            const missingBtn = document.getElementById('missing-btn');
+            const modal = document.getElementById('missing-modal');
+            const closeModal = document.querySelector('.close');
+            const addMissingBtn = document.getElementById('add-missing-btn');
+            
+            // Submit form
+            submitBtn.addEventListener('click', function() {
+                const formData = {
+                    product_name: document.getElementById('product_name').value,
+                    brand: document.getElementById('brand').value,
+                    amount: document.getElementById('amount').value,
+                    unit: document.getElementById('unit').value,
+                    notes: document.getElementById('notes').value
+                };
+                
+                fetch('/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.reload();
+                    }
+                });
+            });
+            
+            // Skip button
+            skipBtn.addEventListener('click', function() {
+                if (confirm('Are you sure you want to skip this product?')) {
+                    fetch('/skip', {
+                        method: 'POST'
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            window.location.reload();
+                        }
+                    });
+                }
+            });
+            
+            // Missing information modal
+            missingBtn.addEventListener('click', function() {
+                modal.style.display = 'block';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Add missing information
+            addMissingBtn.addEventListener('click', function() {
+                const category = document.getElementById('missing-category').value;
+                const info = document.getElementById('missing-info').value;
+                
+                if (info.trim() !== '') {
+                    document.getElementById(category).value = info;
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+        
