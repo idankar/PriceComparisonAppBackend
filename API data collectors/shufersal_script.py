@@ -1,29 +1,18 @@
-#!/usr/bin/env python3
-"""
-Shufersal Product Data Collection Script
-
-This script collects product data from the Shufersal API, including:
-- Product details (name, brand, price, etc.)
-- Product images
-- Category information
-
-The data is organized into a structured format for training a product recognition model.
-"""
-
+# Updated Shufersal Scraper
 import os
 import json
 import time
 import argparse
 import requests
-import pandas as pd
 from PIL import Image
 from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
+import random
 import hashlib
 import re
-from urllib.parse import urljoin, quote
 import logging
+from urllib.parse import quote
 
 # Configure logging
 logging.basicConfig(
@@ -36,34 +25,128 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Constants
-DEFAULT_HEADERS = {
-    "Accept": "application/json",
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-    "Accept-Language": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7"
-}
-
-# Shufersal API endpoints
-BASE_URL = "https://www.shufersal.co.il"
-CATEGORIES_URL = f"{BASE_URL}/online/he/A"
-CATEGORY_URL = f"{BASE_URL}/online/he/C"
-PRODUCT_URL = f"{BASE_URL}/online/he/P"
-SEARCH_URL = f"{BASE_URL}/online/he/search"
-PRODUCT_API_URL = f"{BASE_URL}/online/he/api/v1/products"
-
-# Regular expression for Hebrew characters
-HEBREW_PATTERN = re.compile(r'[\u0590-\u05FF\u200f\u200e]+')
+EXPANDED_SEARCH_TERMS = [
+    # Dairy Products (Hebrew)
+    "חלב", "גבינה", "גבינה צהובה", "קוטג", "יוגורט", "שמנת", "חמאה", "מוצרי חלב", "גבינה לבנה", 
+    "גבינת עיזים", "מעדן חלב", "מילקי", "דני", "מגדים", "לבן", "חלב עמיד", "חלב טרי", "חלב סויה",
+    
+    # Bakery (Hebrew)
+    "לחם", "פיתות", "לחמניות", "חלות", "עוגות", "עוגיות", "מאפים", "בורקס", "קרואסון", "לחם אחיד",
+    "לחם קל", "לחם מלא", "לחם שיפון", "לחם כוסמין", "עוגת שמרים", "בייגלה", "קרקרים",
+    
+    # Meat and Poultry (Hebrew)
+    "בשר", "עוף", "הודו", "בקר", "בשר טחון", "המבורגר", "שניצל", "חזה עוף", "כרעיים", "כנפיים",
+    "נקניקיות", "פסטרמה", "מבשלים", "סטייק", "קבב", "בשר קפוא", "בשר טרי", "פרגיות",
+    
+    # Fish and Seafood (Hebrew)
+    "דגים", "טונה", "סלמון", "דג מושט", "דג בקלה", "נסיכת הנילוס", "אמנון", "דניס", "פילה דג",
+    "דגים קפואים", "שרימפס", "סרדינים",
+    
+    # Fruits and Vegetables (Hebrew)
+    "פירות", "ירקות", "תפוחים", "אגסים", "בננות", "תפוזים", "לימון", "אבוקדו", "עגבניות", "מלפפונים",
+    "פלפל", "גזר", "תפוח אדמה", "בצל", "שום", "חסה", "כרוב", "פירות יבשים", "פירות קפואים",
+    
+    # Snacks (Hebrew)
+    "חטיפים", "במבה", "ביסלי", "צ'יפס", "מרק נמס", "פופקורן", "חטיפי תירס", "אפרופו", "דוריטוס", 
+    "תפוצ'יפס", "צ'יטוס", "עונג", "קליק", "שוקולד", "חטיף בריאות", "אנרגיה", "פיצוחים", "גרעינים",
+    
+    # Beverages (Hebrew)
+    "משקאות", "מים", "סודה", "קולה", "ספרייט", "פאנטה", "מיץ", "תרכיז", "משקה אנרגיה", "קפה",
+    "תה", "שוקו", "חלב סויה", "משקה שקדים", "פריגת", "נביעות", "מי עדן", "קפה שחור", "קפה נמס",
+    
+    # Alcohol (Hebrew)
+    "אלכוהול", "יין", "בירה", "וודקה", "ויסקי", "ליקר", "עראק", "יין אדום", "יין לבן", "גולדסטאר",
+    "מכבי", "קרלסברג", "קורונה", "ערק", "ברנדי", "יין מתוק", "יין יבש", "יין מבעבע",
+    
+    # Pantry Staples (Hebrew)
+    "אורז", "פסטה", "קמח", "סוכר", "מלח", "שמן", "קטניות", "עדשים", "חומץ", "רטבים", "תבלינים",
+    "שעועית", "חומוס", "עדשים", "אפונה", "תירס", "טונה", "זיתים", "שימורים", "רוטב עגבניות",
+    
+    # Frozen Foods (Hebrew)
+    "מוצרים קפואים", "ירקות קפואים", "פיצה קפואה", "גלידה", "שניצל קפוא", "אפונה קפואה", 
+    "תירס קפוא", "בצק קפוא", "אצבעות דג", "ארטיק", "מוצרי תפוחי אדמה קפואים",
+    
+    # Baby Products (Hebrew)
+    "מוצרי תינוקות", "חיתולים", "מטרנה", "סימילאק", "מחיות", "בקבוקים", "מוצצים", "מגבונים",
+    
+    # Cleaning Products (Hebrew)
+    "מוצרי ניקוי", "אקונומיקה", "סבון כלים", "נוזל כביסה", "מרכך כביסה", "סנו", "פיירי", "קולון", 
+    "אריאל", "סנובון", "נייר טואלט", "מגבונים", "מטליות", "סבון ידיים",
+    
+    # Personal Care (Hebrew)
+    "טיפוח אישי", "שמפו", "מרכך שיער", "סבון", "דאודורנט", "משחת שיניים", "מברשת שיניים",
+    "פנטן", "הד אנד שולדרס", "קרם גוף", "קרם פנים", "קרם ידיים", "תער", "קצף גילוח",
+    
+    # Major Israeli Brands
+    "תנובה", "שטראוס", "אסם", "עלית", "תלמה", "יכין", "אוסם", "צבר", "זוגלובק", "טרה", "יפאורה",
+    "מטרנה", "מאסטר שף", "פלוס", "בית השיטה", "יד מרדכי", "עוף טוב", "טבעול", "החברה המרכזית",
+    
+    # Dairy Products (English)
+    "milk", "cheese", "cottage cheese", "yogurt", "cream", "butter", "dairy products", "milk drink",
+    "goat cheese", "pudding", "dairy dessert", "labane", "tzfatit", "feta",
+    
+    # Bakery (English)
+    "bread", "pita", "rolls", "challah", "cakes", "cookies", "pastries", "burekas", "croissant",
+    "whole wheat bread", "rye bread", "spelt bread", "bagels", "crackers", "puff pastry",
+    
+    # Meat and Poultry (English)
+    "meat", "chicken", "turkey", "beef", "ground meat", "hamburger", "schnitzel", "chicken breast",
+    "sausages", "pastrami", "steak", "kabab", "frozen meat", "fresh meat", "liver", "hearts",
+    
+    # Fish and Seafood (English)
+    "fish", "tuna", "salmon", "tilapia", "cod", "nile perch", "denis", "fish fillet",
+    "frozen fish", "shrimp", "sardines", "herring", "canned fish",
+    
+    # Fruits and Vegetables (English)
+    "fruits", "vegetables", "apples", "pears", "bananas", "oranges", "lemon", "avocado", "tomatoes",
+    "cucumbers", "pepper", "carrot", "potato", "onion", "garlic", "lettuce", "cabbage", "dried fruits",
+    
+    # Snacks (English)
+    "snacks", "chips", "pretzels", "popcorn", "corn snacks", "tortilla chips", "potato chips",
+    "energy bars", "chocolate", "candy", "gum", "nuts", "seeds", "rice cakes", "protein bar",
+    
+    # Beverages (English)
+    "drinks", "water", "soda", "cola", "sprite", "fanta", "juice", "concentrate", "energy drink",
+    "coffee", "tea", "chocolate milk", "soy milk", "almond milk", "mineral water", "sparkling water",
+    
+    # Alcohol (English)
+    "alcohol", "wine", "beer", "vodka", "whiskey", "liqueur", "arak", "red wine", "white wine",
+    "goldstar", "maccabi", "carlsberg", "corona", "brandy", "sweet wine", "dry wine", "sparkling wine",
+    
+    # Pantry Staples (English)
+    "rice", "pasta", "flour", "sugar", "salt", "oil", "legumes", "lentils", "vinegar", "sauces",
+    "spices", "beans", "hummus", "chickpeas", "peas", "corn", "olives", "canned goods", "tomato sauce",
+    
+    # Frozen Foods (English)
+    "frozen products", "frozen vegetables", "frozen pizza", "ice cream", "frozen schnitzel",
+    "frozen peas", "frozen corn", "frozen dough", "fish fingers", "popsicle", "frozen potato products",
+    
+    # Baby Products (English)
+    "baby products", "diapers", "formula", "baby food", "bottles", "pacifiers", "wipes",
+    "baby cereal", "baby bath", "baby soap", "baby oil", "baby powder",
+    
+    # Cleaning Products (English)
+    "cleaning products", "bleach", "dish soap", "laundry detergent", "fabric softener",
+    "toilet paper", "wipes", "cloths", "hand soap", "disinfectant", "window cleaner",
+    
+    # Personal Care (English)
+    "personal care", "shampoo", "conditioner", "soap", "deodorant", "toothpaste", "toothbrush",
+    "body lotion", "face cream", "hand cream", "razor", "shaving cream", "toilet paper",
+    
+    # International Brands
+    "Coca Cola", "Pepsi", "Nestlé", "Kellogg's", "Heinz", "Unilever", "Procter & Gamble", "Colgate",
+    "Dove", "Gillette", "Pampers", "Huggies", "Danone", "Lipton", "Nescafé", "Sprite", "Fanta", "Oreo"
+]
 
 class ShufersalScraper:
-    """Scraper for Shufersal online store products"""
+    """Scraper for Shufersal products"""
     
-    def __init__(self, output_dir, session=None):
+    def __init__(self, output_dir):
         """
         Initialize the scraper
         
         Args:
-            output_dir: Directory to save the scraped data
-            session: Optional requests session to use
+            output_dir: Directory to save scraped data
         """
         self.output_dir = output_dir
         self.products_dir = os.path.join(output_dir, "products")
@@ -73,196 +156,94 @@ class ShufersalScraper:
         os.makedirs(self.products_dir, exist_ok=True)
         os.makedirs(self.raw_dir, exist_ok=True)
         
-        # Create or use session
-        self.session = session if session else requests.Session()
-        self.session.headers.update(DEFAULT_HEADERS)
-        
-        # Store categories
-        self.categories = {}
-        
-        # Store products to avoid duplicates
+        # Store processed products to avoid duplicates
         self.processed_products = set()
         self.failed_products = set()
         
-    def _make_request(self, url, method="GET", params=None, data=None, json_data=None, retry=3):
+        # Headers to mimic a browser request
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+            "Accept": "application/json",
+            "Referer": "https://www.shufersal.co.il/online/he/search",
+            "Accept-Language": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7"
+        }
+    
+    def search_products(self, query, max_pages=5):
         """
-        Make a request to the API with retries
+        Search for products by query
         
         Args:
-            url: URL to request
-            method: HTTP method
-            params: URL parameters
-            data: Form data
-            json_data: JSON data
-            retry: Number of retries
+            query: Search query
+            max_pages: Maximum number of pages to fetch
             
         Returns:
-            Response object or None if all retries failed
+            List of products
         """
-        for attempt in range(retry):
+        logger.info(f"Searching for '{query}'")
+        
+        all_products = []
+        encoded_query = quote(query)
+        
+        # Process each page
+        for page in range(max_pages):
             try:
-                response = self.session.request(
-                    method=method,
-                    url=url,
-                    params=params,
-                    data=data,
-                    json=json_data,
-                    timeout=30
-                )
+                logger.info(f"Fetching page {page + 1}...")
                 
+                # Build the API URL
+                url = f"https://www.shufersal.co.il/online/he/search/results?q={encoded_query}&relevance&limit=10&page={page}"
+                
+                # Make the request
+                response = requests.get(url, headers=self.headers, timeout=10)
                 response.raise_for_status()
-                return response
-            except requests.exceptions.RequestException as e:
-                wait_time = 2 ** attempt
-                logger.warning(f"Request failed: {e}. Retrying in {wait_time}s... ({attempt+1}/{retry})")
-                time.sleep(wait_time)
                 
-                if attempt == retry - 1:
-                    logger.error(f"Failed to fetch {url} after {retry} attempts")
-                    return None
-    
-    def get_categories(self):
-        """
-        Get all product categories from the Shufersal website
-        
-        Returns:
-            Dictionary mapping category IDs to category info
-        """
-        logger.info("Fetching top-level categories")
-        
-        response = self._make_request(CATEGORIES_URL)
-        if not response:
-            logger.error("Failed to fetch top-level categories")
-            return {}
-        
-        # Try to parse the JavaScript that contains categories
-        # This is a simplistic approach - may need adjustment
-        try:
-            categories_raw = {}
-            category_lines = re.findall(r'categoryId:"([^"]+)",categoryName:"([^"]+)"', response.text)
-            
-            for cat_id, cat_name in category_lines:
-                categories_raw[cat_id] = {
-                    'id': cat_id,
-                    'name': cat_name.replace('\\', ''),
-                    'subcategories': {}
-                }
-                
-            logger.info(f"Found {len(categories_raw)} top-level categories")
-            
-            # Fetch subcategories for each category
-            for cat_id, cat_info in tqdm(categories_raw.items(), desc="Fetching subcategories"):
-                self._get_subcategories(cat_id, cat_info)
-                
-            self.categories = categories_raw
-            
-            # Save categories to file
-            with open(os.path.join(self.raw_dir, "categories.json"), 'w', encoding='utf-8') as f:
-                json.dump(categories_raw, f, ensure_ascii=False, indent=2)
-                
-            return categories_raw
-            
-        except Exception as e:
-            logger.error(f"Error parsing categories: {e}")
-            return {}
-    
-    def _get_subcategories(self, category_id, category_info):
-        """
-        Get subcategories for a given category
-        
-        Args:
-            category_id: Category ID
-            category_info: Category info dictionary to update
-        """
-        cat_url = f"{CATEGORY_URL}/{category_id}"
-        response = self._make_request(cat_url)
-        
-        if not response:
-            return
-            
-        subcategories = {}
-        
-        # Extract subcategories from the page
-        subcategory_lines = re.findall(r'categoryId:"([^"]+)",categoryName:"([^"]+)"', response.text)
-        
-        for subcat_id, subcat_name in subcategory_lines:
-            if subcat_id != category_id:  # Skip the main category
-                subcategories[subcat_id] = {
-                    'id': subcat_id,
-                    'name': subcat_name.replace('\\', ''),
-                    'parent_id': category_id
-                }
-        
-        category_info['subcategories'] = subcategories
-    
-    def get_products_by_category(self, category_id, max_products=1000, page_size=100):
-        """
-        Get products for a specific category
-        
-        Args:
-            category_id: Category ID
-            max_products: Maximum number of products to fetch
-            page_size: Number of products per page
-            
-        Returns:
-            List of product data
-        """
-        logger.info(f"Fetching products for category {category_id}")
-        
-        products = []
-        page = 0
-        total_fetched = 0
-        
-        while total_fetched < max_products:
-            # Construct API URL
-            url = f"{PRODUCT_API_URL}?categoryCode={category_id}&page={page}&size={page_size}"
-            
-            response = self._make_request(url)
-            if not response:
-                break
-                
-            try:
+                # Parse the JSON response
                 data = response.json()
-                items = data.get('content', [])
                 
-                if not items:
+                # Extract products from this page
+                products = data.get("results", [])
+                
+                if not products:
+                    logger.info(f"No products found on page {page + 1}")
                     break
                     
-                products.extend(items)
-                total_fetched += len(items)
+                logger.info(f"Found {len(products)} products on page {page + 1}")
+                all_products.extend(products)
                 
-                # Check if we're on the last page
-                if data.get('last', False):
-                    break
+                # Add delay between requests
+                time.sleep(1)
                     
-                page += 1
-                
             except Exception as e:
-                logger.error(f"Error parsing product data: {e}")
+                logger.error(f"Error processing page {page + 1}: {str(e)}")
                 break
         
-        logger.info(f"Fetched {len(products)} products for category {category_id}")
+        logger.info(f"Found {len(all_products)} products for query '{query}'")
         
         # Save raw data
-        with open(os.path.join(self.raw_dir, f"category_{category_id}_products.json"), 'w', encoding='utf-8') as f:
-            json.dump(products, f, ensure_ascii=False, indent=2)
-            
-        return products
+        if all_products:
+            query_hash = hashlib.md5(query.encode()).hexdigest()[:8]
+            with open(os.path.join(self.raw_dir, f"search_{query_hash}_products.json"), 'w', encoding='utf-8') as f:
+                json.dump(all_products, f, ensure_ascii=False, indent=2)
         
+        return all_products
+    
     def process_product(self, product_data):
         """
         Process a single product
         
         Args:
-            product_data: Product data from API
+            product_data: Product data from search
             
         Returns:
             Boolean indicating if processing was successful
         """
         try:
             # Extract product ID
-            product_id = product_data.get('code')
+            product_id = product_data.get("code")
             
+            if not product_id:
+                logger.warning("Product without ID, skipping")
+                return False
+                
             # Skip if already processed or failed
             if product_id in self.processed_products or product_id in self.failed_products:
                 return False
@@ -274,27 +255,58 @@ class ShufersalScraper:
             product_dir = os.path.join(self.products_dir, formatted_id)
             os.makedirs(product_dir, exist_ok=True)
             
-            # Extract relevant information
-            name = product_data.get('productName', '')
-            brand = product_data.get('brandName', '')
-            price = product_data.get('price', {}).get('price', 0)
-            unit = product_data.get('unitOfMeasure', '')
-            category = product_data.get('hierarchy', [])[0]['hierarchyName'] if product_data.get('hierarchy') else ''
-            subcategory = product_data.get('hierarchy', [])[-1]['hierarchyName'] if product_data.get('hierarchy') and len(product_data.get('hierarchy')) > 1 else ''
+            # Extract product information
+            name = product_data.get("name", "")
+            
+            # Extract amount and unit information
+            amount = None
+            unit = product_data.get("unitDescription", "")
+            
+            # Try to extract amount from product name
+            if " " in name and any(char.isdigit() for char in name):
+                parts = name.split()
+                for part in parts:
+                    if any(char.isdigit() for char in part):
+                        if "%" in part:  # Percentage
+                            amount = part
+                        elif "מ\"ל" in part or "מל" in part:  # Milliliters
+                            amount = part.replace("מ\"ל", "").replace("מל", "").strip()
+                            unit = "מ\"ל"
+                        elif "גרם" in part:  # Grams
+                            amount = part.replace("גרם", "").strip()
+                            unit = "גרם"
+                        elif "ק\"ג" in part or "קג" in part:  # Kilograms
+                            amount = part.replace("ק\"ג", "").replace("קג", "").strip()
+                            unit = "ק\"ג"
+                        elif "ליטר" in part:  # Liters
+                            amount = part.replace("ליטר", "").strip()
+                            unit = "ליטר"
+                        elif "יח" in part:  # Units
+                            amount = part.replace("יח", "").strip()
+                            unit = "יח"
             
             # Extract Hebrew name if present
-            name_he = ''
-            if HEBREW_PATTERN.search(name):
+            name_he = ""
+            if any(c in HEBREW_CHARS for c in name):
                 # Extract Hebrew characters
-                hebrew_chars = HEBREW_PATTERN.findall(name)
-                name_he = ''.join(hebrew_chars)
+                name_he = ''.join(c for c in name if c in HEBREW_CHARS or c == ' ')
+                name_he = re.sub(r'\s+', ' ', name_he).strip()
                 
                 # Remove Hebrew from English name
-                name_en = HEBREW_PATTERN.sub('', name).strip()
-                name_en = re.sub(r'\s+', ' ', name_en)
+                name_en = ''.join(c for c in name if c not in HEBREW_CHARS)
+                name_en = re.sub(r'\s+', ' ', name_en).strip()
                 
                 if name_en:  # If we have remaining text after removing Hebrew
                     name = name_en
+                else:
+                    name = name_he
+            
+            # Get price
+            price_data = product_data.get("price", {})
+            price = price_data.get("value", 0)
+            
+            # Get brand
+            brand = product_data.get("brandName", "")
             
             # Create metadata
             metadata = {
@@ -303,13 +315,15 @@ class ShufersalScraper:
                 "name_he": name_he,
                 "brand": brand,
                 "price": price,
+                "amount": amount,
                 "unit": unit,
                 "retailer": "Shufersal",
-                "category": category,
-                "subcategory": subcategory,
                 "source": "shufersal",
                 "source_id": product_id
             }
+            
+            # Remove empty metadata fields
+            metadata = {k: v for k, v in metadata.items() if v not in (None, "")}
             
             # Save metadata
             with open(os.path.join(product_dir, "metadata.json"), 'w', encoding='utf-8') as f:
@@ -324,8 +338,11 @@ class ShufersalScraper:
             return True
             
         except Exception as e:
-            logger.error(f"Error processing product {product_data.get('code', 'unknown')}: {e}")
-            self.failed_products.add(product_data.get('code', 'unknown'))
+            logger.error(f"Error processing product: {e}")
+            
+            if product_data and "code" in product_data:
+                self.failed_products.add(product_data["code"])
+                
             return False
     
     def _download_product_images(self, product_data, product_dir):
@@ -336,183 +353,116 @@ class ShufersalScraper:
             product_data: Product data
             product_dir: Directory to save images
         """
-        # Get image URLs
-        images = []
-        
-        # Main image
-        if 'image' in product_data and product_data['image']:
-            main_image = product_data['image']
-            if not main_image.startswith('http'):
-                main_image = urljoin(BASE_URL, main_image)
-            images.append(main_image)
-        
-        # Additional images
-        if 'additionalMarketingContent' in product_data:
-            for img in product_data['additionalMarketingContent'].get('additionalImageLinks', []):
-                if img and not img.startswith('http'):
-                    img = urljoin(BASE_URL, img)
-                if img:
-                    images.append(img)
-        
-        # Download images
-        for i, img_url in enumerate(images):
-            try:
-                response = self._make_request(img_url)
-                if not response:
-                    continue
+        try:
+            # Get image URLs
+            image_urls = []
+            images = product_data.get("images", [])
+            
+            # Filter for valid image URLs
+            for image in images:
+                if image.get("format") in ["medium", "zoom"] and image.get("url"):
+                    url = image.get("url")
+                    # Check if URL looks valid
+                    if url and url.startswith("http"):
+                        image_urls.append(url)
+            
+            # Remove duplicates while preserving order
+            seen = set()
+            unique_urls = []
+            for url in image_urls:
+                if url not in seen:
+                    seen.add(url)
+                    unique_urls.append(url)
+            
+            # Download only unique, valid images
+            for i, img_url in enumerate(unique_urls):
+                try:
+                    response = requests.get(img_url, headers=self.headers, timeout=10)
+                    response.raise_for_status()
                     
-                img = Image.open(BytesIO(response.content))
-                img = img.convert('RGB')  # Convert to RGB (in case of PNG with alpha)
-                
-                # Save image
-                img_path = os.path.join(product_dir, f"{i+1:03d}.jpg")
-                img.save(img_path, "JPEG", quality=95)
-                
-                time.sleep(0.1)  # Small delay to be gentle to the server
-                
-            except Exception as e:
-                logger.error(f"Error downloading image {img_url}: {e}")
+                    # Verify we received an actual image (not a placeholder)
+                    content_type = response.headers.get('Content-Type', '')
+                    if not content_type.startswith('image/'):
+                        logger.warning(f"URL returned non-image content: {img_url}")
+                        continue
+                    
+                    # Verify image size isn't too small (placeholders are often very small)
+                    if len(response.content) < 1000:
+                        logger.warning(f"Image too small, likely a placeholder: {img_url}")
+                        continue
+                    
+                    img = Image.open(BytesIO(response.content))
+                    
+                    # Skip very small images
+                    if img.width < 50 or img.height < 50:
+                        logger.warning(f"Image dimensions too small: {img_url}")
+                        continue
+                    
+                    img = img.convert('RGB')  # Convert to RGB (in case of PNG with alpha)
+                    
+                    # Save image
+                    img_path = os.path.join(product_dir, f"{i+1:03d}.jpg")
+                    img.save(img_path, "JPEG", quality=95)
+                    
+                    # Small delay between downloads
+                    time.sleep(0.2)
+                    
+                except Exception as e:
+                    logger.error(f"Error downloading image {img_url}: {e}")
+                    
+        except Exception as e:
+            logger.error(f"Error extracting image URLs: {e}")
     
-    def scrape_all_categories(self, max_products_per_category=500, max_total_products=50000, workers=10):
+    def scrape_search_terms(self, max_products=30000, max_per_search=100, workers=10):
         """
-        Scrape products from all categories
+        Scrape products using common search terms
         
         Args:
-            max_products_per_category: Maximum products per category
-            max_total_products: Maximum total products
+            max_products: Maximum total products to scrape
+            max_per_search: Maximum products per search
             workers: Number of worker threads
             
         Returns:
             Total number of products processed
         """
-        # Get categories if not already loaded
-        if not self.categories:
-            self.get_categories()
-            
-        if not self.categories:
-            logger.error("No categories found. Aborting.")
-            return 0
-            
-        # Collect all category IDs (including subcategories)
-        all_category_ids = []
-        for cat_id, cat_info in self.categories.items():
-            all_category_ids.append(cat_id)
-            for subcat_id in cat_info['subcategories'].keys():
-                all_category_ids.append(subcat_id)
+        # Calculate products per search term
+        search_terms =COMMON_SEARCH_TERMS=EXPANDED_SEARCH_TERMS.copy()
+        products_per_search = min(max_per_search, max_products // len(search_terms))
         
-        logger.info(f"Found {len(all_category_ids)} categories to scrape")
+        # Shuffle search terms for more variety
+        random.shuffle(search_terms)
         
+        # Process each search term
         total_processed = 0
-        products_per_category = max(1, min(max_products_per_category, max_total_products // len(all_category_ids)))
         
-        # Process each category
-        for cat_id in tqdm(all_category_ids, desc="Processing categories"):
+        for term in tqdm(search_terms, desc="Processing search queries"):
             # Stop if we've reached the maximum total
-            if total_processed >= max_total_products:
+            if total_processed >= max_products:
                 break
                 
-            # Fetch products for this category
-            products = self.get_products_by_category(cat_id, max_products=products_per_category)
+            # Search for products with this term
+            products = self.search_products(term, max_pages=max(1, products_per_search // 10))
+            
+            # Limit to max products per search
+            products = products[:products_per_search]
             
             # Process products with multiple threads
             with ThreadPoolExecutor(max_workers=workers) as executor:
                 results = list(tqdm(
-                    executor.map(self.process_product, products), 
+                    executor.map(self.process_product, products),
                     total=len(products),
-                    desc=f"Processing products for category {cat_id}"
+                    desc=f"Processing products for '{term}'"
                 ))
                 
             # Count successful processings
             successful = sum(1 for r in results if r)
             total_processed += successful
             
-            logger.info(f"Processed {successful}/{len(products)} products for category {cat_id}")
-            logger.info(f"Total processed so far: {total_processed}/{max_total_products}")
+            logger.info(f"Processed {successful}/{len(products)} products for search '{term}'")
+            logger.info(f"Total processed so far: {total_processed}/{max_products}")
             
-        return total_processed
-    
-    def search_products(self, query, max_products=1000):
-        """
-        Search for products
-        
-        Args:
-            query: Search query
-            max_products: Maximum number of products to fetch
-            
-        Returns:
-            List of product data
-        """
-        logger.info(f"Searching for '{query}'")
-        
-        encoded_query = quote(query)
-        url = f"{SEARCH_URL}?q={encoded_query}"
-        
-        response = self._make_request(url)
-        if not response:
-            return []
-            
-        # Extract product IDs from search results
-        product_ids = re.findall(r'productId:"([^"]+)"', response.text)
-        unique_ids = list(set(product_ids))
-        
-        logger.info(f"Found {len(unique_ids)} unique products for query '{query}'")
-        
-        # Limit to max_products
-        unique_ids = unique_ids[:max_products]
-        
-        # Fetch detailed product data for each ID
-        products = []
-        for product_id in tqdm(unique_ids, desc=f"Fetching product details for '{query}'"):
-            try:
-                product_url = f"{PRODUCT_API_URL}/{product_id}"
-                product_response = self._make_request(product_url)
-                
-                if product_response:
-                    product_data = product_response.json()
-                    products.append(product_data)
-                    time.sleep(0.2)  # Small delay to be gentle to the server
-            except Exception as e:
-                logger.error(f"Error fetching product {product_id}: {e}")
-        
-        # Save raw data
-        query_hash = hashlib.md5(query.encode()).hexdigest()[:8]
-        with open(os.path.join(self.raw_dir, f"search_{query_hash}_products.json"), 'w', encoding='utf-8') as f:
-            json.dump(products, f, ensure_ascii=False, indent=2)
-            
-        return products
-    
-    def scrape_popular_searches(self, searches, max_products_per_search=200, workers=10):
-        """
-        Scrape products from popular search terms
-        
-        Args:
-            searches: List of search terms
-            max_products_per_search: Maximum products per search
-            workers: Number of worker threads
-            
-        Returns:
-            Total number of products processed
-        """
-        total_processed = 0
-        
-        for query in tqdm(searches, desc="Processing search queries"):
-            # Search for products
-            products = self.search_products(query, max_products=max_products_per_search)
-            
-            # Process products with multiple threads
-            with ThreadPoolExecutor(max_workers=workers) as executor:
-                results = list(tqdm(
-                    executor.map(self.process_product, products), 
-                    total=len(products),
-                    desc=f"Processing products for search '{query}'"
-                ))
-                
-            # Count successful processings
-            successful = sum(1 for r in results if r)
-            total_processed += successful
-            
-            logger.info(f"Processed {successful}/{len(products)} products for search '{query}'")
-            logger.info(f"Total processed so far: {total_processed}")
+            # Add delay between search terms
+            time.sleep(2)
             
         return total_processed
     
@@ -524,13 +474,16 @@ class ShufersalScraper:
             Dictionary with summary information
         """
         # Count products and images
-        product_count = len(os.listdir(self.products_dir))
+        product_count = len([p for p in os.listdir(self.products_dir) if p.startswith("shufersal_")])
         
         total_images = 0
         products_with_images = 0
         products_with_hebrew = 0
         
         for product_id in os.listdir(self.products_dir):
+            if not product_id.startswith("shufersal_"):
+                continue
+                
             product_dir = os.path.join(self.products_dir, product_id)
             
             # Count images
@@ -592,8 +545,11 @@ class ShufersalScraper:
         products_excluded = 0
         products_included = 0
         
-        # Process each product
+        # Process each Shufersal product
         for product_id in tqdm(os.listdir(self.products_dir), desc="Creating manifest"):
+            if not product_id.startswith("shufersal_"):
+                continue
+                
             product_dir = os.path.join(self.products_dir, product_id)
             
             # Find images
@@ -631,8 +587,7 @@ class ShufersalScraper:
                 "brand": metadata.get("brand", ""),
                 "name": metadata.get("name", ""),
                 "name_he": metadata.get("name_he", ""),
-                "category": metadata.get("category", ""),
-                "retailer": metadata.get("retailer", "")
+                "retailer": "Shufersal"
             }
             
             manifest["train"][product_id] = {
@@ -662,13 +617,16 @@ class ShufersalScraper:
         return manifest_path
 
 
+# Define Hebrew characters set for Hebrew text detection
+HEBREW_CHARS = set('אבגדהוזחטיכלמנסעפצקרשתךםןףץ')
+
+
 def main():
     parser = argparse.ArgumentParser(description="Shufersal Product Data Scraper")
     parser.add_argument("--output-dir", type=str, default="data", help="Output directory")
-    parser.add_argument("--max-products", type=int, default=50000, help="Maximum number of products to scrape")
-    parser.add_argument("--max-per-category", type=int, default=500, help="Maximum products per category")
+    parser.add_argument("--max-products", type=int, default=30000, help="Maximum number of products to scrape")
+    parser.add_argument("--max-per-search", type=int, default=100, help="Maximum products per search term")
     parser.add_argument("--workers", type=int, default=10, help="Number of worker threads")
-    parser.add_argument("--include-searches", action="store_true", help="Include popular search terms")
     parser.add_argument("--create-manifest", action="store_true", help="Create training manifest after scraping")
     
     args = parser.parse_args()
@@ -676,34 +634,12 @@ def main():
     # Initialize scraper
     scraper = ShufersalScraper(args.output_dir)
     
-    # Scrape all categories
-    total_from_categories = scraper.scrape_all_categories(
-        max_products_per_category=args.max_per_category,
-        max_total_products=args.max_products,
+    # Scrape products
+    total_products = scraper.scrape_search_terms(
+        max_products=args.max_products,
+        max_per_search=args.max_per_search,
         workers=args.workers
     )
-    
-    # If enabled, also scrape from popular searches
-    if args.include_searches:
-        # Popular grocery search terms in Hebrew and English
-        popular_searches = [
-            "חלב", "גבינה", "לחם", "ביצים", "עוף", "בשר", "דגים", "פירות", "ירקות",
-            "חטיפים", "משקאות", "יין", "בירה", "קפה", "תה", "סוכר", "מלח", "שמן",
-            "milk", "cheese", "bread", "eggs", "chicken", "meat", "fish", "fruits", "vegetables",
-            "snacks", "drinks", "wine", "beer", "coffee", "tea", "sugar", "salt", "oil"
-        ]
-        
-        remaining_products = max(0, args.max_products - total_from_categories)
-        if remaining_products > 0:
-            products_per_search = max(10, remaining_products // len(popular_searches))
-            
-            total_from_searches = scraper.scrape_popular_searches(
-                popular_searches,
-                max_products_per_search=products_per_search,
-                workers=args.workers
-            )
-            
-            logger.info(f"Total products scraped from searches: {total_from_searches}")
     
     # Create summary
     summary = scraper.create_summary()
