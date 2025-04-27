@@ -1,0 +1,852 @@
+{
+  "train": {
+    "shufersal_P_42435": {
+      "product_id": "shufersal_P_42435",
+      "name": "1%",
+      "name_he": "חלב מפוסטר בקרטון",
+      "brand": "תנובה",
+      "price": 6.75,
+      "amount": "1%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290102397679": {
+      "product_id": "shufersal_P_7290102397679",
+      "name": "5%",
+      "name_he": "קוטג וחצי",
+      "brand": "טרה",
+      "price": 9.0,
+      "amount": "5%",
+      "unit": "375 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg",
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_8434165466166": {
+      "product_id": "shufersal_P_8434165466166",
+      "name": "product",
+      "name_he": "קריט קרקרים מלוחים",
+      "brand": "krit",
+      "price": 8.9,
+      "unit": "200 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290014758681": {
+      "product_id": "shufersal_P_7290014758681",
+      "name": "1%",
+      "name_he": "קוטג שומן",
+      "brand": "תנובה",
+      "price": 6.0,
+      "amount": "1%",
+      "unit": "250 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg",
+        "003.jpg"
+      ]
+    },
+    "shufersal_P_7290104726262": {
+      "product_id": "shufersal_P_7290104726262",
+      "name": "product",
+      "name_he": "דני שלוק שוקולד",
+      "brand": "דני",
+      "price": 12.1,
+      "unit": "4 * 125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_8008698003503": {
+      "product_id": "shufersal_P_8008698003503",
+      "name": "product",
+      "name_he": "קרקרים מלבניים שר",
+      "brand": "שר",
+      "price": 29.9,
+      "unit": "210 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290017791142": {
+      "product_id": "shufersal_P_7290017791142",
+      "name": "product",
+      "name_he": "קרקרים כוסמין מלא",
+      "brand": "פת במלח",
+      "price": 24.5,
+      "unit": "225 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290112492449": {
+      "product_id": "shufersal_P_7290112492449",
+      "name": "שמפו פינוק שיער רגיל",
+      "name_he": "שמפו פינוק שיער רגיל",
+      "brand": "פינוק",
+      "price": 12.9,
+      "unit": "700 מ\"ל",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_4585907": {
+      "product_id": "shufersal_P_4585907",
+      "name": "1.5%",
+      "name_he": "דני וניל שומן",
+      "brand": "דני",
+      "price": 3.0,
+      "amount": "1.5%",
+      "unit": "125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290019790358": {
+      "product_id": "shufersal_P_7290019790358",
+      "name": "2%",
+      "name_he": "חלב מועשר נטול לקטוז",
+      "brand": "מחלבות רמת הגולן",
+      "price": 9.0,
+      "amount": "2%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290104720499": {
+      "product_id": "shufersal_P_7290104720499",
+      "name": "product",
+      "name_he": "דני וניל מארז",
+      "brand": "דני",
+      "price": 18.1,
+      "unit": "8 * 125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290017791203": {
+      "product_id": "shufersal_P_7290017791203",
+      "name": "product",
+      "name_he": "קרקרים סלק כוסמין",
+      "brand": "פת במלח",
+      "price": 24.5,
+      "unit": "200 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290019790303": {
+      "product_id": "shufersal_P_7290019790303",
+      "name": "3%",
+      "name_he": "חלב מועשר שומן",
+      "brand": "מחלבות רמת הגולן",
+      "price": 9.0,
+      "amount": "3%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7296073661313": {
+      "product_id": "shufersal_P_7296073661313",
+      "name": "product",
+      "name_he": "קרקר פטריות כמהין",
+      "brand": "SNACK BITES",
+      "price": 7.9,
+      "unit": "80 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290013453266": {
+      "product_id": "shufersal_P_7290013453266",
+      "name": "product",
+      "name_he": "מקלוני כוסמין וקצח",
+      "brand": "דני וגלית",
+      "price": 21.9,
+      "unit": "200 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_8434165466333": {
+      "product_id": "shufersal_P_8434165466333",
+      "name": "product",
+      "name_he": "מיני קרקרים עגולים",
+      "brand": "krit",
+      "price": 11.9,
+      "unit": "350 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_293820": {
+      "product_id": "shufersal_P_293820",
+      "name": "'",
+      "name_he": "שמפו וגל רחצה קרמה מן",
+      "brand": "קרמה",
+      "price": 18.5,
+      "unit": "700 מ\"ל",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_4131074": {
+      "product_id": "shufersal_P_4131074",
+      "name": "3%",
+      "name_he": "חלב בקרטון שומן",
+      "brand": "תנובה",
+      "price": 7.18,
+      "amount": "3%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290019790259": {
+      "product_id": "shufersal_P_7290019790259",
+      "name": "4%",
+      "name_he": "חלב טבעי שומן",
+      "brand": "מחלבות רמת הגולן",
+      "price": 9.0,
+      "amount": "4%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290010472390": {
+      "product_id": "shufersal_P_7290010472390",
+      "name": "product",
+      "name_he": "דני שוקולד מארז",
+      "brand": "דני",
+      "price": 18.1,
+      "unit": "8 * 125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290014321199": {
+      "product_id": "shufersal_P_7290014321199",
+      "name": "product",
+      "name_he": "קרקרים פשתן צ'ילי פיקנטי",
+      "brand": "לאס אנד מור",
+      "price": 25.9,
+      "unit": "125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_72993637": {
+      "product_id": "shufersal_P_72993637",
+      "name": "1.5%",
+      "name_he": "דני שוקולד",
+      "brand": "דני",
+      "price": 3.0,
+      "amount": "1.5%",
+      "unit": "125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290107932080": {
+      "product_id": "shufersal_P_7290107932080",
+      "name": "milk",
+      "name_he": "חלב יטבתה מועשר3% בקבוק",
+      "brand": "יטבתה",
+      "price": 9.0,
+      "amount": "3%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290017962023": {
+      "product_id": "shufersal_P_7290017962023",
+      "name": "product",
+      "name_he": "גרנולה מייפל תמר פקאן",
+      "brand": "דני וגלית",
+      "price": 22.9,
+      "unit": "330 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_40974": {
+      "product_id": "shufersal_P_40974",
+      "name": "2%",
+      "name_he": "חלב טרי דל לקטוז",
+      "brand": "תנובה",
+      "price": 8.7,
+      "amount": "2%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290013453280": {
+      "product_id": "shufersal_P_7290013453280",
+      "name": "product",
+      "name_he": "מקלוני כוסמין וזעתר",
+      "brand": "דני וגלית",
+      "price": 21.9,
+      "unit": "200 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7296073661337": {
+      "product_id": "shufersal_P_7296073661337",
+      "name": "cream",
+      "name_he": "קרקר שמנת בצל",
+      "brand": "SNACK BITES",
+      "price": 7.9,
+      "unit": "80 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290013453686": {
+      "product_id": "shufersal_P_7290013453686",
+      "name": "cookies",
+      "name_he": "עוגיות מייפל ופקאן לל\"ת",
+      "brand": "דני וגלית",
+      "price": 28.9,
+      "unit": "230 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_56845": {
+      "product_id": "shufersal_P_56845",
+      "name": "3%",
+      "name_he": "חלב טרי הומוגני קרטון",
+      "brand": "תנובה",
+      "price": 10.77,
+      "amount": "3%",
+      "unit": "1.5 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_74375": {
+      "product_id": "shufersal_P_74375",
+      "name": "product",
+      "name_he": "קרקר זהב אסם",
+      "brand": "אסם",
+      "price": 7.9,
+      "unit": "150 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_8434165466326": {
+      "product_id": "shufersal_P_8434165466326",
+      "name": "product",
+      "name_he": "מיני קרקרים פאב מיקס",
+      "brand": "krit",
+      "price": 11.9,
+      "unit": "350 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290013453082": {
+      "product_id": "shufersal_P_7290013453082",
+      "name": "cookies",
+      "name_he": "עוגיות כוסמין ושוקוצ'יפס",
+      "brand": "דני וגלית",
+      "price": 26.9,
+      "unit": "230 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_522319": {
+      "product_id": "shufersal_P_522319",
+      "name": "3%",
+      "name_he": "חלב טרי מהגולן",
+      "brand": "מחלבות רמת הגולן",
+      "price": 7.18,
+      "amount": "3%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_522326": {
+      "product_id": "shufersal_P_522326",
+      "name": "1%",
+      "name_he": "חלב טרי מהגולן",
+      "brand": "מחלבות רמת הגולן",
+      "price": 6.75,
+      "amount": "1%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    }
+  },
+  "val": {
+    "shufersal_P_42435": {
+      "product_id": "shufersal_P_42435",
+      "name": "1%",
+      "name_he": "חלב מפוסטר בקרטון",
+      "brand": "תנובה",
+      "price": 6.75,
+      "amount": "1%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290102397679": {
+      "product_id": "shufersal_P_7290102397679",
+      "name": "5%",
+      "name_he": "קוטג וחצי",
+      "brand": "טרה",
+      "price": 9.0,
+      "amount": "5%",
+      "unit": "375 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "003.jpg"
+      ]
+    },
+    "shufersal_P_8434165466166": {
+      "product_id": "shufersal_P_8434165466166",
+      "name": "product",
+      "name_he": "קריט קרקרים מלוחים",
+      "brand": "krit",
+      "price": 8.9,
+      "unit": "200 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290014758681": {
+      "product_id": "shufersal_P_7290014758681",
+      "name": "1%",
+      "name_he": "קוטג שומן",
+      "brand": "תנובה",
+      "price": 6.0,
+      "amount": "1%",
+      "unit": "250 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290104726262": {
+      "product_id": "shufersal_P_7290104726262",
+      "name": "product",
+      "name_he": "דני שלוק שוקולד",
+      "brand": "דני",
+      "price": 12.1,
+      "unit": "4 * 125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_8008698003503": {
+      "product_id": "shufersal_P_8008698003503",
+      "name": "product",
+      "name_he": "קרקרים מלבניים שר",
+      "brand": "שר",
+      "price": 29.9,
+      "unit": "210 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290017791142": {
+      "product_id": "shufersal_P_7290017791142",
+      "name": "product",
+      "name_he": "קרקרים כוסמין מלא",
+      "brand": "פת במלח",
+      "price": 24.5,
+      "unit": "225 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290112492449": {
+      "product_id": "shufersal_P_7290112492449",
+      "name": "שמפו פינוק שיער רגיל",
+      "name_he": "שמפו פינוק שיער רגיל",
+      "brand": "פינוק",
+      "price": 12.9,
+      "unit": "700 מ\"ל",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_4585907": {
+      "product_id": "shufersal_P_4585907",
+      "name": "1.5%",
+      "name_he": "דני וניל שומן",
+      "brand": "דני",
+      "price": 3.0,
+      "amount": "1.5%",
+      "unit": "125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290019790358": {
+      "product_id": "shufersal_P_7290019790358",
+      "name": "2%",
+      "name_he": "חלב מועשר נטול לקטוז",
+      "brand": "מחלבות רמת הגולן",
+      "price": 9.0,
+      "amount": "2%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290104720499": {
+      "product_id": "shufersal_P_7290104720499",
+      "name": "product",
+      "name_he": "דני וניל מארז",
+      "brand": "דני",
+      "price": 18.1,
+      "unit": "8 * 125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290017791203": {
+      "product_id": "shufersal_P_7290017791203",
+      "name": "product",
+      "name_he": "קרקרים סלק כוסמין",
+      "brand": "פת במלח",
+      "price": 24.5,
+      "unit": "200 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290019790303": {
+      "product_id": "shufersal_P_7290019790303",
+      "name": "3%",
+      "name_he": "חלב מועשר שומן",
+      "brand": "מחלבות רמת הגולן",
+      "price": 9.0,
+      "amount": "3%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7296073661313": {
+      "product_id": "shufersal_P_7296073661313",
+      "name": "product",
+      "name_he": "קרקר פטריות כמהין",
+      "brand": "SNACK BITES",
+      "price": 7.9,
+      "unit": "80 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290013453266": {
+      "product_id": "shufersal_P_7290013453266",
+      "name": "product",
+      "name_he": "מקלוני כוסמין וקצח",
+      "brand": "דני וגלית",
+      "price": 21.9,
+      "unit": "200 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_8434165466333": {
+      "product_id": "shufersal_P_8434165466333",
+      "name": "product",
+      "name_he": "מיני קרקרים עגולים",
+      "brand": "krit",
+      "price": 11.9,
+      "unit": "350 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_293820": {
+      "product_id": "shufersal_P_293820",
+      "name": "'",
+      "name_he": "שמפו וגל רחצה קרמה מן",
+      "brand": "קרמה",
+      "price": 18.5,
+      "unit": "700 מ\"ל",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_4131074": {
+      "product_id": "shufersal_P_4131074",
+      "name": "3%",
+      "name_he": "חלב בקרטון שומן",
+      "brand": "תנובה",
+      "price": 7.18,
+      "amount": "3%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290019790259": {
+      "product_id": "shufersal_P_7290019790259",
+      "name": "4%",
+      "name_he": "חלב טבעי שומן",
+      "brand": "מחלבות רמת הגולן",
+      "price": 9.0,
+      "amount": "4%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290010472390": {
+      "product_id": "shufersal_P_7290010472390",
+      "name": "product",
+      "name_he": "דני שוקולד מארז",
+      "brand": "דני",
+      "price": 18.1,
+      "unit": "8 * 125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290014321199": {
+      "product_id": "shufersal_P_7290014321199",
+      "name": "product",
+      "name_he": "קרקרים פשתן צ'ילי פיקנטי",
+      "brand": "לאס אנד מור",
+      "price": 25.9,
+      "unit": "125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_72993637": {
+      "product_id": "shufersal_P_72993637",
+      "name": "1.5%",
+      "name_he": "דני שוקולד",
+      "brand": "דני",
+      "price": 3.0,
+      "amount": "1.5%",
+      "unit": "125 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290107932080": {
+      "product_id": "shufersal_P_7290107932080",
+      "name": "milk",
+      "name_he": "חלב יטבתה מועשר3% בקבוק",
+      "brand": "יטבתה",
+      "price": 9.0,
+      "amount": "3%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290017962023": {
+      "product_id": "shufersal_P_7290017962023",
+      "name": "product",
+      "name_he": "גרנולה מייפל תמר פקאן",
+      "brand": "דני וגלית",
+      "price": 22.9,
+      "unit": "330 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_40974": {
+      "product_id": "shufersal_P_40974",
+      "name": "2%",
+      "name_he": "חלב טרי דל לקטוז",
+      "brand": "תנובה",
+      "price": 8.7,
+      "amount": "2%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_7290013453280": {
+      "product_id": "shufersal_P_7290013453280",
+      "name": "product",
+      "name_he": "מקלוני כוסמין וזעתר",
+      "brand": "דני וגלית",
+      "price": 21.9,
+      "unit": "200 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7296073661337": {
+      "product_id": "shufersal_P_7296073661337",
+      "name": "cream",
+      "name_he": "קרקר שמנת בצל",
+      "brand": "SNACK BITES",
+      "price": 7.9,
+      "unit": "80 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290013453686": {
+      "product_id": "shufersal_P_7290013453686",
+      "name": "cookies",
+      "name_he": "עוגיות מייפל ופקאן לל\"ת",
+      "brand": "דני וגלית",
+      "price": 28.9,
+      "unit": "230 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_56845": {
+      "product_id": "shufersal_P_56845",
+      "name": "3%",
+      "name_he": "חלב טרי הומוגני קרטון",
+      "brand": "תנובה",
+      "price": 10.77,
+      "amount": "3%",
+      "unit": "1.5 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_74375": {
+      "product_id": "shufersal_P_74375",
+      "name": "product",
+      "name_he": "קרקר זהב אסם",
+      "brand": "אסם",
+      "price": 7.9,
+      "unit": "150 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_8434165466326": {
+      "product_id": "shufersal_P_8434165466326",
+      "name": "product",
+      "name_he": "מיני קרקרים פאב מיקס",
+      "brand": "krit",
+      "price": 11.9,
+      "unit": "350 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_7290013453082": {
+      "product_id": "shufersal_P_7290013453082",
+      "name": "cookies",
+      "name_he": "עוגיות כוסמין ושוקוצ'יפס",
+      "brand": "דני וגלית",
+      "price": 26.9,
+      "unit": "230 גרם",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    },
+    "shufersal_P_522319": {
+      "product_id": "shufersal_P_522319",
+      "name": "3%",
+      "name_he": "חלב טרי מהגולן",
+      "brand": "מחלבות רמת הגולן",
+      "price": 7.18,
+      "amount": "3%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "002.jpg"
+      ]
+    },
+    "shufersal_P_522326": {
+      "product_id": "shufersal_P_522326",
+      "name": "1%",
+      "name_he": "חלב טרי מהגולן",
+      "brand": "מחלבות רמת הגולן",
+      "price": 6.75,
+      "amount": "1%",
+      "unit": "1 ליטר",
+      "retailer": "Shufersal",
+      "images": [
+        "001.jpg"
+      ]
+    }
+  }
+}
