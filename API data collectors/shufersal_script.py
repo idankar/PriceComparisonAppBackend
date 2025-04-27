@@ -1,18 +1,31 @@
-# Updated Shufersal Scraper
+#!/usr/bin/env python3
+"""
+Shufersal Product Data Collection Script
+
+This script collects product data from Shufersal's website using their public API.
+It organizes product information and images into a structured format for training
+a product recognition model.
+
+Note: This script uses Shufersal's public web API which is unofficial,
+so it may require updates if the API changes.
+"""
+
 import os
 import json
 import time
 import argparse
 import requests
+import pandas as pd
 from PIL import Image
 from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
-import random
 import hashlib
 import re
 import logging
+import random
 from urllib.parse import quote
+from pathlib import Path
 
 # Configure logging
 logging.basicConfig(
@@ -25,7 +38,11 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-EXPANDED_SEARCH_TERMS = [
+# Define Hebrew characters set for Hebrew text detection
+HEBREW_CHARS = set('אבגדהוזחטיכלמנסעפצקרשתךםןףץ')
+
+# Common search terms to expand the default set
+COMMON_SEARCH_TERMS = [
     # Dairy Products (Hebrew)
     "חלב", "גבינה", "גבינה צהובה", "קוטג", "יוגורט", "שמנת", "חמאה", "מוצרי חלב", "גבינה לבנה", 
     "גבינת עיזים", "מעדן חלב", "מילקי", "דני", "מגדים", "לבן", "חלב עמיד", "חלב טרי", "חלב סויה",
@@ -33,18 +50,6 @@ EXPANDED_SEARCH_TERMS = [
     # Bakery (Hebrew)
     "לחם", "פיתות", "לחמניות", "חלות", "עוגות", "עוגיות", "מאפים", "בורקס", "קרואסון", "לחם אחיד",
     "לחם קל", "לחם מלא", "לחם שיפון", "לחם כוסמין", "עוגת שמרים", "בייגלה", "קרקרים",
-    
-    # Meat and Poultry (Hebrew)
-    "בשר", "עוף", "הודו", "בקר", "בשר טחון", "המבורגר", "שניצל", "חזה עוף", "כרעיים", "כנפיים",
-    "נקניקיות", "פסטרמה", "מבשלים", "סטייק", "קבב", "בשר קפוא", "בשר טרי", "פרגיות",
-    
-    # Fish and Seafood (Hebrew)
-    "דגים", "טונה", "סלמון", "דג מושט", "דג בקלה", "נסיכת הנילוס", "אמנון", "דניס", "פילה דג",
-    "דגים קפואים", "שרימפס", "סרדינים",
-    
-    # Fruits and Vegetables (Hebrew)
-    "פירות", "ירקות", "תפוחים", "אגסים", "בננות", "תפוזים", "לימון", "אבוקדו", "עגבניות", "מלפפונים",
-    "פלפל", "גזר", "תפוח אדמה", "בצל", "שום", "חסה", "כרוב", "פירות יבשים", "פירות קפואים",
     
     # Snacks (Hebrew)
     "חטיפים", "במבה", "ביסלי", "צ'יפס", "מרק נמס", "פופקורן", "חטיפי תירס", "אפרופו", "דוריטוס", 
@@ -54,89 +59,27 @@ EXPANDED_SEARCH_TERMS = [
     "משקאות", "מים", "סודה", "קולה", "ספרייט", "פאנטה", "מיץ", "תרכיז", "משקה אנרגיה", "קפה",
     "תה", "שוקו", "חלב סויה", "משקה שקדים", "פריגת", "נביעות", "מי עדן", "קפה שחור", "קפה נמס",
     
-    # Alcohol (Hebrew)
-    "אלכוהול", "יין", "בירה", "וודקה", "ויסקי", "ליקר", "עראק", "יין אדום", "יין לבן", "גולדסטאר",
-    "מכבי", "קרלסברג", "קורונה", "ערק", "ברנדי", "יין מתוק", "יין יבש", "יין מבעבע",
-    
-    # Pantry Staples (Hebrew)
-    "אורז", "פסטה", "קמח", "סוכר", "מלח", "שמן", "קטניות", "עדשים", "חומץ", "רטבים", "תבלינים",
-    "שעועית", "חומוס", "עדשים", "אפונה", "תירס", "טונה", "זיתים", "שימורים", "רוטב עגבניות",
-    
-    # Frozen Foods (Hebrew)
-    "מוצרים קפואים", "ירקות קפואים", "פיצה קפואה", "גלידה", "שניצל קפוא", "אפונה קפואה", 
-    "תירס קפוא", "בצק קפוא", "אצבעות דג", "ארטיק", "מוצרי תפוחי אדמה קפואים",
-    
-    # Baby Products (Hebrew)
-    "מוצרי תינוקות", "חיתולים", "מטרנה", "סימילאק", "מחיות", "בקבוקים", "מוצצים", "מגבונים",
-    
-    # Cleaning Products (Hebrew)
-    "מוצרי ניקוי", "אקונומיקה", "סבון כלים", "נוזל כביסה", "מרכך כביסה", "סנו", "פיירי", "קולון", 
-    "אריאל", "סנובון", "נייר טואלט", "מגבונים", "מטליות", "סבון ידיים",
-    
-    # Personal Care (Hebrew)
-    "טיפוח אישי", "שמפו", "מרכך שיער", "סבון", "דאודורנט", "משחת שיניים", "מברשת שיניים",
-    "פנטן", "הד אנד שולדרס", "קרם גוף", "קרם פנים", "קרם ידיים", "תער", "קצף גילוח",
-    
-    # Major Israeli Brands
-    "תנובה", "שטראוס", "אסם", "עלית", "תלמה", "יכין", "אוסם", "צבר", "זוגלובק", "טרה", "יפאורה",
-    "מטרנה", "מאסטר שף", "פלוס", "בית השיטה", "יד מרדכי", "עוף טוב", "טבעול", "החברה המרכזית",
-    
-    # Dairy Products (English)
-    "milk", "cheese", "cottage cheese", "yogurt", "cream", "butter", "dairy products", "milk drink",
-    "goat cheese", "pudding", "dairy dessert", "labane", "tzfatit", "feta",
-    
-    # Bakery (English)
-    "bread", "pita", "rolls", "challah", "cakes", "cookies", "pastries", "burekas", "croissant",
-    "whole wheat bread", "rye bread", "spelt bread", "bagels", "crackers", "puff pastry",
-    
-    # Meat and Poultry (English)
-    "meat", "chicken", "turkey", "beef", "ground meat", "hamburger", "schnitzel", "chicken breast",
-    "sausages", "pastrami", "steak", "kabab", "frozen meat", "fresh meat", "liver", "hearts",
-    
-    # Fish and Seafood (English)
-    "fish", "tuna", "salmon", "tilapia", "cod", "nile perch", "denis", "fish fillet",
-    "frozen fish", "shrimp", "sardines", "herring", "canned fish",
-    
-    # Fruits and Vegetables (English)
-    "fruits", "vegetables", "apples", "pears", "bananas", "oranges", "lemon", "avocado", "tomatoes",
-    "cucumbers", "pepper", "carrot", "potato", "onion", "garlic", "lettuce", "cabbage", "dried fruits",
-    
-    # Snacks (English)
-    "snacks", "chips", "pretzels", "popcorn", "corn snacks", "tortilla chips", "potato chips",
-    "energy bars", "chocolate", "candy", "gum", "nuts", "seeds", "rice cakes", "protein bar",
-    
-    # Beverages (English)
-    "drinks", "water", "soda", "cola", "sprite", "fanta", "juice", "concentrate", "energy drink",
-    "coffee", "tea", "chocolate milk", "soy milk", "almond milk", "mineral water", "sparkling water",
-    
-    # Alcohol (English)
-    "alcohol", "wine", "beer", "vodka", "whiskey", "liqueur", "arak", "red wine", "white wine",
-    "goldstar", "maccabi", "carlsberg", "corona", "brandy", "sweet wine", "dry wine", "sparkling wine",
-    
-    # Pantry Staples (English)
-    "rice", "pasta", "flour", "sugar", "salt", "oil", "legumes", "lentils", "vinegar", "sauces",
-    "spices", "beans", "hummus", "chickpeas", "peas", "corn", "olives", "canned goods", "tomato sauce",
-    
-    # Frozen Foods (English)
-    "frozen products", "frozen vegetables", "frozen pizza", "ice cream", "frozen schnitzel",
-    "frozen peas", "frozen corn", "frozen dough", "fish fingers", "popsicle", "frozen potato products",
-    
-    # Baby Products (English)
-    "baby products", "diapers", "formula", "baby food", "bottles", "pacifiers", "wipes",
-    "baby cereal", "baby bath", "baby soap", "baby oil", "baby powder",
-    
-    # Cleaning Products (English)
-    "cleaning products", "bleach", "dish soap", "laundry detergent", "fabric softener",
-    "toilet paper", "wipes", "cloths", "hand soap", "disinfectant", "window cleaner",
-    
-    # Personal Care (English)
-    "personal care", "shampoo", "conditioner", "soap", "deodorant", "toothpaste", "toothbrush",
-    "body lotion", "face cream", "hand cream", "razor", "shaving cream", "toilet paper",
-    
-    # International Brands
-    "Coca Cola", "Pepsi", "Nestlé", "Kellogg's", "Heinz", "Unilever", "Procter & Gamble", "Colgate",
-    "Dove", "Gillette", "Pampers", "Huggies", "Danone", "Lipton", "Nescafé", "Sprite", "Fanta", "Oreo"
+    # Add more categories as needed
 ]
+
+# Dictionary of common product translations
+PRODUCT_TRANSLATIONS = {
+    "חלב טרי": "Fresh Milk",
+    "חלב מועשר": "Enriched Milk",
+    "גבינה לבנה": "White Cheese",
+    "קוטג": "Cottage Cheese",
+    "יוגורט": "Yogurt",
+    "שמנת": "Cream",
+    "חמאה": "Butter",
+    "מוצרי חלב": "Dairy Products",
+    "גבינת עיזים": "Goat Cheese",
+    "לבן": "Labaneh",
+    "חלב עמיד": "UHT Milk",
+    "חלב סויה": "Soy Milk",
+    "דל לקטוז": "Lactose-Free",
+    "שוקו": "Chocolate Milk",
+    # Add more translations as needed
+}
 
 class ShufersalScraper:
     """Scraper for Shufersal products"""
@@ -159,30 +102,21 @@ class ShufersalScraper:
         # Store processed products to avoid duplicates
         self.processed_products = set()
         self.failed_products = set()
+    
+    def search_products(self, query, max_pages=3):
+        """Fetch products from Shufersal API"""
+        logger.info(f"Searching for products: {query}")
+        
+        all_products = []
+        encoded_query = quote(query)
         
         # Headers to mimic a browser request
-        self.headers = {
+        headers = {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
             "Accept": "application/json",
             "Referer": "https://www.shufersal.co.il/online/he/search",
             "Accept-Language": "he-IL,he;q=0.9,en-US;q=0.8,en;q=0.7"
         }
-    
-    def search_products(self, query, max_pages=5):
-        """
-        Search for products by query
-        
-        Args:
-            query: Search query
-            max_pages: Maximum number of pages to fetch
-            
-        Returns:
-            List of products
-        """
-        logger.info(f"Searching for '{query}'")
-        
-        all_products = []
-        encoded_query = quote(query)
         
         # Process each page
         for page in range(max_pages):
@@ -193,7 +127,7 @@ class ShufersalScraper:
                 url = f"https://www.shufersal.co.il/online/he/search/results?q={encoded_query}&relevance&limit=10&page={page}"
                 
                 # Make the request
-                response = requests.get(url, headers=self.headers, timeout=10)
+                response = requests.get(url, headers=headers, timeout=10)
                 response.raise_for_status()
                 
                 # Parse the JSON response
@@ -217,14 +151,73 @@ class ShufersalScraper:
                 break
         
         logger.info(f"Found {len(all_products)} products for query '{query}'")
+        logger.info(f"Sample product fields: {list(all_products[0].keys()) if all_products else 'No products'}")
         
         # Save raw data
         if all_products:
             query_hash = hashlib.md5(query.encode()).hexdigest()[:8]
-            with open(os.path.join(self.raw_dir, f"search_{query_hash}_products.json"), 'w', encoding='utf-8') as f:
+            with open(os.path.join(self.raw_dir, f"search_{query_hash}_products.json"), "w", encoding="utf-8") as f:
                 json.dump(all_products, f, ensure_ascii=False, indent=2)
         
         return all_products
+    
+    def extract_product_metadata(self, product_data):
+        """Extract structured metadata from product data"""
+        # Initialize basic metadata
+        metadata = {
+            "product_id": f"shufersal_{product_data.get('code', '')}",
+            "name": None,  # Start with null for English name
+            "name_he": "",
+            "brand": product_data.get("brandName", ""),
+            "price": float(product_data.get("price", {}).get("value", 0)),
+            "amount": "",
+            "unit": "",
+            "retailer": "Shufersal",
+            "source": "shufersal",
+            "source_id": product_data.get("code", "")
+        }
+        
+        # Extract product name
+        full_name = product_data.get("name", "")
+        
+        # Separate Hebrew and non-Hebrew parts
+        hebrew_chars = set('אבגדהוזחטיכלמנסעפצקרשתךםןףץ')
+        name_he_parts = []
+        name_en_parts = []
+        
+        for word in full_name.split():
+            if any(c in hebrew_chars for c in word):
+                name_he_parts.append(word)
+            else:
+                name_en_parts.append(word)
+        
+        # Set Hebrew name
+        metadata["name_he"] = " ".join(name_he_parts)
+        
+        # Set English name only if meaningful English text was found
+        if name_en_parts and not all(part.isdigit() or part == "%" for part in name_en_parts):
+            metadata["name"] = " ".join(name_en_parts)
+        # Otherwise, keep it as null
+        
+        # Extract amount and unit if present
+        amount_match = re.search(r'(\d+(?:\.\d+)?)\s*(גרם|ג\'|ג|מ"ל|מל|ק"ג|קג|ליטר|ל|יח\'|ml|g|kg|l|liter)', full_name)
+        if amount_match:
+            metadata["amount"] = amount_match.group(1)
+            metadata["unit"] = amount_match.group(2)
+        
+        # Standardize units
+        unit_mapping = {
+            'גרם': 'g', 'ג\'': 'g', 'ג': 'g',
+            'מ"ל': 'ml', 'מל': 'ml',
+            'ק"ג': 'kg', 'קג': 'kg',
+            'ליטר': 'l', 'ל': 'l',
+            'יח\'': 'unit',
+            '%': '%'
+        }
+        if metadata["unit"] in unit_mapping:
+            metadata["unit"] = unit_mapping[metadata["unit"]]
+        
+        return metadata
     
     def process_product(self, product_data):
         """
@@ -247,171 +240,155 @@ class ShufersalScraper:
             # Skip if already processed or failed
             if product_id in self.processed_products or product_id in self.failed_products:
                 return False
-                
+                    
             # Format as shufersal_{product_id} for our database
             formatted_id = f"shufersal_{product_id}"
+            
+            logger.info(f"Processing product: {formatted_id}")
             
             # Create product directory
             product_dir = os.path.join(self.products_dir, formatted_id)
             os.makedirs(product_dir, exist_ok=True)
             
-            # Extract product information
+            # Get product information
             name = product_data.get("name", "")
+            logger.info(f"Product name: {name}")
             
-            # Extract amount and unit information
-            amount = None
-            unit = product_data.get("unitDescription", "")
-            
-            # Try to extract amount from product name
-            if " " in name and any(char.isdigit() for char in name):
-                parts = name.split()
-                for part in parts:
-                    if any(char.isdigit() for char in part):
-                        if "%" in part:  # Percentage
-                            amount = part
-                        elif "מ\"ל" in part or "מל" in part:  # Milliliters
-                            amount = part.replace("מ\"ל", "").replace("מל", "").strip()
-                            unit = "מ\"ל"
-                        elif "גרם" in part:  # Grams
-                            amount = part.replace("גרם", "").strip()
-                            unit = "גרם"
-                        elif "ק\"ג" in part or "קג" in part:  # Kilograms
-                            amount = part.replace("ק\"ג", "").replace("קג", "").strip()
-                            unit = "ק\"ג"
-                        elif "ליטר" in part:  # Liters
-                            amount = part.replace("ליטר", "").strip()
-                            unit = "ליטר"
-                        elif "יח" in part:  # Units
-                            amount = part.replace("יח", "").strip()
-                            unit = "יח"
-            
-            # Extract Hebrew name if present
-            name_he = ""
-            if any(c in HEBREW_CHARS for c in name):
-                # Extract Hebrew characters
-                name_he = ''.join(c for c in name if c in HEBREW_CHARS or c == ' ')
-                name_he = re.sub(r'\s+', ' ', name_he).strip()
+            try:
+                # Get images
+                image_urls = []
+                images = product_data.get("images", [])
                 
-                # Remove Hebrew from English name
-                name_en = ''.join(c for c in name if c not in HEBREW_CHARS)
-                name_en = re.sub(r'\s+', ' ', name_en).strip()
+                # Log image info
+                logger.info(f"Found {len(images)} image entries")
                 
-                if name_en:  # If we have remaining text after removing Hebrew
-                    name = name_en
-                else:
-                    name = name_he
-            
-            # Get price
-            price_data = product_data.get("price", {})
-            price = price_data.get("value", 0)
-            
-            # Get brand
-            brand = product_data.get("brandName", "")
-            
-            # Create metadata
-            metadata = {
-                "product_id": formatted_id,
-                "name": name,
-                "name_he": name_he,
-                "brand": brand,
-                "price": price,
-                "amount": amount,
-                "unit": unit,
-                "retailer": "Shufersal",
-                "source": "shufersal",
-                "source_id": product_id
-            }
-            
-            # Remove empty metadata fields
-            metadata = {k: v for k, v in metadata.items() if v not in (None, "")}
-            
-            # Save metadata
-            with open(os.path.join(product_dir, "metadata.json"), 'w', encoding='utf-8') as f:
-                json.dump(metadata, f, ensure_ascii=False, indent=2)
-            
-            # Download and save images
-            self._download_product_images(product_data, product_dir)
-            
-            # Add to processed set
-            self.processed_products.add(product_id)
-            
-            return True
-            
+                for image in images:
+                    if image.get("format") == "medium" and image.get("url"):
+                        image_urls.append(image.get("url"))
+                        
+                logger.info(f"Found {len(image_urls)} valid image URLs")
+                
+                # Download and save images
+                self._download_product_images(image_urls, product_dir)
+                
+                # Extract product metadata
+                metadata = {
+                    "product_id": formatted_id,
+                    "name": name,
+                    "name_he": "", # Will be filled by extract_product_metadata
+                    "brand": product_data.get("brandName", ""),
+                    "price": float(product_data.get("price", {}).get("value", 0)),
+                    "amount": "",
+                    "unit": "",
+                    "retailer": "Shufersal",
+                    "source": "shufersal",
+                    "source_id": product_id
+                }
+                
+                try:
+                    # Try enhanced metadata extraction
+                    enhanced_metadata = self.extract_product_metadata(product_data)
+                    # Update the metadata with enhanced fields
+                    metadata.update(enhanced_metadata)
+                    logger.info(f"Enhanced metadata successful: {metadata}")
+                except Exception as meta_error:
+                    logger.error(f"Error in enhanced metadata extraction: {meta_error}")
+                
+                # Save metadata
+                with open(os.path.join(product_dir, "metadata.json"), 'w', encoding='utf-8') as f:
+                    json.dump(metadata, f, ensure_ascii=False, indent=2)
+                
+                # Add to processed set
+                self.processed_products.add(product_id)
+                
+                return True
+                
+            except Exception as inner_e:
+                logger.error(f"Inner error processing product {product_id}: {inner_e}")
+                return False
+                
         except Exception as e:
             logger.error(f"Error processing product: {e}")
             
             if product_data and "code" in product_data:
                 self.failed_products.add(product_data["code"])
-                
+            
             return False
     
-    def _download_product_images(self, product_data, product_dir):
+    def _get_image_urls(self, product_data):
+        """Get all available image URLs from product data"""
+        image_urls = []
+
+        # Get images from the API response
+        images = product_data.get("images", [])
+        logger.info(f"Found {len(images)} image entries")
+
+        # Examine each image entry to understand structure
+        for i, image in enumerate(images):
+            logger.info(f"Image {i} data: {image}")
+
+            # Check for URL field directly
+            if isinstance(image, dict) and "url" in image:
+                url = image["url"]
+                if url and isinstance(url, str) and url.startswith("http"):
+                    logger.info(f"Adding valid URL: {url}")
+                    image_urls.append(url)
+                else:
+                    logger.info(f"Invalid URL format: {url}")
+            # Some APIs nest the URL under format fields
+            elif isinstance(image, dict) and "format" in image:
+                format_info = image.get("format")
+                url = image.get("url")
+                logger.info(f"Format: {format_info}, URL: {url}")
+                if url and isinstance(url, str) and url.startswith("http"):
+                    logger.info(f"Adding valid format URL: {url}")
+                    image_urls.append(url)
+
+        logger.info(f"Found {len(image_urls)} valid image URLs")
+        return image_urls
+    
+    def _download_product_images(self, image_urls, product_dir):
         """
         Download product images
         
         Args:
-            product_data: Product data
+            image_urls: List of image URLs
             product_dir: Directory to save images
         """
-        try:
-            # Get image URLs
-            image_urls = []
-            images = product_data.get("images", [])
-            
-            # Filter for valid image URLs
-            for image in images:
-                if image.get("format") in ["medium", "zoom"] and image.get("url"):
-                    url = image.get("url")
-                    # Check if URL looks valid
-                    if url and url.startswith("http"):
-                        image_urls.append(url)
-            
-            # Remove duplicates while preserving order
-            seen = set()
-            unique_urls = []
-            for url in image_urls:
-                if url not in seen:
-                    seen.add(url)
-                    unique_urls.append(url)
-            
-            # Download only unique, valid images
-            for i, img_url in enumerate(unique_urls):
-                try:
-                    response = requests.get(img_url, headers=self.headers, timeout=10)
-                    response.raise_for_status()
-                    
-                    # Verify we received an actual image (not a placeholder)
-                    content_type = response.headers.get('Content-Type', '')
-                    if not content_type.startswith('image/'):
-                        logger.warning(f"URL returned non-image content: {img_url}")
-                        continue
-                    
-                    # Verify image size isn't too small (placeholders are often very small)
-                    if len(response.content) < 1000:
-                        logger.warning(f"Image too small, likely a placeholder: {img_url}")
-                        continue
-                    
-                    img = Image.open(BytesIO(response.content))
-                    
-                    # Skip very small images
-                    if img.width < 50 or img.height < 50:
-                        logger.warning(f"Image dimensions too small: {img_url}")
-                        continue
-                    
-                    img = img.convert('RGB')  # Convert to RGB (in case of PNG with alpha)
-                    
-                    # Save image
-                    img_path = os.path.join(product_dir, f"{i+1:03d}.jpg")
-                    img.save(img_path, "JPEG", quality=95)
-                    
-                    # Small delay between downloads
-                    time.sleep(0.2)
-                    
-                except Exception as e:
-                    logger.error(f"Error downloading image {img_url}: {e}")
-                    
-        except Exception as e:
-            logger.error(f"Error extracting image URLs: {e}")
+        for i, img_url in enumerate(image_urls):
+            try:
+                response = requests.get(img_url, timeout=10)
+                response.raise_for_status()
+                
+                # Verify we received an actual image (not a placeholder)
+                content_type = response.headers.get('Content-Type', '')
+                if not content_type.startswith('image/'):
+                    logger.warning(f"URL returned non-image content: {img_url}")
+                    continue
+                
+                # Verify image size isn't too small (placeholders are often very small)
+                if len(response.content) < 1000:
+                    logger.warning(f"Image too small, likely a placeholder: {img_url}")
+                    continue
+                
+                img = Image.open(BytesIO(response.content))
+                
+                # Skip very small images
+                if img.width < 50 or img.height < 50:
+                    logger.warning(f"Image dimensions too small: {img_url}")
+                    continue
+                
+                img = img.convert('RGB')  # Convert to RGB (in case of PNG with alpha)
+                
+                # Save image
+                img_path = os.path.join(product_dir, f"{i+1:03d}.jpg")
+                img.save(img_path, "JPEG", quality=95)
+                
+                # Small delay between downloads
+                time.sleep(0.2)
+                
+            except Exception as e:
+                logger.error(f"Error downloading image {img_url}: {e}")
     
     def scrape_search_terms(self, max_products=30000, max_per_search=100, workers=10):
         """
@@ -426,7 +403,7 @@ class ShufersalScraper:
             Total number of products processed
         """
         # Calculate products per search term
-        search_terms =COMMON_SEARCH_TERMS=EXPANDED_SEARCH_TERMS.copy()
+        search_terms = COMMON_SEARCH_TERMS.copy()
         products_per_search = min(max_per_search, max_products // len(search_terms))
         
         # Shuffle search terms for more variety
@@ -441,10 +418,17 @@ class ShufersalScraper:
                 break
                 
             # Search for products with this term
-            products = self.search_products(term, max_pages=max(1, products_per_search // 10))
+            products = self.search_products(term, max(1, products_per_search // 10))
             
             # Limit to max products per search
             products = products[:products_per_search]
+            
+            logger.info(f"Processing {len(products)} products for query '{term}'")
+            
+            # Try to process one product directly for debugging
+            if products:
+                success = self.process_product(products[0])
+                logger.info(f"Test product processing result: {success}")
             
             # Process products with multiple threads
             with ThreadPoolExecutor(max_workers=workers) as executor:
@@ -615,10 +599,6 @@ class ShufersalScraper:
         logger.info(f"Val images: {sum(len(p['images']) for p in manifest['val'].values())}")
         
         return manifest_path
-
-
-# Define Hebrew characters set for Hebrew text detection
-HEBREW_CHARS = set('אבגדהוזחטיכלמנסעפצקרשתךםןףץ')
 
 
 def main():
