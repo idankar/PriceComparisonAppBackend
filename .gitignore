@@ -29,6 +29,8 @@ data/labeled/
 data/augmented/
 data/donut/
 data/products/
+data/augmented_dataset
+data/clip_augmented
 # data/donut_data/images/ # Covered by data/donut/
 
 # Models
