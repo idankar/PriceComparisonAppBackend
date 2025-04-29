@@ -28,6 +28,7 @@ data/raw_images/
 data/labeled/
 data/augmented/
 data/donut/
+data/products/
 # data/donut_data/images/ # Covered by data/donut/
 
 # Models

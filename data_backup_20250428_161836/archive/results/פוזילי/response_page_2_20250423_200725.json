@@ -1,0 +1,95 @@
+{
+  "results": [],
+  "pagination": {
+    "pageSize": 10,
+    "currentPage": 1,
+    "sort": "relevance",
+    "numberOfPages": 0,
+    "totalNumberOfResults": 9
+  },
+  "facets": [
+    {
+      "code": "categories-2",
+      "name": "קטגוריה",
+      "priority": 100,
+      "category": false,
+      "multiSelect": true,
+      "visible": true,
+      "topValues": null,
+      "values": [
+        {
+          "code": "A22",
+          "name": "בישול אפיה ושימורים",
+          "count": 7,
+          "query": {
+            "url": "/search?q=%D7%A4%D7%95%D7%96%D7%99%D7%9C%D7%99%3Arelevance%3Acategories-2%3AA22",
+            "query": {
+              "value": "&#x5e4;&#x5d5;&#x5d6;&#x5d9;&#x5dc;&#x5d9;:relevance:categories-2:A22"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A28",
+          "name": "אורגני ובריאות",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%A4%D7%95%D7%96%D7%99%D7%9C%D7%99%3Arelevance%3Acategories-2%3AA28",
+            "query": {
+              "value": "&#x5e4;&#x5d5;&#x5d6;&#x5d9;&#x5dc;&#x5d9;:relevance:categories-2:A28"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F03",
+          "name": "בישול אפיה ממרחים ושימורים",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%A4%D7%95%D7%96%D7%99%D7%9C%D7%99%3Arelevance%3Acategories-2%3AF03",
+            "query": {
+              "value": "&#x5e4;&#x5d5;&#x5d6;&#x5d9;&#x5dc;&#x5d9;:relevance:categories-2:F03"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A500801",
+          "name": "שוברים שיאים במבצעים",
+          "count": 1,
+          "query": {
+            "url": "/search?q=%D7%A4%D7%95%D7%96%D7%99%D7%9C%D7%99%3Arelevance%3Acategories-2%3AA500801",
+            "query": {
+              "value": "&#x5e4;&#x5d5;&#x5d6;&#x5d9;&#x5dc;&#x5d9;:relevance:categories-2:A500801"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A500901",
+          "name": "מבצעים שאסור לפספס",
+          "count": 1,
+          "query": {
+            "url": "/search?q=%D7%A4%D7%95%D7%96%D7%99%D7%9C%D7%99%3Arelevance%3Acategories-2%3AA500901",
+            "query": {
+              "value": "&#x5e4;&#x5d5;&#x5d6;&#x5d9;&#x5dc;&#x5d9;:relevance:categories-2:A500901"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F12",
+          "name": "ללא גלוטן",
+          "count": 1,
+          "query": {
+            "url": "/search?q=%D7%A4%D7%95%D7%96%D7%99%D7%9C%D7%99%3Arelevance%3Acategories-2%3AF12",
+            "query": {
+              "value": "&#x5e4;&#x5d5;&#x5d6;&#x5d9;&#x5dc;&#x5d9;:relevance:categories-2:F12"
+            }
+          },
+          "selected": false
+        }
+      ]
+    }
+  ]
+}

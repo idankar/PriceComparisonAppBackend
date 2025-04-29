@@ -1,0 +1,4016 @@
+{
+  "results": [
+    {
+      "code": "P_41858",
+      "name": "שמנת חמוצה 15% מועשרת",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%97%D7%9E%D7%95%D7%A6%D7%94/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%97%D7%9E%D7%95%D7%A6%D7%94-15%25-%D7%9E%D7%95%D7%A2%D7%A9%D7%A8%D7%AA/p/P_41858",
+      "description": "שמנת חמוצה 15% מועשרת",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "שמנת חמוצה15% מועשרת200",
+      "manufacturer": "מחלבת יטבתה",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 3.3,
+        "priceType": "BUY",
+        "formattedValue": "3.30 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_41858",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/IWX26_S_P_41858_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/IWX26_M_P_41858_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/IWX26_S_P_41858_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/IWX26_M_P_41858_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/IWX26_L_P_41858_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/IWX26_Z_P_41858_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת חמוצה 15% מועשרת",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת חמוצה 15% מועשרת",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמנת חמוצה 15% מועשרת",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמנת חמוצה 15% מועשרת",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת חמוצה 15% מועשרת",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת חמוצה 15% מועשרת",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "41858",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "יטבתה"
+      },
+      "brandName": "יטבתה",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 1.65,
+        "priceType": "BUY",
+        "formattedValue": "1.65 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 3.3,
+        "priceType": "BUY",
+        "formattedValue": "3.30 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "200 מ\"ל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A010714",
+        "categories",
+        "A",
+        "A0107",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/IWX26_L_P_41858_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/IWX26_M_P_41858_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/IWX26_S_P_41858_1.png",
+      "baseProductDescription": "שמנת חמוצה 15% מועשרת",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 157.0,
+      "fats": 15.0,
+      "healthy": null,
+      "sodium": 55.0,
+      "sugar": 2.7,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "GLUTEN_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_4125509",
+      "name": "שמנת חמוצה 15% חצי מנה",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%97%D7%9E%D7%95%D7%A6%D7%94/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%97%D7%9E%D7%95%D7%A6%D7%94-15%25-%D7%97%D7%A6%D7%99-%D7%9E%D7%A0%D7%94/p/P_4125509",
+      "description": "שמנת חמוצה 15% חצי מנה",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "שמנת חמוצה15% חצי מנה100",
+      "manufacturer": "תנובה בע\"מ",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 2.1,
+        "priceType": "BUY",
+        "formattedValue": "2.10 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_4125509",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RUK26_S_P_4125509_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RUK26_M_P_4125509_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RUK26_S_P_4125509_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RUK26_M_P_4125509_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/RUK26_L_P_4125509_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/RUK26_Z_P_4125509_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת חמוצה 15% חצי מנה",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת חמוצה 15% חצי מנה",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמנת חמוצה 15% חצי מנה",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמנת חמוצה 15% חצי מנה",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת חמוצה 15% חצי מנה",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת חמוצה 15% חצי מנה",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "4125509",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "תנובה"
+      },
+      "brandName": "תנובה",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.1,
+        "priceType": "BUY",
+        "formattedValue": "2.10 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 2.1,
+        "priceType": "BUY",
+        "formattedValue": "2.10 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "100 מ\"ל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A010714",
+        "categories",
+        "A",
+        "A0107",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/RUK26_L_P_4125509_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RUK26_M_P_4125509_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RUK26_S_P_4125509_1.png",
+      "baseProductDescription": "שמנת חמוצה 15% חצי מנה",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 159.0,
+      "fats": 15.0,
+      "healthy": null,
+      "sodium": 40.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "GLUTEN_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_4125370",
+      "name": "שמנת חמוצה תנובה 9% שומן",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%97%D7%9E%D7%95%D7%A6%D7%94/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%97%D7%9E%D7%95%D7%A6%D7%94-%D7%AA%D7%A0%D7%95%D7%91%D7%94-9%25-%D7%A9%D7%95%D7%9E%D7%9F/p/P_4125370",
+      "description": "שמנת חמוצה תנובה 9% שומן",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "שמנת חמוצה 9% שומן 200מל",
+      "manufacturer": "תנובה בע\"מ",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 4.6,
+        "priceType": "BUY",
+        "formattedValue": "4.60 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_4125370",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RPB22_S_P_4125370_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RPB22_M_P_4125370_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RPB22_S_P_4125370_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RPB22_M_P_4125370_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/RPB22_L_P_4125370_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/RPB22_Z_P_4125370_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת חמוצה תנובה 9% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת חמוצה תנובה 9% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמנת חמוצה תנובה 9% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמנת חמוצה תנובה 9% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת חמוצה תנובה 9% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת חמוצה תנובה 9% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "4125370",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "תנובה"
+      },
+      "brandName": "תנובה",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.3,
+        "priceType": "BUY",
+        "formattedValue": "2.30 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 4.6,
+        "priceType": "BUY",
+        "formattedValue": "4.60 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "200 מ\"ל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A010714",
+        "categories",
+        "A",
+        "A0107",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/RPB22_L_P_4125370_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RPB22_M_P_4125370_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RPB22_S_P_4125370_1.png",
+      "baseProductDescription": "שמנת חמוצה תנובה 9% שומן",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 113.0,
+      "fats": 9.0,
+      "healthy": null,
+      "sodium": 45.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "GLUTEN_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_4125455",
+      "name": "שמנת תנובה 15% שומן",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%97%D7%9E%D7%95%D7%A6%D7%94/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%AA%D7%A0%D7%95%D7%91%D7%94-15%25-%D7%A9%D7%95%D7%9E%D7%9F/p/P_4125455",
+      "description": "שמנת תנובה 15%שומן",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "שמנת תנובה 15%שומן200מל",
+      "manufacturer": "תנובה בע\"מ",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 2.77,
+        "priceType": "BUY",
+        "formattedValue": "2.77 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_4125455",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RSI26_S_P_4125455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RSI26_M_P_4125455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RSI26_S_P_4125455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RSI26_M_P_4125455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/RSI26_L_P_4125455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/RSI26_Z_P_4125455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת תנובה 15% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת תנובה 15% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמנת תנובה 15% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמנת תנובה 15% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת תנובה 15% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת תנובה 15% שומן",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "4125455",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "תנובה"
+      },
+      "brandName": "תנובה",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 1.39,
+        "priceType": "BUY",
+        "formattedValue": "1.39 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 2.77,
+        "priceType": "BUY",
+        "formattedValue": "2.77 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "200 מ\"ל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/prod/product_characteristics_images/ABC25_PD7.png",
+        "altText": "מוצר בפיקוח",
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "מוצרים בפיקוח",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A1501",
+        "A010714",
+        "A150101",
+        "categories",
+        "A",
+        "A15",
+        "A0107",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/RSI26_L_P_4125455_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RSI26_M_P_4125455_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RSI26_S_P_4125455_1.png",
+      "baseProductDescription": "שמנת תנובה 15%שומן",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 159.0,
+      "fats": 15.0,
+      "healthy": null,
+      "sodium": 40.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "GLUTEN_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_72963753",
+      "name": "שמנת של פעם חמוצה 27%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%97%D7%9C%D7%91-%D7%95%D7%91%D7%99%D7%A6%D7%99%D7%9D/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%97%D7%9E%D7%95%D7%A6%D7%94/%D7%A9%D7%9E%D7%A0%D7%AA-%D7%A9%D7%9C-%D7%A4%D7%A2%D7%9D-%D7%97%D7%9E%D7%95%D7%A6%D7%94-27%25/p/P_72963753",
+      "description": "שמנת של פעם חמוצה 27%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "שמ.של פעם חמוצה27% 200ג",
+      "manufacturer": "תנובה בע\"מ",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 5.1,
+        "priceType": "BUY",
+        "formattedValue": "5.10 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_72963753",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/HNE42_S_P_72963753_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/HNE42_M_P_72963753_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/HNE42_S_P_72963753_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/HNE42_M_P_72963753_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/HNE42_L_P_72963753_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/HNE42_Z_P_72963753_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת של פעם חמוצה 27%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמנת של פעם חמוצה 27%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמנת של פעם חמוצה 27%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמנת של פעם חמוצה 27%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת של פעם חמוצה 27%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמנת של פעם חמוצה 27%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "72963753",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "תנובה"
+      },
+      "brandName": "תנובה",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.55,
+        "priceType": "BUY",
+        "formattedValue": "2.55 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 5.1,
+        "priceType": "BUY",
+        "formattedValue": "5.10 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "200 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "חלב וביצים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A010714",
+        "categories",
+        "A",
+        "A0107",
+        "A01"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/HNE42_L_P_72963753_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/HNE42_M_P_72963753_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/HNE42_S_P_72963753_1.png",
+      "baseProductDescription": "שמנת של פעם חמוצה 27%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 265.0,
+      "fats": 27.0,
+      "healthy": null,
+      "sodium": 45.0,
+      "sugar": null,
+      "weightIncrement": null,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7296073269991",
+      "name": "שמן זרעי ענבים",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%99-%D7%95%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA/%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D-%D7%9C%D7%91%D7%99%D7%A9%D7%95%D7%9C-%D7%95%D7%90%D7%A4%D7%99%D7%94/%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/%D7%A9%D7%9E%D7%9F-%D7%96%D7%A8%D7%A2%D7%99-%D7%A2%D7%A0%D7%91%D7%99%D7%9D/p/P_7296073269991",
+      "description": "שמן זרעי ענבים",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "שמן זרעי ענבים גרין 1 לי",
+      "manufacturer": "אוליפיציו סלוודורי בע\"מ",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 51.9,
+        "priceType": "BUY",
+        "formattedValue": "51.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7296073269991",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/KUY70_S_P_7296073269991_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/KUY70_M_P_7296073269991_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/KUY70_S_P_7296073269991_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/KUY70_M_P_7296073269991_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/KUY70_L_P_7296073269991_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/KUY70_Z_P_7296073269991_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמן זרעי ענבים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמן זרעי ענבים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמן זרעי ענבים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמן זרעי ענבים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמן זרעי ענבים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמן זרעי ענבים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7296073269991",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "גרין"
+      },
+      "brandName": "גרין",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": true,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 5.19,
+        "priceType": "BUY",
+        "formattedValue": "5.19 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 51.9,
+        "priceType": "BUY",
+        "formattedValue": "51.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "1 ליטר",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_characteristics_images/ABC16_PD16.png",
+        "altText": "תוסיפו גרין לסל",
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "בישול אפיה ושימורים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A222604",
+        "A2226",
+        "A22",
+        "categories",
+        "F",
+        "A280213",
+        "F0305",
+        "A2802",
+        "A28",
+        "F030501",
+        "F03",
+        "A",
+        "A280205"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/KUY70_L_P_7296073269991_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/KUY70_M_P_7296073269991_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/KUY70_S_P_7296073269991_1.png",
+      "baseProductDescription": "שמן זרעי ענבים",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 828.0,
+      "fats": 92.0,
+      "healthy": null,
+      "sodium": null,
+      "sugar": null,
+      "weightIncrement": 500.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_8052440756315",
+      "name": "שמן קנולה אורגני",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%99-%D7%95%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA/%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D-%D7%9C%D7%91%D7%99%D7%A9%D7%95%D7%9C-%D7%95%D7%90%D7%A4%D7%99%D7%94/%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/%D7%A9%D7%9E%D7%9F-%D7%A7%D7%A0%D7%95%D7%9C%D7%94-%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%99/p/P_8052440756315",
+      "description": "שמן קנולה אורגני",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "שמן קנולה אורגני 1 ליטר",
+      "manufacturer": null,
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 38.9,
+        "priceType": "BUY",
+        "formattedValue": "38.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_8052440756315",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QXG50_S_P_8052440756315_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QXG50_M_P_8052440756315_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QXG50_S_P_8052440756315_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QXG50_M_P_8052440756315_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/QXG50_L_P_8052440756315_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/QXG50_Z_P_8052440756315_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמן קנולה אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמן קנולה אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמן קנולה אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמן קנולה אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמן קנולה אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמן קנולה אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "8052440756315",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "נטורפוד"
+      },
+      "brandName": "נטורפוד",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 3.89,
+        "priceType": "BUY",
+        "formattedValue": "3.89 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 38.9,
+        "priceType": "BUY",
+        "formattedValue": "38.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "1 ליטר",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_characteristics_images/ABC16_PD16.png",
+        "altText": "תוסיפו גרין לסל",
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "בישול אפיה ושימורים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A222604",
+        "A2226",
+        "F030504",
+        "A22",
+        "categories",
+        "F",
+        "A280213",
+        "F0305",
+        "A2802",
+        "A28",
+        "F03",
+        "F030501",
+        "A",
+        "A280205"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/QXG50_L_P_8052440756315_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QXG50_M_P_8052440756315_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QXG50_S_P_8052440756315_1.png",
+      "baseProductDescription": "שמן קנולה אורגני",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 828.0,
+      "fats": 100.0,
+      "healthy": null,
+      "sodium": 0.0,
+      "sugar": null,
+      "weightIncrement": 500.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "ORGANIC",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7296073703792",
+      "name": "שמן זית אורגני",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/green-%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA-%D7%95%D7%98%D7%91%D7%A2/%D7%91%D7%99%D7%A9%D7%95%D7%9C-%D7%90%D7%A4%D7%99%D7%94-%D7%9E%D7%9E%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/%D7%A9%D7%9E%D7%9F-%D7%95%D7%97%D7%95%D7%9E%D7%A5/%D7%A9%D7%9E%D7%9F-%D7%96%D7%99%D7%AA/%D7%A9%D7%9E%D7%9F-%D7%96%D7%99%D7%AA-%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%99/p/P_7296073703792",
+      "description": "שמן זית כתית מעולה אורגני",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "CAVANNA OLI SNC",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 39.9,
+        "priceType": "BUY",
+        "formattedValue": "39.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7296073703792",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/CNP62_S_P_7296073703792_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/CNP62_M_P_7296073703792_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/CNP62_S_P_7296073703792_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/CNP62_M_P_7296073703792_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/CNP62_L_P_7296073703792_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/CNP62_Z_P_7296073703792_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמן זית אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמן זית אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמן זית אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמן זית אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמן זית אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמן זית אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7296073703792",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "גרין"
+      },
+      "brandName": "גרין",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": true,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 6.65,
+        "priceType": "BUY",
+        "formattedValue": "6.65 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 49.9,
+        "priceType": "BUY",
+        "formattedValue": "49.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "750 מ\"ל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "בישול אפיה ממרחים ושימורים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": "מבצע<!--promoid:4112981||displaytype:MSG-->",
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [
+        "4112981"
+      ],
+      "mainPromotionCode": "4112981",
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "F",
+        "F0305",
+        "A2802",
+        "categories",
+        "A28",
+        "F03",
+        "A",
+        "A280205",
+        "F030502"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/CNP62_L_P_7296073703792_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/CNP62_M_P_7296073703792_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/CNP62_S_P_7296073703792_1.png",
+      "baseProductDescription": "שמן זית כתית מעולה אורגני",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 824.0,
+      "fats": 91.6,
+      "healthy": null,
+      "sodium": null,
+      "sugar": null,
+      "weightIncrement": 500.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "ORGANIC",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_8017938005122",
+      "name": "חומץ תפוחים אורגני",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/green-%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA-%D7%95%D7%98%D7%91%D7%A2/%D7%91%D7%99%D7%A9%D7%95%D7%9C-%D7%90%D7%A4%D7%99%D7%94-%D7%9E%D7%9E%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/%D7%A9%D7%9E%D7%9F-%D7%95%D7%97%D7%95%D7%9E%D7%A5/%D7%97%D7%95%D7%9E%D7%A5-%D7%95%D7%9E%D7%99%D7%A5-%D7%9C%D7%99%D7%9E%D7%95%D7%9F/%D7%97%D7%95%D7%9E%D7%A5-%D7%AA%D7%A4%D7%95%D7%97%D7%99%D7%9D-%D7%90%D7%95%D7%A8%D7%92%D7%A0%D7%99/p/P_8017938005122",
+      "description": "חומץ תפוחים אורגני",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "חומץ תפוחים אורגני 750 מ",
+      "manufacturer": null,
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 19.9,
+        "priceType": "BUY",
+        "formattedValue": "19.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_8017938005122",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/EDF46_S_P_8017938005122_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/EDF46_M_P_8017938005122_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/EDF46_S_P_8017938005122_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/EDF46_M_P_8017938005122_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/EDF46_L_P_8017938005122_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/EDF46_Z_P_8017938005122_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "חומץ תפוחים אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "חומץ תפוחים אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "חומץ תפוחים אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "חומץ תפוחים אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "חומץ תפוחים אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "חומץ תפוחים אורגני",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "8017938005122",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "מריה לוציה"
+      },
+      "brandName": "מריה לוציה",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.65,
+        "priceType": "BUY",
+        "formattedValue": "2.65 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 19.9,
+        "priceType": "BUY",
+        "formattedValue": "19.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "750 מ\"ל",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_characteristics_images/ABC16_PD16.png",
+        "altText": "תוסיפו גרין לסל",
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "בישול אפיה ממרחים ושימורים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "F",
+        "F0305",
+        "A2802",
+        "categories",
+        "A28",
+        "F03",
+        "A",
+        "A280205",
+        "F030503"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/EDF46_L_P_8017938005122_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/EDF46_M_P_8017938005122_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/EDF46_S_P_8017938005122_1.png",
+      "baseProductDescription": "חומץ תפוחים אורגני",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 20.0,
+      "fats": 0.0,
+      "healthy": null,
+      "sodium": null,
+      "sugar": null,
+      "weightIncrement": 500.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_8007270999012",
+      "name": "שמן גרעיני ענבים דורו",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/green-%D7%91%D7%A8%D7%99%D7%90%D7%95%D7%AA-%D7%95%D7%98%D7%91%D7%A2/%D7%91%D7%99%D7%A9%D7%95%D7%9C-%D7%90%D7%A4%D7%99%D7%94-%D7%9E%D7%9E%D7%A8%D7%97%D7%99%D7%9D-%D7%95%D7%A9%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D/%D7%A9%D7%9E%D7%9F-%D7%95%D7%97%D7%95%D7%9E%D7%A5/%D7%A9%D7%9E%D7%A0%D7%99%D7%9D-%D7%A6%D7%9E%D7%97%D7%99%D7%99%D7%9D-%D7%95%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D/%D7%A9%D7%9E%D7%9F-%D7%92%D7%A8%D7%A2%D7%99%D7%A0%D7%99-%D7%A2%D7%A0%D7%91%D7%99%D7%9D-%D7%93%D7%95%D7%A8%D7%95/p/P_8007270999012",
+      "description": "שמן גרעיני ענבים דורו",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "שמן גרעיני ענבים דורו 1ל",
+      "manufacturer": null,
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 54.9,
+        "priceType": "BUY",
+        "formattedValue": "54.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_8007270999012",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RHL54_S_P_8007270999012_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RHL54_M_P_8007270999012_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RHL54_S_P_8007270999012_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RHL54_M_P_8007270999012_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/RHL54_L_P_8007270999012_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/RHL54_Z_P_8007270999012_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמן גרעיני ענבים דורו",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "שמן גרעיני ענבים דורו",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "שמן גרעיני ענבים דורו",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "שמן גרעיני ענבים דורו",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמן גרעיני ענבים דורו",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "שמן גרעיני ענבים דורו",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "8007270999012",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "קוסטה ד'אורו"
+      },
+      "brandName": "קוסטה ד'אורו",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 5.49,
+        "priceType": "BUY",
+        "formattedValue": "5.49 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 54.9,
+        "priceType": "BUY",
+        "formattedValue": "54.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "מ\"ל",
+      "unitDescription": "1 ליטר",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_characteristics_images/ABC16_PD16.png",
+        "altText": "תוסיפו גרין לסל",
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "בישול אפיה ממרחים ושימורים",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "F",
+        "F0305",
+        "A2802",
+        "categories",
+        "F030501",
+        "F03",
+        "A28",
+        "A",
+        "A280205"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/RHL54_L_P_8007270999012_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/RHL54_M_P_8007270999012_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/RHL54_S_P_8007270999012_1.png",
+      "baseProductDescription": "שמן גרעיני ענבים דורו",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 831.0,
+      "fats": 92.3,
+      "healthy": null,
+      "sodium": 0.0,
+      "sugar": null,
+      "weightIncrement": 500.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    }
+  ],
+  "pagination": {
+    "pageSize": 10,
+    "currentPage": 0,
+    "sort": "relevance",
+    "numberOfPages": 102,
+    "totalNumberOfResults": 1017
+  },
+  "facets": [
+    {
+      "code": "categories-2",
+      "name": "קטגוריה",
+      "priority": 100,
+      "category": false,
+      "multiSelect": true,
+      "visible": true,
+      "topValues": null,
+      "values": [
+        {
+          "code": "A01",
+          "name": "חלב וביצים",
+          "count": 256,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA01",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A01"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B03",
+          "name": "טיפוח פנים",
+          "count": 228,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB03",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B03"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A31",
+          "name": "פארם וטיפוח",
+          "count": 182,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA31",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A31"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F09",
+          "name": "ויטמינים ותוספי תזונה",
+          "count": 169,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AF09",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:F09"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A22",
+          "name": "בישול אפיה ושימורים",
+          "count": 131,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA22",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A22"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B09",
+          "name": "טיפוח הגוף והשיער",
+          "count": 77,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB09",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B09"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A10",
+          "name": "לחמים ומוצרי מאפה",
+          "count": 44,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA10",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A10"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G18",
+          "name": "סלון ואווירה",
+          "count": 41,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG18",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G18"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A16",
+          "name": "מזון מקורר קפואים ונקניקים",
+          "count": 37,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA16",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A16"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A28",
+          "name": "אורגני ובריאות",
+          "count": 35,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA28",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A28"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A43",
+          "name": "יום העצמאות",
+          "count": 33,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA43",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A43"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A24",
+          "name": "רשימות",
+          "count": 32,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA24",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A24"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B04",
+          "name": "רחצה והגיינה",
+          "count": 32,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB04",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B04"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A25",
+          "name": "חטיפים מתוקים ודגני בוקר",
+          "count": 31,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA25",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A25"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A32",
+          "name": "עולם התינוקות",
+          "count": 27,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA32",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A32"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A42",
+          "name": "פסח בשופרסל Online",
+          "count": 25,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA42",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A42"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B06",
+          "name": "ויטמינים ותוספי תזונה",
+          "count": 25,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB06",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B06"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G14",
+          "name": "מטבח, אירוח וחד פעמי",
+          "count": 25,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG14",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G14"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A38",
+          "name": "ויטמינים ותוספי תזונה ",
+          "count": 24,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA38",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A38"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A34",
+          "name": "ניקיון הבית וחד פעמי",
+          "count": 22,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA34",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A34"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B08",
+          "name": "תינוקות וילדים",
+          "count": 22,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB08",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B08"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G02",
+          "name": "חשמל למטבח",
+          "count": 18,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG02",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G02"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B02",
+          "name": "איפור ",
+          "count": 16,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB02",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B02"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B07",
+          "name": "בית מרקחת ואופטיקה",
+          "count": 16,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB07",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B07"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G17",
+          "name": "חדר שינה",
+          "count": 16,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG17",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G17"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A15",
+          "name": "מוצרים בפיקוח",
+          "count": 15,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA15",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A15"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "C55",
+          "name": "חגיגת כדורגל",
+          "count": 14,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AC55",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:C55"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F10",
+          "name": "מוצרי מקרר וביצים",
+          "count": 13,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AF10",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:F10"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F03",
+          "name": "בישול אפיה ממרחים ושימורים",
+          "count": 11,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AF03",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:F03"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A36",
+          "name": "מעושר בחלבון",
+          "count": 9,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA36",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A36"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G20",
+          "name": "DIY ולמשרד ",
+          "count": 8,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG20",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G20"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B10",
+          "name": "OUTLET",
+          "count": 7,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB10",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B10"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F07",
+          "name": "לחם, קרקרים ופריכיות",
+          "count": 6,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AF07",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:F07"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B30",
+          "name": "עיצוב שיער מקצועי",
+          "count": 5,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB30",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B30"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G99",
+          "name": "הכל לבית – במשלוח של הסופר ",
+          "count": 5,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG99",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G99"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A91",
+          "name": "ONLINE PREMIUM",
+          "count": 4,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA91",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A91"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G29",
+          "name": " מתחדשים עם PILOT ",
+          "count": 4,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG29",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G29"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A13",
+          "name": "משקאות אלכוהול ויין",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA13",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A13"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B12",
+          "name": "בישום",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AB12",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:B12"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F11",
+          "name": "מן המקפיא",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AF11",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:F11"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G01",
+          "name": "חשמל לבית",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG01",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G01"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A07",
+          "name": "מוצרי בשר, עוף ודגים ",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA07",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A07"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A50",
+          "name": "מה חדש",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AA50",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:A50"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G16",
+          "name": "נסיעות קמפינג ופנאי",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%A9%D7%9E%D7%A0%D7%AA+%D7%97%D7%9E%D7%95%D7%A6%D7%94%3Arelevance%3Acategories-2%3AG16",
+            "query": {
+              "value": "&#x5e9;&#x5de;&#x5e0;&#x5ea;&#x20;&#x5d7;&#x5de;&#x5d5;&#x5e6;&#x5d4;:relevance:categories-2:G16"
+            }
+          },
+          "selected": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 {
-  "total_products": 34,
-  "total_images": 70,
-  "products_with_images": 34,
-  "products_with_hebrew": 34,
-  "avg_images_per_product": 2.0588235294117645,
+  "total_products": 13635,
+  "total_images": 39551,
+  "products_with_images": 13635,
+  "products_with_hebrew": 13635,
+  "avg_images_per_product": 2.9006967363403007,
   "percent_with_images": 100.0,
-  "percent_with_hebrew": 100.0
+  "percent_with_hebrew": 100.0,
+  "generated_at": "2025-04-28T19:46:20.827021"
 }

@@ -1,0 +1,3923 @@
+{
+  "results": [
+    {
+      "code": "P_574141",
+      "name": "לחם חיטה מלא",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%D7%90%D7%A8%D7%95%D7%96%D7%99%D7%9D/%D7%9C%D7%97%D7%9D-%D7%97%D7%99%D7%98%D7%94-%D7%9E%D7%9C%D7%90/p/P_574141",
+      "description": "לחם חיטה מלא",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "לחם חיטה מלא 750 גרם",
+      "manufacturer": "דגנית עין בר תעשיות מזון",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_574141",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QHI22_S_P_574141_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QHI22_M_P_574141_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QHI22_S_P_574141_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QHI22_M_P_574141_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/QHI22_L_P_574141_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/QHI22_Z_P_574141_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם חיטה מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם חיטה מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחם חיטה מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחם חיטה מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם חיטה מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם חיטה מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "574141",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "דגנית עין בר"
+      },
+      "brandName": "דגנית עין בר",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.07,
+        "priceType": "BUY",
+        "formattedValue": "2.07 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "750 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101402",
+        "A1014",
+        "categories",
+        "A1008",
+        "A10",
+        "A",
+        "A100801"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/QHI22_L_P_574141_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QHI22_M_P_574141_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QHI22_S_P_574141_1.png",
+      "baseProductDescription": "לחם חיטה מלא",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 227.0,
+      "fats": 2.8,
+      "healthy": null,
+      "sodium": 365.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "WHOLE_WHEAT",
+          "type": "HealthAttributesEnum"
+        },
+        {
+          "code": "VEGAN",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_3268429",
+      "name": "לחם ירוק מקמח מלא",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%D7%90%D7%A8%D7%95%D7%96%D7%99%D7%9D/%D7%9C%D7%97%D7%9D-%D7%99%D7%A8%D7%95%D7%A7-%D7%9E%D7%A7%D7%9E%D7%97-%D7%9E%D7%9C%D7%90/p/P_3268429",
+      "description": "לחם ירוק מקמח מלא",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "לחם ירוק מקמח מלא 750 גר",
+      "manufacturer": "דגנית עין בר תעשיות מזון",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_3268429",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/XXU34_S_P_3268429_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/XXU34_M_P_3268429_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/XXU34_S_P_3268429_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/XXU34_M_P_3268429_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/XXU34_L_P_3268429_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/XXU34_Z_P_3268429_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם ירוק מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם ירוק מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחם ירוק מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחם ירוק מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם ירוק מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם ירוק מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "3268429",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "דגנית עין בר"
+      },
+      "brandName": "דגנית עין בר",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.07,
+        "priceType": "BUY",
+        "formattedValue": "2.07 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "750 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101402",
+        "A1014",
+        "categories",
+        "A1008",
+        "A10",
+        "A",
+        "A100801"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/XXU34_L_P_3268429_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/XXU34_M_P_3268429_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/XXU34_S_P_3268429_1.png",
+      "baseProductDescription": "לחם ירוק מקמח מלא",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 223.0,
+      "fats": 1.8,
+      "healthy": null,
+      "sodium": 382.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "WHOLE_WHEAT",
+          "type": "HealthAttributesEnum"
+        },
+        {
+          "code": "VEGAN",
+          "type": "HealthAttributesEnum"
+        },
+        {
+          "code": "PRESERVATIVES_FREE",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_3268252",
+      "name": "לחם חיטה מלא לילדים",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%D7%90%D7%A8%D7%95%D7%96%D7%99%D7%9D/%D7%9C%D7%97%D7%9D-%D7%97%D7%99%D7%98%D7%94-%D7%9E%D7%9C%D7%90-%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D/p/P_3268252",
+      "description": "לחם חיטה מלא לילדים",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "לחם חיטה מלא לילדים750ג",
+      "manufacturer": "דגנית עין בר תעשיות מזון",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_3268252",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/XQZ28_S_P_3268252_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/XQZ28_M_P_3268252_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/XQZ28_S_P_3268252_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/XQZ28_M_P_3268252_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/XQZ28_L_P_3268252_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/XQZ28_Z_P_3268252_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם חיטה מלא לילדים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם חיטה מלא לילדים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחם חיטה מלא לילדים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחם חיטה מלא לילדים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם חיטה מלא לילדים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם חיטה מלא לילדים",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "3268252",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "דגנית עין בר"
+      },
+      "brandName": "דגנית עין בר",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.07,
+        "priceType": "BUY",
+        "formattedValue": "2.07 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "750 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101402",
+        "A1014",
+        "categories",
+        "A1008",
+        "A10",
+        "A",
+        "A100801"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/XQZ28_L_P_3268252_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/XQZ28_M_P_3268252_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/XQZ28_S_P_3268252_1.png",
+      "baseProductDescription": "לחם חיטה מלא לילדים",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 221.0,
+      "fats": 1.0,
+      "healthy": null,
+      "sodium": 343.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "WHOLE_WHEAT",
+          "type": "HealthAttributesEnum"
+        },
+        {
+          "code": "VEGAN",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_574455",
+      "name": "לחם חיטה מלא +כוסמין",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%D7%90%D7%A8%D7%95%D7%96%D7%99%D7%9D/%D7%9C%D7%97%D7%9D-%D7%97%D7%99%D7%98%D7%94-%D7%9E%D7%9C%D7%90-%2B%D7%9B%D7%95%D7%A1%D7%9E%D7%99%D7%9F/p/P_574455",
+      "description": "לחם חיטה מלא +כוסמין",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "לחם חיטה מלא +כוסמין750ג",
+      "manufacturer": null,
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_574455",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QTK30_S_P_574455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QTK30_M_P_574455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QTK30_S_P_574455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QTK30_M_P_574455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/QTK30_L_P_574455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/QTK30_Z_P_574455_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם חיטה מלא +כוסמין",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם חיטה מלא +כוסמין",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחם חיטה מלא +כוסמין",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחם חיטה מלא +כוסמין",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם חיטה מלא +כוסמין",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם חיטה מלא +כוסמין",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "574455",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "דגנית עין בר"
+      },
+      "brandName": "דגנית עין בר",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.07,
+        "priceType": "BUY",
+        "formattedValue": "2.07 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 15.5,
+        "priceType": "BUY",
+        "formattedValue": "15.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "750 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101402",
+        "A1014",
+        "categories",
+        "A1008",
+        "A10",
+        "A",
+        "A100801"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/QTK30_L_P_574455_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/QTK30_M_P_574455_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/QTK30_S_P_574455_1.png",
+      "baseProductDescription": "לחם חיטה מלא +כוסמין",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 247.0,
+      "fats": 3.4,
+      "healthy": null,
+      "sodium": 334.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "WHOLE_WHEAT",
+          "type": "HealthAttributesEnum"
+        },
+        {
+          "code": "VEGAN",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_4504762",
+      "name": "לחם מקמח מלא",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9E%D7%99%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA-%D7%9E%D7%94%D7%9E%D7%90%D7%A4%D7%99%D7%94/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%97%D7%9C%D7%95%D7%AA/%D7%9C%D7%97%D7%9D-%D7%9E%D7%A7%D7%9E%D7%97-%D7%9E%D7%9C%D7%90/p/P_4504762",
+      "description": "לחם מקמח מלא",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "לחם קמח מלא קפוא 550 גרם",
+      "manufacturer": "מאפה גידרון דגון",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 12.5,
+        "priceType": "BUY",
+        "formattedValue": "12.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_4504762",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GVB28_S_P_4504762_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GVB28_M_P_4504762_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GVB28_S_P_4504762_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GVB28_M_P_4504762_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/GVB28_L_P_4504762_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/GVB28_Z_P_4504762_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "4504762",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "שופרסל"
+      },
+      "brandName": "שופרסל",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": true,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.27,
+        "priceType": "BUY",
+        "formattedValue": "2.27 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 12.5,
+        "priceType": "BUY",
+        "formattedValue": "12.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "550 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101401",
+        "A100501",
+        "A1014",
+        "categories",
+        "A1005",
+        "A10",
+        "A"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/GVB28_L_P_4504762_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/GVB28_M_P_4504762_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/GVB28_S_P_4504762_1.png",
+      "baseProductDescription": "לחם מקמח מלא",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 207.0,
+      "fats": 1.8,
+      "healthy": null,
+      "sodium": 414.0,
+      "sugar": null,
+      "weightIncrement": 500.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7296073592488",
+      "name": "לחם מקמח מלא",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9E%D7%99%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA-%D7%9E%D7%94%D7%9E%D7%90%D7%A4%D7%99%D7%94/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%97%D7%9C%D7%95%D7%AA/%D7%9C%D7%97%D7%9D-%D7%9E%D7%A7%D7%9E%D7%97-%D7%9E%D7%9C%D7%90/p/P_7296073592488",
+      "description": "לחם מקמח מלא",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "גידרון תעשיות בע\"מ",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 12.5,
+        "priceType": "BUY",
+        "formattedValue": "12.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7296073592488",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/TWR70_S_P_7296073592488_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/TWR70_M_P_7296073592488_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/TWR70_S_P_7296073592488_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/TWR70_M_P_7296073592488_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/TWR70_L_P_7296073592488_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/TWR70_Z_P_7296073592488_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם מקמח מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7296073592488",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "שופרסל"
+      },
+      "brandName": "שופרסל",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": true,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 12.5,
+        "priceType": "BUY",
+        "formattedValue": "12.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 12.5,
+        "priceType": "BUY",
+        "formattedValue": "12.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 1,
+      "unitForComparison": "יחידה",
+      "unitDescription": "540 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101401",
+        "A100501",
+        "A1014",
+        "categories",
+        "A1005",
+        "A10",
+        "A"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/TWR70_L_P_7296073592488_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/TWR70_M_P_7296073592488_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/TWR70_S_P_7296073592488_1.png",
+      "baseProductDescription": "לחם מקמח מלא",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": null,
+      "fats": null,
+      "healthy": null,
+      "sodium": null,
+      "sugar": null,
+      "weightIncrement": 500.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7290015644297",
+      "name": "לחמניות פשוט מלא",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA-%D7%90%D7%A8%D7%95%D7%96%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%A4%D7%A9%D7%95%D7%98-%D7%9E%D7%9C%D7%90/p/P_7290015644297",
+      "description": "לחמניות פשוט מלא",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "לחמניות פשוט מלא 6*75גרם",
+      "manufacturer": "מאפיית שלמה א. אנג\\'ל בע",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 12.5,
+        "priceType": "BUY",
+        "formattedValue": "12.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7290015644297",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/EBI56_S_P_7290015644297_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/EBI56_M_P_7290015644297_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/EBI56_S_P_7290015644297_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/EBI56_M_P_7290015644297_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/EBI56_L_P_7290015644297_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/EBI56_Z_P_7290015644297_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחמניות פשוט מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחמניות פשוט מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחמניות פשוט מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחמניות פשוט מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחמניות פשוט מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחמניות פשוט מלא",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7290015644297",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "אנג'ל מאפיה"
+      },
+      "brandName": "אנג'ל מאפיה",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.78,
+        "priceType": "BUY",
+        "formattedValue": "2.78 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 12.5,
+        "priceType": "BUY",
+        "formattedValue": "12.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "6 * 75 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800920/prod/product_characteristics_images/ABC21_PD11.png",
+        "altText": "ויגן פרנדלי",
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": "מבצע<!--promoid:4113779||displaytype:MSG-->",
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [
+        "4113779"
+      ],
+      "mainPromotionCode": "4113779",
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101504",
+        "A1015",
+        "categories",
+        "A100804",
+        "A1008",
+        "A10",
+        "A"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/EBI56_L_P_7290015644297_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/EBI56_M_P_7290015644297_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/EBI56_S_P_7290015644297_1.png",
+      "baseProductDescription": "לחמניות פשוט מלא",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 250.0,
+      "fats": 2.8,
+      "healthy": null,
+      "sodium": 357.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_6322838",
+      "name": "לחם קמח מלא 100%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%D7%90%D7%A8%D7%95%D7%96%D7%99%D7%9D/%D7%9C%D7%97%D7%9D-%D7%A7%D7%9E%D7%97-%D7%9E%D7%9C%D7%90-100%25/p/P_6322838",
+      "description": "לחם קמח מלא 100%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": "לחם קמח מלא 100% 750 גרם",
+      "manufacturer": "מאפיית דוידוביץ ובניו בע",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 14.5,
+        "priceType": "BUY",
+        "formattedValue": "14.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_6322838",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/SHB32_S_P_6322838_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/SHB32_M_P_6322838_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/SHB32_S_P_6322838_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/SHB32_M_P_6322838_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/SHB32_L_P_6322838_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/SHB32_Z_P_6322838_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם קמח מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם קמח מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחם קמח מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחם קמח מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם קמח מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם קמח מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "6322838",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "דוידוביץ"
+      },
+      "brandName": "דוידוביץ",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 1.93,
+        "priceType": "BUY",
+        "formattedValue": "1.93 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 14.5,
+        "priceType": "BUY",
+        "formattedValue": "14.50 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "750 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101402",
+        "A1014",
+        "categories",
+        "A1008",
+        "A10",
+        "A",
+        "A100801"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/SHB32_L_P_6322838_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/SHB32_M_P_6322838_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/SHB32_S_P_6322838_1.png",
+      "baseProductDescription": "לחם קמח מלא 100%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 236.0,
+      "fats": 3.1,
+      "healthy": null,
+      "sodium": 333.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_7290017746906",
+      "name": "לחם כוסמין מלא כפרי",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%D7%90%D7%A8%D7%95%D7%96%D7%99%D7%9D/%D7%9C%D7%97%D7%9D-%D7%9B%D7%95%D7%A1%D7%9E%D7%99%D7%9F-%D7%9E%D7%9C%D7%90-%D7%9B%D7%A4%D7%A8%D7%99/p/P_7290017746906",
+      "description": "לחם כוסמין מלא כפרי",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "מאפיית דוידוביץ ובניו בע",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 20.9,
+        "priceType": "BUY",
+        "formattedValue": "20.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_7290017746906",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/UKX58_S_P_7290017746906_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/UKX58_M_P_7290017746906_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "small",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/UKX58_S_P_7290017746906_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "medium",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/UKX58_M_P_7290017746906_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/UKX58_L_P_7290017746906_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/UKX58_Z_P_7290017746906_1.png",
+          "altText": null,
+          "galleryIndex": null,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם כוסמין מלא כפרי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "לחם כוסמין מלא כפרי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "לחם כוסמין מלא כפרי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "לחם כוסמין מלא כפרי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם כוסמין מלא כפרי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "לחם כוסמין מלא כפרי",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "7290017746906",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "דוידוביץ"
+      },
+      "brandName": "דוידוביץ",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.79,
+        "priceType": "BUY",
+        "formattedValue": "2.79 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 20.9,
+        "priceType": "BUY",
+        "formattedValue": "20.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "750 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101402",
+        "A1014",
+        "categories",
+        "A1008",
+        "A10",
+        "A",
+        "A100801"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_large/UKX58_L_P_7290017746906_1.png",
+      "baseProductImageMedium": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_medium/UKX58_M_P_7290017746906_1.png",
+      "baseProductImageSmall": "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_small/UKX58_S_P_7290017746906_1.png",
+      "baseProductDescription": "לחם כוסמין מלא כפרי",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 235.0,
+      "fats": 1.4,
+      "healthy": null,
+      "sodium": 345.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [],
+      "healthRecommendation": null
+    },
+    {
+      "code": "P_574615",
+      "name": "כוסמין מלא 100%",
+      "url": "/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%95%D7%AA/%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%95%D7%9E%D7%95%D7%A6%D7%A8%D7%99-%D7%9E%D7%90%D7%A4%D7%94/%D7%9C%D7%97%D7%9D%2C-%D7%9C%D7%97%D7%9E%D7%A0%D7%99%D7%95%D7%AA-%D7%95%D7%A4%D7%99%D7%AA%D7%95%D7%AA/%D7%9C%D7%97%D7%9E%D7%99%D7%9D-%D7%9E%D7%99%D7%95%D7%97%D7%93%D7%99%D7%9D-%D7%90%D7%A8%D7%95%D7%96%D7%99%D7%9D/%D7%9B%D7%95%D7%A1%D7%9E%D7%99%D7%9F-%D7%9E%D7%9C%D7%90-100%25/p/P_574615",
+      "description": "לחם כוסמין מלא 100%",
+      "purchasable": null,
+      "stock": {
+        "stockLevelStatus": {
+          "code": "inStock",
+          "type": "StockLevelStatus"
+        },
+        "stockLevel": null,
+        "stockThreshold": null,
+        "available": null,
+        "reserved": null,
+        "invMethod": null,
+        "inventoryManagement": null,
+        "inventoryOnTheWay": null,
+        "minimalThreshold1": null,
+        "minimalThreshold2": null,
+        "warehouse": null,
+        "productCode": null
+      },
+      "futureStocks": null,
+      "availableForPickup": false,
+      "averageRating": null,
+      "numberOfReviews": 0,
+      "summary": null,
+      "manufacturer": "דגנית עין בר תעשיות מזון",
+      "variantType": null,
+      "price": {
+        "currencyIso": "ILS",
+        "value": 19.9,
+        "priceType": "BUY",
+        "formattedValue": "19.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "baseProduct": "P_574615",
+      "images": [
+        {
+          "imageType": "PRIMARY",
+          "format": "superZoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "כוסמין מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "zoom",
+          "url": "https://media.shufersal.co.il/product_images/default/Z_P_default.png",
+          "altText": "כוסמין מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "large",
+          "url": "https://media.shufersal.co.il/product_images/default/L_P_default.png",
+          "altText": "כוסמין מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "product",
+          "url": "https://media.shufersal.co.il/product_images/default/M_P_default.png",
+          "altText": "כוסמין מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "thumbnail",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "כוסמין מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        },
+        {
+          "imageType": "PRIMARY",
+          "format": "cartIcon",
+          "url": "https://media.shufersal.co.il/product_images/default/S_P_default.png",
+          "altText": "כוסמין מלא 100%",
+          "galleryIndex": 0,
+          "width": null,
+          "code": null,
+          "color": null,
+          "textColor": null,
+          "rank": null
+        }
+      ],
+      "categories": null,
+      "reviews": null,
+      "classifications": null,
+      "potentialPromotions": null,
+      "variantOptions": null,
+      "baseOptions": null,
+      "volumePricesFlag": false,
+      "volumePrices": null,
+      "productReferences": null,
+      "variantMatrix": null,
+      "priceRange": {
+        "minPrice": null,
+        "maxPrice": null
+      },
+      "firstCategoryNameList": null,
+      "multidimensional": null,
+      "configurable": null,
+      "keywords": null,
+      "genders": null,
+      "sku": "574615",
+      "commercialDepartment": null,
+      "brand": {
+        "code": null,
+        "name": "דגנית עין בר"
+      },
+      "brandName": "דגנית עין בר",
+      "deliveryItem": null,
+      "associatedDeiveryItem": null,
+      "inventoryManagement": null,
+      "sellingMethod": {
+        "code": "BY_UNIT",
+        "type": "SellingMethodEnum"
+      },
+      "groupingCode": null,
+      "country": null,
+      "manufacturerInfo": null,
+      "privateLabel": false,
+      "newProduct": false,
+      "showOnSite": null,
+      "showOnMobile": null,
+      "searchable": null,
+      "indexable": null,
+      "packagingType": null,
+      "sourceOfSupply": "DIRECT",
+      "productType": null,
+      "adultsOnly": false,
+      "giftProduct": null,
+      "productSet": null,
+      "minOrderWeight": null,
+      "maxOrderWeight": 100.0,
+      "minOrderQuantity": null,
+      "maxOrderQuantity": 100,
+      "food": true,
+      "ignoreERPCategory": null,
+      "stockReservationMethod": null,
+      "ean": null,
+      "popularityRanking": null,
+      "pricePerUnit": {
+        "currencyIso": "ILS",
+        "value": 2.65,
+        "priceType": "BUY",
+        "formattedValue": "2.65 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "categoryPrice": {
+        "currencyIso": "ILS",
+        "value": 19.9,
+        "priceType": "BUY",
+        "formattedValue": "19.90 ₪",
+        "minQuantity": null,
+        "maxQuantity": null
+      },
+      "pricePerUnitWithoutDiscount": null,
+      "valueForComparison": 100,
+      "unitForComparison": "גרם",
+      "unitDescription": "750 גרם",
+      "depositPrice": null,
+      "gallery360Images": null,
+      "gallery360Link": null,
+      "galleryAudios": null,
+      "galleryPdfs": null,
+      "galleryVideos": null,
+      "generalVideos": null,
+      "links": null,
+      "icon": {
+        "imageType": null,
+        "format": null,
+        "url": null,
+        "altText": null,
+        "galleryIndex": null,
+        "width": null,
+        "code": null,
+        "color": null,
+        "textColor": null,
+        "rank": null
+      },
+      "numberContentUnits": null,
+      "unit": null,
+      "deliveryTime": null,
+      "commercialCategoryGroup": null,
+      "commercialCategorySubGroup": null,
+      "promotions": null,
+      "productPriceGroup": null,
+      "secondLevelCategory": "לחמים ומוצרי מאפה",
+      "cartStatus": {
+        "inCart": false,
+        "qty": null,
+        "sellingMethod": null,
+        "comment": null,
+        "cartEntryNumber": null
+      },
+      "promotionsDisplay": null,
+      "promotionMsg": null,
+      "promotionCharacteristicsImg": null,
+      "promotionCodes": [],
+      "mainPromotionCode": null,
+      "promotionCount": null,
+      "promotionCharacteristicDescription": null,
+      "allCategoryCodes": [
+        "A101402",
+        "A1014",
+        "categories",
+        "A1008",
+        "A10",
+        "A",
+        "A100801"
+      ],
+      "effectiveMinQuantity": null,
+      "effectivePrice": null,
+      "effectivePricePerUnit": null,
+      "remarks": null,
+      "weightConversion": null,
+      "baseProductImageLarge": null,
+      "baseProductImageMedium": null,
+      "baseProductImageSmall": null,
+      "baseProductDescription": "לחם כוסמין מלא 100%",
+      "coordinationType": null,
+      "canonical": null,
+      "supply": null,
+      "responsibility": null,
+      "noIndex": null,
+      "longTail": false,
+      "isBeProduct": null,
+      "leafletLink": null,
+      "modifiable": null,
+      "calories": 236.0,
+      "fats": 1.4,
+      "healthy": null,
+      "sodium": 380.0,
+      "sugar": null,
+      "weightIncrement": 100.0,
+      "maxWeight": null,
+      "minWeight": null,
+      "healthAttributes": [
+        {
+          "code": "VEGAN",
+          "type": "HealthAttributesEnum"
+        }
+      ],
+      "healthRecommendation": null
+    }
+  ],
+  "pagination": {
+    "pageSize": 10,
+    "currentPage": 1,
+    "sort": "relevance",
+    "numberOfPages": 71,
+    "totalNumberOfResults": 704
+  },
+  "facets": [
+    {
+      "code": "categories-2",
+      "name": "קטגוריה",
+      "priority": 100,
+      "category": false,
+      "multiSelect": true,
+      "visible": true,
+      "topValues": null,
+      "values": [
+        {
+          "code": "A10",
+          "name": "לחמים ומוצרי מאפה",
+          "count": 247,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA10",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A10"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G17",
+          "name": "חדר שינה",
+          "count": 152,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG17",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G17"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A28",
+          "name": "אורגני ובריאות",
+          "count": 110,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA28",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A28"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A25",
+          "name": "חטיפים מתוקים ודגני בוקר",
+          "count": 86,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA25",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A25"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G18",
+          "name": "סלון ואווירה",
+          "count": 67,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG18",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G18"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A22",
+          "name": "בישול אפיה ושימורים",
+          "count": 64,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA22",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A22"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A16",
+          "name": "מזון מקורר קפואים ונקניקים",
+          "count": 55,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA16",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A16"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A43",
+          "name": "יום העצמאות",
+          "count": 48,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA43",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A43"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F12",
+          "name": "ללא גלוטן",
+          "count": 44,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AF12",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:F12"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A24",
+          "name": "רשימות",
+          "count": 41,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA24",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A24"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F07",
+          "name": "לחם, קרקרים ופריכיות",
+          "count": 38,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AF07",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:F07"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A34",
+          "name": "ניקיון הבית וחד פעמי",
+          "count": 28,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA34",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A34"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A42",
+          "name": "פסח בשופרסל Online",
+          "count": 25,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA42",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A42"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G14",
+          "name": "מטבח, אירוח וחד פעמי",
+          "count": 25,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG14",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G14"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B02",
+          "name": "איפור ",
+          "count": 20,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AB02",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:B02"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F03",
+          "name": "בישול אפיה ממרחים ושימורים",
+          "count": 20,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AF03",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:F03"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F11",
+          "name": "מן המקפיא",
+          "count": 20,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AF11",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:F11"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A31",
+          "name": "פארם וטיפוח",
+          "count": 19,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA31",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A31"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G02",
+          "name": "חשמל למטבח",
+          "count": 19,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG02",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G02"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A15",
+          "name": "מוצרים בפיקוח",
+          "count": 11,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA15",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A15"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B08",
+          "name": "תינוקות וילדים",
+          "count": 9,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AB08",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:B08"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A32",
+          "name": "עולם התינוקות",
+          "count": 8,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA32",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A32"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F05",
+          "name": "דגנים חטיפים מתוקים ומשקאות",
+          "count": 8,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AF05",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:F05"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B04",
+          "name": "רחצה והגיינה",
+          "count": 7,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AB04",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:B04"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G16",
+          "name": "נסיעות קמפינג ופנאי",
+          "count": 7,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG16",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G16"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B09",
+          "name": "טיפוח הגוף והשיער",
+          "count": 6,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AB09",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:B09"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F13",
+          "name": "ללא תוספת סוכר",
+          "count": 6,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AF13",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:F13"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G13",
+          "name": "GALA HOME",
+          "count": 6,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG13",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G13"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A01",
+          "name": "חלב וביצים",
+          "count": 4,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA01",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A01"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "C55",
+          "name": "חגיגת כדורגל",
+          "count": 4,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AC55",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:C55"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A91",
+          "name": "ONLINE PREMIUM",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA91",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A91"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B03",
+          "name": "טיפוח פנים",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AB03",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:B03"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B12",
+          "name": "בישום",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AB12",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:B12"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G19",
+          "name": "אמבטיה וחדר כביסה",
+          "count": 3,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG19",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G19"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A04",
+          "name": "פירות וירקות",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA04",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A04"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A13",
+          "name": "משקאות אלכוהול ויין",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA13",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A13"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A37",
+          "name": "בעלי חיים",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA37",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A37"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G03",
+          "name": "אלקטרוניקה וסלולר",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG03",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G03"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G15",
+          "name": "גינה וחוץ",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG15",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G15"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "G23",
+          "name": "ילדים ותינוקות",
+          "count": 2,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AG23",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:G23"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A07",
+          "name": "מוצרי בשר, עוף ודגים ",
+          "count": 1,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AA07",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:A07"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "B05",
+          "name": "גברים",
+          "count": 1,
+          "query": {
+            "url": "/search?q=%D7%9C%D7%97%D7%9D+%D7%9E%D7%9C%D7%90%3Arelevance%3Acategories-2%3AB05",
+            "query": {
+              "value": "&#x5dc;&#x5d7;&#x5dd;&#x20;&#x5de;&#x5dc;&#x5d0;:relevance:categories-2:B05"
+            }
+          },
+          "selected": false
+        }
+      ]
+    }
+  ]
+}

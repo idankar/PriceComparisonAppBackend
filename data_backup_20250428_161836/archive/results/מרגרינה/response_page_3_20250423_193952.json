@@ -1,0 +1,35 @@
+{
+  "results": [],
+  "pagination": {
+    "pageSize": 10,
+    "currentPage": 2,
+    "sort": "relevance",
+    "numberOfPages": 0,
+    "totalNumberOfResults": 11
+  },
+  "facets": [
+    {
+      "code": "categories-2",
+      "name": "קטגוריה",
+      "priority": 100,
+      "category": false,
+      "multiSelect": true,
+      "visible": true,
+      "topValues": null,
+      "values": [
+        {
+          "code": "A01",
+          "name": "חלב וביצים",
+          "count": 11,
+          "query": {
+            "url": "/search?q=%D7%9E%D7%A8%D7%92%D7%A8%D7%99%D7%A0%D7%94%3Arelevance%3Acategories-2%3AA01",
+            "query": {
+              "value": "&#x5de;&#x5e8;&#x5d2;&#x5e8;&#x5d9;&#x5e0;&#x5d4;:relevance:categories-2:A01"
+            }
+          },
+          "selected": false
+        }
+      ]
+    }
+  ]
+}

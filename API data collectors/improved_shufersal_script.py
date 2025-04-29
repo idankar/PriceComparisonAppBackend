@@ -62,7 +62,74 @@ COMMON_SEARCH_TERMS = [
     "משקאות", "מים", "סודה", "קולה", "ספרייט", "פאנטה", "מיץ", "תרכיז", "משקה אנרגיה", "קפה",
     "תה", "שוקו", "חלב סויה", "משקה שקדים", "פריגת", "נביעות", "מי עדן", "קפה שחור", "קפה נמס",
     
-    # Add more categories as needed
+    # Fruits and Vegetables (Hebrew)
+    "פירות", "ירקות", "תפוחים", "בננות", "תפוזים", "לימון", "מלפפון", "עגבניות", "גזר", "בצל",
+    "פלפל", "חסה", "כרוב", "תפוחי אדמה", "בטטה", "אבוקדו", "מנגו", "אבטיח", "מלון", "ענבים",
+    "אפרסק", "נקטרינה", "תות", "תאנים", "תמרים", "צנונית", "סלק", "כרובית", "ברוקולי", "קישוא",
+    
+    # Meat and Poultry (Hebrew)
+    "בשר", "עוף", "הודו", "שניצל", "המבורגר", "קציצות", "פרגיות", "כנפיים", "חזה עוף", "כבד",
+    "בשר טחון", "בשר בקר", "סטייק", "צלי", "נקניקיות", "נקניק", "קבב", "פסטרמה", "בשר טלה",
+    
+    # Frozen Foods (Hebrew)
+    "מוצרים קפואים", "פיצה קפואה", "גלידה", "ירקות קפואים", "מוקפא", "שלגונים", "אדממה", "בורקס קפוא",
+    "לקט ירקות", "אפונה קפואה", "שעועית קפואה", "תירס קפוא", "בצק עלים", "בצק קפוא", "פסטה קפואה",
+    
+    # Cleaning Products (Hebrew)
+    "מוצרי ניקוי", "סבון כלים", "אקונומיקה", "מרכך כביסה", "אבקת כביסה", "ג'ל כביסה", "מנקה רצפות",
+    "סבון", "שמפו", "מרכך שיער", "תרסיס ניקוי", "מטליות", "מגבונים", "נייר טואלט", "מברשת שיניים",
+    "משחת שיניים", "סבון נוזלי", "קרם רחצה", "תחליב רחצה", "דאודורנט",
+    
+    # Personal Care (Hebrew)
+    "טיפוח אישי", "קרם לחות", "קרם גוף", "קרם פנים", "קרם ידיים", "שמפו", "מרכך שיער", "דאודורנט",
+    "מי פה", "מברשת שיניים", "משחת שיניים", "תחליב גילוח", "קרם גילוח", "מוס לשיער", "ג'ל לשיער",
+    "סכיני גילוח", "קרם הגנה", "תחבושות", "טמפונים", "מגבונים אינטימיים", "לק לציפורניים", "מסיר לק"
+    
+    # Add these additional search terms to your COMMON_SEARCH_TERMS list
+
+# Home Goods & Kitchen (Hebrew)
+"כלי בית", "מחבת", "סיר", "כוסות", "צלחות", "סכו״ם", "סכינים", "קרש חיתוך", "מגבות", "מצעים", 
+"כריות", "שמיכות", "וילונות", "מפות", "מנורות", "נרות", "מטאטא", "שואב אבק", "קולב", "ארגז כלים",
+"כלי אוכל", "קערות", "תבניות אפייה", "מיקסר", "מעבד מזון", "קומקום", "מיחם", "מגהץ", "מאוורר",
+
+# Office & School Supplies (Hebrew)
+"ציוד משרדי", "עטים", "עפרונות", "מחברות", "נייר", "דפים", "תיקיות", "מהדקים", "מספריים", "דבק",
+"סרגל", "מחשבון", "ילקוט", "תיק בית ספר", "מחק", "טושים", "צבעים", "מדבקות", "לוח שנה", "יומן",
+
+# Electronics & Gadgets (Hebrew)
+"אלקטרוניקה", "סוללות", "מטען", "כבל", "אוזניות", "רמקולים", "מצלמה", "כרטיס זיכרון", "דיסק און קי",
+"מקלדת", "עכבר", "נגן", "רדיו", "שלט רחוק", "פנס", "מתאם", "מפצל חשמל", "מאריך",
+
+# Baby & Child Products (Hebrew)
+"מוצרי תינוקות", "חיתולים", "מגבונים", "טיטולים", "בקבוקים", "מוצצים", "צעצועים", "עגלה", "כסא אוכל",
+"מיטת תינוק", "משחקים", "בגדי תינוקות", "מזון לתינוקות", "דייסה", "תחליף חלב", "לול", "הליכון",
+
+# Health Products (Hebrew)
+"בריאות", "תרופות", "ויטמינים", "תוספי תזונה", "מדחום", "פלסטרים", "חבישה", "מסכות", "אלכוג'ל",
+"כדורים", "סירופ", "תרסיס אף", "טיפות עיניים", "משחות", "מוצרי היגיינה", "מברשת שיניים", "חוט דנטלי",
+
+# Pet Supplies (Hebrew)
+"מוצרי חיות מחמד", "אוכל לכלבים", "אוכל לחתולים", "חטיפים לכלבים", "חטיפים לחתולים", "צעצועים לחיות",
+"קולר", "רצועה", "מיטה לחיות", "תיק נשיאה", "קערת אוכל", "מזון לדגים", "מזון לציפורים", "חול לחתולים",
+
+# Specific Food Brands (Hebrew)
+"תלמה", "עלית", "אסם", "יכין", "מאסטר שף", "שטראוס", "טרה", "תנובה", "זוגלובק", "סוגת", "יפאורה",
+"אחלה", "שפע", "פרי", "האגיס", "ליבר", "סנפרוסט", "רביולי מעולה", "זיתים חרוזים", "תה ויסוצקי",
+
+# International Foods (Hebrew)
+"אוכל מקסיקני", "אוכל סיני", "אוכל תאילנדי", "אוכל יפני", "אוכל אמריקאי", "אוכל איטלקי", 
+"סושי", "פסטה", "נודלס", "טורטיה", "טאקו", "סלסה", "רוטב סויה", "קטשופ", "חרדל", "מיונז",
+
+# Kosher & Religious Products (Hebrew)
+"מוצרים כשרים", "לחם מצה", "יין כשר", "מוצרי פסח", "מוצרי סוכות", "מוצרי חנוכה", "נרות שבת",
+"חלות", "צלחות לפסח", "שמן זית כשר", "בשר כשר למהדרין", "מזון ללא גלוטן כשר", "מוצרי חג",
+
+# Organic & Health Foods (Hebrew)
+"מזון אורגני", "טבעוני", "טבעי", "ללא גלוטן", "דל שומן", "דל סוכר", "ללא לקטוז", "מוצרי סויה",
+"קינואה", "עדשים", "חומוס", "טחינה", "שקדים", "אגוזים", "זרעי צ'יה", "זרעי פשתן", "שיבולת שועל",
+
+# Seasonal Products (Hebrew)
+"מוצרי קיץ", "מוצרי חורף", "גלידות", "ארטיקים", "קפה קר", "תה קר", "מרק", "שוקו חם", "תבשילי חורף"
 ]
 
 # Dictionary of common product translations
@@ -83,6 +150,13 @@ PRODUCT_TRANSLATIONS = {
     "שוקו": "Chocolate Milk",
     # Add more translations as needed
 }
+
+# Custom JSON encoder to handle datetime objects
+class DateTimeEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        return super(DateTimeEncoder, self).default(obj)
 
 # MongoDB connection setup function
 def setup_mongodb_connection(uri="mongodb://localhost:27017/", db_name="price_comparison"):
@@ -240,7 +314,7 @@ class ShufersalScraper:
         # Initialize metadata
         metadata = {
             "product_id": f"shufersal_{product_id}",
-            "name": None,
+            "name": None,  # Default to NULL for English name
             "name_he": "",
             "brand": product_data.get("brandName", ""),
             "price": float(product_data.get("price", {}).get("value", 0) or 0),
@@ -269,11 +343,36 @@ class ShufersalScraper:
             else:
                 non_hebrew_parts.append(word)
         
-        # Check for percentage patterns in dairy products
+        # Check for percentage patterns in dairy products - more comprehensive matching
+        # First try the standard pattern with % sign
         percentage_match = re.search(r'(\d+(?:\.\d+)?)%', full_name)
-        hebrew_text = ' '.join(hebrew_parts)
-        is_dairy = any(term in hebrew_text for term in ["חלב", "יוגורט", "גבינה", "שמנת", "לבן", "קוטג"])
         
+        # If not found, try alternate patterns like "X אחוז" (X percent in Hebrew)
+        if not percentage_match:
+            percentage_match = re.search(r'(\d+(?:\.\d+)?)\s*אחוז', full_name)
+        
+        # If still not found, look for numbers followed by fat-related words
+        if not percentage_match:
+            fat_terms = ['שומן', 'שמנת', 'שמן']  # fat-related terms
+            for term in fat_terms:
+                match = re.search(r'(\d+(?:\.\d+)?)\s*' + term, full_name)
+                if match:
+                    percentage_match = match
+                    break
+        
+        # For dairy products, also check for isolated numbers that might be fat percentages
+        if not percentage_match:
+            # Look for standalone numbers between 0-9 which are common fat percentages
+            standalone_number = re.search(r'(?<!\d)([0-9](?:\.[0-9])?)(?!\d)(?!\s*(?:גרם|ג\'|ג|מ"ל|מל|ק"ג|קג|ליטר|ל|יח\'|ml|g|kg|l|liter))', full_name)
+            if standalone_number:
+                value = float(standalone_number.group(1))
+                if 0 <= value <= 9:  # Likely to be a fat percentage if between 0-9
+                    percentage_match = standalone_number
+        
+        hebrew_text = ' '.join(hebrew_parts)
+        is_dairy = any(term in hebrew_text for term in ["חלב", "יוגורט", "גבינה", "שמנת", "לבן", "קוטג", "לאבנה"])
+        
+        # Special case: if we found a percentage and the product seems to be dairy by name
         if percentage_match and is_dairy:
             # DAIRY PRODUCT WITH FAT PERCENTAGE
             fat_percentage = percentage_match.group(1)
@@ -282,30 +381,29 @@ class ShufersalScraper:
             clean_hebrew = re.sub(r'\s*\d+(?:\.\d+)?%\s*שומן?\s*', ' ', hebrew_text)
             clean_hebrew = re.sub(r'\s+', ' ', clean_hebrew).strip()
             
-            # Set appropriate English name based on product type
-            if "חלב" in clean_hebrew:
+            # Set appropriate English name based on product type, BUT ONLY for confident matches
+            if "חלב" in clean_hebrew and "טרי" in clean_hebrew:
                 if "דל לקטוז" in clean_hebrew:
                     name_en = "Lactose-Free Milk"
                 else:
-                    name_en = "Milk"
-            elif "יוגורט" in clean_hebrew:
+                    name_en = "Fresh Milk"
+            elif "חלב" in clean_hebrew and clean_hebrew.count(" ") < 2:  # Simple milk description
+                name_en = "Milk"
+            elif "יוגורט" in clean_hebrew and clean_hebrew.count(" ") < 2:
                 name_en = "Yogurt"
-            elif "גבינה" in clean_hebrew:
-                if "לבנה" in clean_hebrew:
-                    name_en = "White Cheese"
-                else:
-                    name_en = "Cheese"
-            elif "שמנת" in clean_hebrew:
+            elif "גבינה" in clean_hebrew and "לבנה" in clean_hebrew:
+                name_en = "White Cheese" 
+            elif "שמנת" in clean_hebrew and clean_hebrew.count(" ") < 2:
                 name_en = "Cream"
-            elif "לבן" in clean_hebrew:
-                name_en = "Sour Milk"
-            elif "קוטג" in clean_hebrew:
+            elif "קוטג" in clean_hebrew and clean_hebrew.count(" ") < 2:
                 name_en = "Cottage Cheese"
             else:
-                name_en = "Dairy Product"
+                # For other dairy products, leave English name as NULL
+                name_en = None
+                logger.info(f"Dairy product without confident English translation: {clean_hebrew}")
             
             # Set metadata
-            metadata["name"] = name_en
+            metadata["name"] = name_en  # May be None
             metadata["name_he"] = clean_hebrew
             metadata["amount"] = float(fat_percentage) if fat_percentage.replace('.', '').isdigit() else fat_percentage
             metadata["unit"] = "%"
@@ -314,8 +412,17 @@ class ShufersalScraper:
             # Set Hebrew name
             metadata["name_he"] = ' '.join(hebrew_parts) if hebrew_parts else ""
             
-            # Set English name only if meaningful English text was found
-            if non_hebrew_parts and not all(part.isdigit() or part == "%" for part in non_hebrew_parts):
+            # CHANGE: For non-dairy products, set English name to NULL by default
+            # We'll let a future translation step handle this properly
+            metadata["name"] = None
+            
+            # Only set English name if it's a well-defined English term 
+            # (and not just numbers, brand names, or generic terms)
+            english_words = [word for word in non_hebrew_parts 
+                            if word.isalpha() and len(word) > 2 
+                            and word.lower() not in ['the', 'and', 'for', 'with', 'new']]
+            
+            if english_words and len(english_words) >= 2:  # At least 2 meaningful English words
                 metadata["name"] = ' '.join(non_hebrew_parts)
             
             # Try to extract amount and unit
@@ -373,77 +480,23 @@ class ShufersalScraper:
             product_dir = os.path.join(self.products_dir, formatted_id)
             os.makedirs(product_dir, exist_ok=True)
             
-            # Extract product information
-            name = product_data.get("name", "")
+            # Extract product metadata using our improved function
+            metadata = self.extract_product_metadata(product_data)
             
-            # Extract amount and unit information
-            amount = None
-            unit = product_data.get("unitDescription", "")
+            # Log dairy products with missing percentage information
+            if "חלב" in metadata.get("name_he", "") and metadata.get("unit") != "%" and metadata.get("amount") is None:
+                logger.info(f"Possible dairy product missing percentage: {metadata.get('name_he')} - {formatted_id}")
             
-            # Try to extract amount from product name
-            if " " in name and any(char.isdigit() for char in name):
-                parts = name.split()
-                for part in parts:
-                    if any(char.isdigit() for char in part):
-                        if "%" in part:
-                            amount = part
-                            unit = "%"
-                        elif "מ\"ל" in part or "מל" in part:
-                            amount = part.replace("מ\"ל", "").replace("מל", "").strip()
-                            unit = "ml"
-                        elif "גרם" in part:
-                            amount = part.replace("גרם", "").strip()
-                            unit = "g"
-                        elif "ק\"ג" in part or "קג" in part:
-                            amount = part.replace("ק\"ג", "").replace("קג", "").strip()
-                            unit = "kg"
-                        elif "ליטר" in part:
-                            amount = part.replace("ליטר", "").strip()
-                            unit = "l"
-                        elif "יח" in part:
-                            amount = part.replace("יח", "").strip()
-                            unit = "unit"
+            # Add timestamp for MongoDB
+            metadata["last_updated"] = datetime.now()
             
-            # Extract Hebrew name if present
-            name_he = ""
-            if any(c in HEBREW_CHARS for c in name):
-                name_he = ''.join(c for c in name if c in HEBREW_CHARS or c == ' ')
-                name_he = re.sub(r'\s+', ' ', name_he).strip()
-                
-                # Remove Hebrew from English name
-                name_en = ''.join(c for c in name if c not in HEBREW_CHARS)
-                name_en = re.sub(r'\s+', ' ', name_en).strip()
-                
-                if name_en:
-                    name = name_en
-                else:
-                    name = name_he
-            
-            # Get price and brand
-            price = product_data.get("price", {}).get("value", 0)
-            brand = product_data.get("brandName", "")
-            
-            # Create metadata
-            metadata = {
-                "product_id": formatted_id,
-                "name": name,
-                "name_he": name_he,
-                "brand": brand,
-                "price": price,
-                "amount": amount,
-                "unit": unit,
-                "retailer": "Shufersal",
-                "source": "shufersal",
-                "source_id": product_id,
-                "last_updated": datetime.now()
-            }
-            
-            # Remove empty metadata fields
-            metadata = {k: v for k, v in metadata.items() if v not in (None, "")}
+            # Create a copy of metadata for JSON serialization (without datetime objects)
+            metadata_for_json = metadata.copy()
+            metadata_for_json["last_updated"] = metadata["last_updated"].isoformat()
             
             # Save metadata to file system (for backup/compatibility)
             with open(os.path.join(product_dir, "metadata.json"), 'w', encoding='utf-8') as f:
-                json.dump(metadata, f, ensure_ascii=False, indent=2)
+                json.dump(metadata_for_json, f, ensure_ascii=False, indent=2)
             
             # Download and save images, get image filenames
             image_filenames = self._download_product_images(product_data, product_dir)
@@ -452,11 +505,17 @@ class ShufersalScraper:
             metadata["images"] = image_filenames
             
             # Store in MongoDB
-            self.mongodb["products"].update_one(
+            result = self.mongodb["products"].update_one(
                 {"product_id": formatted_id},
                 {"$set": metadata},
                 upsert=True
             )
+            
+            # Log MongoDB insertion results for troubleshooting
+            if result.modified_count > 0 or result.upserted_id is not None:
+                logger.debug(f"Successfully added/updated product {formatted_id} in MongoDB")
+            else:
+                logger.warning(f"Product {formatted_id} may not have been added to MongoDB properly")
             
             # Add to processed set
             self.processed_products.add(product_id)
@@ -542,7 +601,8 @@ class ShufersalScraper:
                     img.save(img_bytes, format="JPEG", quality=95)
                     img_bytes.seek(0)
                     
-                    # Store in GridFS
+                    # Store in GridFS with metadata as separate, serializable elements
+                    # Avoid putting datetime directly in the metadata
                     image_metadata = {
                         "product_id": formatted_id,
                         "filename": img_filename,
@@ -550,20 +610,21 @@ class ShufersalScraper:
                         "width": img.width,
                         "height": img.height,
                         "content_type": "image/jpeg",
-                        "uploaded_at": datetime.now()
+                        "uploaded_at": datetime.now().isoformat()  # Store as string
                     }
                     
-                    # Check if image already exists in GridFS
-                    existing_image = self.mongodb["fs"].find_one({
-                        "product_id": formatted_id,
-                        "filename": img_filename
+                    # Check if image already exists in GridFS (using product_id and filename as key)
+                    existing_file = self.mongodb["fs"].find_one({
+                        "metadata.product_id": formatted_id, 
+                        "metadata.filename": img_filename
                     })
                     
                     # If not exists, save to GridFS
-                    if not existing_image:
+                    if not existing_file:
                         self.mongodb["fs"].put(
                             img_bytes.getvalue(),
-                            **image_metadata
+                            filename=img_filename,  # Include filename in GridFS doc
+                            metadata=image_metadata  # Store metadata
                         )
                     
                     # Small delay between downloads
@@ -656,7 +717,7 @@ class ShufersalScraper:
         # Count products with Hebrew
         products_with_hebrew_pipeline = [
             {"$match": {"source": "shufersal"}},
-            {"$match": {"name_he": {"$exists": True, "$ne": ""}}},
+            {"$match": {"name_he": {"$exists": True, "$ne": None}}},
             {"$count": "count"}
         ]
         products_with_hebrew_result = list(self.mongodb["products"].aggregate(products_with_hebrew_pipeline))
@@ -690,7 +751,8 @@ class ShufersalScraper:
             "products_with_hebrew": products_with_hebrew,
             "avg_images_per_product": avg_images_per_product,
             "percent_with_images": percent_with_images,
-            "percent_with_hebrew": percent_with_hebrew
+            "percent_with_hebrew": percent_with_hebrew,
+            "generated_at": datetime.now().isoformat()  # Use string format for JSON
         }
         
         # Save summary (keep for backup/compatibility)

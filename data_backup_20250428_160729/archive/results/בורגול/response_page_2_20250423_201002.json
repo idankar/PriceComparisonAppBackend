@@ -1,0 +1,71 @@
+{
+  "results": [],
+  "pagination": {
+    "pageSize": 10,
+    "currentPage": 1,
+    "sort": "relevance",
+    "numberOfPages": 0,
+    "totalNumberOfResults": 4
+  },
+  "facets": [
+    {
+      "code": "categories-2",
+      "name": "קטגוריה",
+      "priority": 100,
+      "category": false,
+      "multiSelect": true,
+      "visible": true,
+      "topValues": null,
+      "values": [
+        {
+          "code": "A22",
+          "name": "בישול אפיה ושימורים",
+          "count": 4,
+          "query": {
+            "url": "/search?q=%D7%91%D7%95%D7%A8%D7%92%D7%95%D7%9C%3Arelevance%3Acategories-2%3AA22",
+            "query": {
+              "value": "&#x5d1;&#x5d5;&#x5e8;&#x5d2;&#x5d5;&#x5dc;:relevance:categories-2:A22"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A28",
+          "name": "אורגני ובריאות",
+          "count": 1,
+          "query": {
+            "url": "/search?q=%D7%91%D7%95%D7%A8%D7%92%D7%95%D7%9C%3Arelevance%3Acategories-2%3AA28",
+            "query": {
+              "value": "&#x5d1;&#x5d5;&#x5e8;&#x5d2;&#x5d5;&#x5dc;:relevance:categories-2:A28"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "A500801",
+          "name": "שוברים שיאים במבצעים",
+          "count": 1,
+          "query": {
+            "url": "/search?q=%D7%91%D7%95%D7%A8%D7%92%D7%95%D7%9C%3Arelevance%3Acategories-2%3AA500801",
+            "query": {
+              "value": "&#x5d1;&#x5d5;&#x5e8;&#x5d2;&#x5d5;&#x5dc;:relevance:categories-2:A500801"
+            }
+          },
+          "selected": false
+        },
+        {
+          "code": "F03",
+          "name": "בישול אפיה ממרחים ושימורים",
+          "count": 1,
+          "query": {
+            "url": "/search?q=%D7%91%D7%95%D7%A8%D7%92%D7%95%D7%9C%3Arelevance%3Acategories-2%3AF03",
+            "query": {
+              "value": "&#x5d1;&#x5d5;&#x5e8;&#x5d2;&#x5d5;&#x5dc;:relevance:categories-2:F03"
+            }
+          },
+          "selected": false
+        }
+      ]
+    }
+  ]
+}
