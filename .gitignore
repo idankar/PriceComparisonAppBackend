@@ -31,6 +31,7 @@ data/donut/
 data/products/
 data/augmented_dataset
 data/clip_augmented
+/Users/noa/Desktop/PriceComparisonApp/data_backup_20250428_160729/raw
 # data/donut_data/images/ # Covered by data/donut/
 
 # Models
