@@ -26,9 +26,9 @@ TRAIN_JSON = os.path.join(DONUT_DATA_DIR, "train.json")
 TRAIN_CLEANED_JSON = os.path.join(DONUT_DATA_DIR, "train.cleaned.json")
 MASTER_OCR_CSV = os.path.join(OCR_RESULTS_DIR, "master_ocr_results.csv")
 
-# OCR configuration
+# OCR configuration - Optimized for Hebrew product labels
 OCR_LANG = "heb+eng"
-OCR_CONFIG = "--psm 6"
+OCR_CONFIG = "--oem 3 --psm 6"  # LSTM neural network with uniform block text
 
 # YOLO configuration
 YOLO_MODEL = "yolov8n.pt"
@@ -156,9 +156,14 @@ SCREENSHOT_WIDTH = 1920
 SCREENSHOT_HEIGHT = 1080
 DEFAULT_BROWSER_TIMEOUT = 30  # seconds
 
-# OCR settings
+# OCR settings - Optimized for Hebrew product text recognition
 TESSERACT_CMD = r'tesseract'  # Update if tesseract is in a different location
-TESSERACT_CONFIG = r'--oem 1 --psm 11 -l heb+eng'
+# Best configuration based on testing: LSTM neural network + uniform block text
+TESSERACT_CONFIG = r'--oem 3 --psm 6 -l heb+eng'
+# Alternative PSM modes for different text layouts
+TESSERACT_PSM_MODES = [3, 6, 8, 11]  # auto, uniform block, single word, sparse text
+# High contrast threshold for confidence filtering
+TESSERACT_MIN_CONFIDENCE = 70
 
 # API extraction settings
 API_MAX_RETRIES = 3

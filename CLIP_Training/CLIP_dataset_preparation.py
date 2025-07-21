@@ -14,7 +14,7 @@ mpl.rcParams['font.family'] = 'DejaVu Sans'
 # --- CONFIGURATION ---
 PRODUCTS_DIR = '/Users/noa/Desktop/PriceComparisonApp/data/products'
 OUTPUT_DIR = '/Users/noa/Desktop/PriceComparisonApp/data/augmented_dataset'
-SELECT_N_PRODUCTS = 20  # Limiting for quick test
+SELECT_N_PRODUCTS = None  # Limiting for quick test
 IMG_SIZE = 224
 
 # Create output dir if needed

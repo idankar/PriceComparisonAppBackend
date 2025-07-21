@@ -1,10 +1,26 @@
-# Python
+# Dataset files
+*.jsonl
+*.json
+
+# Image directories
+**/images/
+**/*_images/
+**/*_product_images/
+hatzi_hinam_product_images/
+**/augmented_images/
+**/preprocessed_images/
+**/cropped_images/
+
+# Checkpoint directories
+checkpoints/
+
+# Python environment
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-
+env/
 build/
 develop-eggs/
 dist/
@@ -19,57 +35,20 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# Data files
-data/ocr_results/
-data/raw_images/
-data/labeled/
-data/augmented/
-data/donut/
-data/products/
-data/augmented_dataset/
-data/clip_augmented/
-
-# Backup image directories (exclude from Git)
-old_files/data_backup_20250428_160729/
-old_files/data_backup_20250428_161836/
-old_files/data_backup_20250428_161836/archive/augmented/
-data_backup_20250428_160729/archive/annotation/raw/
-data_backup_20250428_160729/archive/augmented/
-data_backup_20250428_160729/archive/annotation/images/
-
-# Models
-models/
-*.pt
-
-# Logs & Temp
-logs/
-*.log
-*.tmp
-*.pid
-nohup.out
-
-# Duplicates
-__pycache__/
-*.pyc
-
-# Backup
-backup/
-
-# Environment
 .env
-.venv
-env/
 venv/
 ENV/
 compare_env/
+fresh_env/
 
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+# Jupyter Notebooks
+.ipynb_checkpoints
 
-# API Keys & Sensitive Info
-*.key
-api_keys.json
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

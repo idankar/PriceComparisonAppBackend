@@ -1,1 +1,0 @@
-"""PriceComparisonApp main package."""

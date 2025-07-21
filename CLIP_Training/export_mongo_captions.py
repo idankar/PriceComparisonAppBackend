@@ -16,11 +16,12 @@ collection = db[COLLECTION_NAME]
 # --- FETCH DOCUMENTS AND BUILD CAPTIONS ---
 captions = []
 count = 0
-for doc in tqdm(collection.find({}, {"name_he": 1, "brand": 1, "_id": 0})):
+for doc in tqdm(collection.find({}, {"product_id": 1, "name_he": 1, "brand": 1, "_id": 0})):
+    product_id = doc.get("product_id", "")
     name = doc.get("name_he", "")
     brand = doc.get("brand", "")
 
-    if not name or not brand:
+    if not (product_id and name and brand):
         continue
 
     # Flip field order for English brand names (heuristic: contains any Latin letter)
@@ -29,7 +30,7 @@ for doc in tqdm(collection.find({}, {"name_he": 1, "brand": 1, "_id": 0})):
     else:
         caption = f"שם מוצר: {name}\nמותג: {brand}"
 
-    captions.append(caption)
+    captions.append(f"{product_id}\n{caption}")
     count += 1
 
 # --- SAVE TO FILE ---
