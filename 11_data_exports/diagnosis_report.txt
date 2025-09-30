@@ -1,0 +1,109 @@
+Traceback (most recent call last):
+  File "/Users/idankarbat/Documents/noa_recovery/Desktop/PriceComparisonApp/retailer_diagnosis_fuzzy_match.py", line 434, in main
+    fuzzy_matches = fuzzy_match_test(cursor)
+  File "/Users/idankarbat/Documents/noa_recovery/Desktop/PriceComparisonApp/retailer_diagnosis_fuzzy_match.py", line 197, in fuzzy_match_test
+    cursor.execute(query)
+  File "/Users/idankarbat/Library/Python/3.9/lib/python/site-packages/psycopg2/extras.py", line 146, in execute
+    return super().execute(query, vars)
+psycopg2.errors.FeatureNotSupported: DISTINCT is not implemented for window functions
+LINE 7:                 COUNT(DISTINCT r.retailername) OVER (PARTITI...
+                        ^
+
+
+================================================================================
+RETAILER DIAGNOSIS & FUZZY MATCHING ANALYSIS
+================================================================================
+Generated: 2025-09-28 13:43:39
+
+================================================================================
+TEST 1: RETAILER DATA QUALITY DIAGNOSIS
+================================================================================
+
+📊 RETAILER DATA QUALITY METRICS:
+--------------------------------------------------------------------------------
+
+Super-Pharm:
+  Unique Products: 19,621
+  Total Price Points: 7,164,851
+  Stores with Prices: 305
+  Days with Data: 1
+  Data Range: 2025-09-20 to 2025-09-20
+  Avg Product Name Length: 32.5 chars
+  Standard Barcodes (13-digit): 17,969
+  Non-standard Barcodes: 1,652
+  Products in Canonical: 19,621
+  Products with Images: 8,460
+
+Good Pharm:
+  Unique Products: 12,134
+  Total Price Points: 1,455,678
+  Stores with Prices: 72
+  Days with Data: 1
+  Data Range: 2025-09-25 to 2025-09-25
+  Avg Product Name Length: 38.7 chars
+  Standard Barcodes (13-digit): 11,080
+  Non-standard Barcodes: 1,054
+  Products in Canonical: 12,134
+  Products with Images: 5,003
+
+Be Pharm:
+  Unique Products: 12,023
+  Total Price Points: 151,450
+  Stores with Prices: 88
+  Days with Data: 914
+  Data Range: 2012-01-31 to 2025-09-19
+  Avg Product Name Length: 22.1 chars
+  Standard Barcodes (13-digit): 9,893
+  Non-standard Barcodes: 2,130
+  Products in Canonical: 12,023
+  Products with Images: 6,459
+
+--------------------------------------------------------------------------------
+PAIRWISE RETAILER OVERLAPS:
+--------------------------------------------------------------------------------
+Be Pharm ↔ Good Pharm: 4,489 shared products
+Be Pharm ↔ Super-Pharm: 4,151 shared products
+Good Pharm ↔ Super-Pharm: 3,937 shared products
+
+--------------------------------------------------------------------------------
+DATA FRESHNESS CHECK (Last 30 days):
+--------------------------------------------------------------------------------
+Super-Pharm: 19,621 products with recent prices
+Good Pharm: 12,131 products with recent prices
+Be Pharm: 1,310 products with recent prices
+
+================================================================================
+BARCODE FORMAT CONSISTENCY CHECK
+================================================================================
+
+Be Pharm Barcode Lengths:
+  8-digit: 279 (2.3%)
+  10-digit: 5 (0.0%)
+  11-digit: 396 (3.3%)
+  12-digit: 1,450 (12.1%)
+  13-digit: 9,893 (82.3%)
+
+Good Pharm Barcode Lengths:
+  8-digit: 390 (3.2%)
+  9-digit: 1 (0.0%)
+  10-digit: 10 (0.1%)
+  11-digit: 302 (2.5%)
+  12-digit: 351 (2.9%)
+  13-digit: 11,080 (91.3%)
+
+Super-Pharm Barcode Lengths:
+  8-digit: 318 (1.6%)
+  9-digit: 2 (0.0%)
+  10-digit: 20 (0.1%)
+  11-digit: 70 (0.4%)
+  12-digit: 1,242 (6.3%)
+  13-digit: 17,969 (91.6%)
+
+================================================================================
+TEST 2: FUZZY MATCHING ANALYSIS
+================================================================================
+
+❌ Error during analysis: DISTINCT is not implemented for window functions
+LINE 7:                 COUNT(DISTINCT r.retailername) OVER (PARTITI...
+                        ^
+

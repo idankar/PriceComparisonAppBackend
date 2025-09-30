@@ -1,0 +1,218 @@
+
+================================================================================
+UNSCRAPED PRODUCTS ANALYSIS
+================================================================================
+Generated: 2025-09-28 13:17:35
+
+================================================================================
+ANALYSIS OF UNSCRAPED PRODUCTS BY RETAILER
+================================================================================
+
+Unscraped Products by Retailer:
+------------------------------------------------------------
+Super-Pharm            11,161 products (1,976,568 price points)
+Good Pharm              6,772 products (625,034 price points)
+Be Pharm                5,564 products (36,315 price points)
+
+================================================================================
+SAMPLING UNSCRAPED PRODUCTS
+================================================================================
+
+================================================================================
+PRODUCT CATEGORY BREAKDOWN
+================================================================================
+
+Total sampled: 500
+Pharmacy-related: 327 (65.4%)
+Non-pharmacy: 173 (34.6%)
+
+------------------------------------------------------------
+Category Distribution:
+------------------------------------------------------------
+📦 uncategorized         147 ( 29.4%)
+💊 skincare              117 ( 23.4%)
+💊 cosmetics              87 ( 17.4%)
+💊 hair_care              47 (  9.4%)
+💊 oral_care              26 (  5.2%)
+💊 deodorant              22 (  4.4%)
+📦 household              13 (  2.6%)
+📦 food                   13 (  2.6%)
+💊 baby_care              11 (  2.2%)
+💊 vitamins                9 (  1.8%)
+💊 feminine_care           6 (  1.2%)
+💊 food_supplements        1 (  0.2%)
+💊 medical_devices         1 (  0.2%)
+
+================================================================================
+SAMPLE PRODUCTS BY CATEGORY
+================================================================================
+
+UNCATEGORIZED (Count: 147):
+------------------------------------------------------------
+  1. [7290118202578] לייף מקלוני אוזניים לב ורוד 200 י
+     Brand: לייף
+     Retailer: Super-Pharm, Price points: 912
+  2. [7290008017916] מורז משחת פוליגונום לעור פגום (משושת)
+     Brand: מורז
+     Retailer: Super-Pharm, Price points: 912
+  3. [4001638099226] וולדה שמן עיסוי עם ארניקה
+     Brand: סמואלוב
+     Retailer: Super-Pharm, Price points: 911
+
+SKINCARE (Count: 117):
+------------------------------------------------------------
+  1. [3337875598996] סרווה קרם לחות לעור יבש-יבש מאוד 177
+     Brand: נורוליס
+     Retailer: Super-Pharm, Price points: 912
+  2. [3337875597197] סרווה גל מקציף לניקוי העור רגיל-שמן 236
+     Brand: נורוליס
+     Retailer: Super-Pharm, Price points: 912
+  3. [7290118209720] לייף פייס איט - מסכת לחות
+     Brand: General
+     Retailer: Super-Pharm, Price points: 912
+
+COSMETICS (Count: 87):
+------------------------------------------------------------
+  1. [3337875684101] קרם לחות להחלקת העור חומצה סיליצילית 340
+     Brand: נורוליס
+     Retailer: Super-Pharm, Price points: 912
+  2. [7290103446758] לייף איזי פלקס MSM שלישיה 220+110
+     Brand: לייף
+     Retailer: Super-Pharm, Price points: 912
+  3. [3337875684095] קרם לחות להחלקת העור חומצה סיליצילית 177
+     Brand: נורוליס
+     Retailer: Super-Pharm, Price points: 910
+
+HAIR CARE (Count: 47):
+------------------------------------------------------------
+  1. [7290111604904] לייף סטרונג-הייר שמפו ביוטין 500 מל
+     Brand: לייף
+     Retailer: Super-Pharm, Price points: 912
+  2. [7290114967488] לייף סטרונג-הייר מסכת שיער שמן קיק 500 מ
+     Brand: פרופשונל
+     Retailer: Super-Pharm, Price points: 909
+  3. [8809738325124] סו.קו דאבל דואו
+     Brand: General
+     Retailer: Super-Pharm, Price points: 909
+
+ORAL CARE (Count: 26):
+------------------------------------------------------------
+  1. [7290114965170] לייף קופסת אחסנה לשיניים תותבות
+     Brand: זר הייטק
+     Retailer: Super-Pharm, Price points: 912
+  2. [7290000146997] טום וג'רי משחת שיניים בטעם מסטיק 50 מל
+     Brand: General
+     Retailer: Super-Pharm, Price points: 909
+  3. [7610458107447] 744-מברשת שיניים 3 שורות אינטרספייס ירוק
+     Brand: סיראם
+     Retailer: Super-Pharm, Price points: 906
+
+DEODORANT (Count: 22):
+------------------------------------------------------------
+  1. [7290000288659] סנו די רול און גונגל 50 מל
+     Brand: General
+     Retailer: Super-Pharm, Price points: 912
+  2. [7290119919932] לייף מקלוני אוזניים פלסטיק קופסא 400 יחי
+     Brand: לייף
+     Retailer: Super-Pharm, Price points: 912
+  3. [7290118204183] לייף רול און דוחה יתושים לתינוקות וילדים
+     Brand: שיק תעשיות תמרוקים
+     Retailer: Super-Pharm, Price points: 909
+
+HOUSEHOLD (Count: 13):
+------------------------------------------------------------
+  1. [7290000288420] סנו די תרסיס
+     Brand: General
+     Retailer: Super-Pharm, Price points: 909
+  2. [7290108352900] סנו סושי מגבות הפלא גליל כפול 6=12
+     Brand: לא ידוע
+     Retailer: Super-Pharm, Price points: 904
+  3. [7290005423369] סנו די קידס תחליב דוחה יתושים לילדים 100
+     Brand: החברה הדרומית
+     Retailer: Super-Pharm, Price points: 903
+
+FOOD (Count: 13):
+------------------------------------------------------------
+  1. [7290111604935] לייף אול אין חטיף חלבון 100 עוגיות קראנץ
+     Brand: מדיטרנד
+     Retailer: Super-Pharm, Price points: 901
+  2. [5060365798047] מאד ביוטי יסמין מסכת תה ירוק
+     Brand: General
+     Retailer: Super-Pharm, Price points: 895
+  3. [5060365798924] מאד ביוטי מליפיסנט מסכת תה ירוק
+     Brand: General
+     Retailer: Super-Pharm, Price points: 893
+
+BABY CARE (Count: 11):
+------------------------------------------------------------
+  1. [7290008909853] קולה ZERO בקבוק 0.5 מל
+     Brand: General
+     Retailer: Super-Pharm, Price points: 909
+  2. [7290111591686] לייף בייביז מקלוני אוזניים בטיחותיים 60
+     Brand: לייף
+     Retailer: Super-Pharm, Price points: 907
+  3. [7290113829879] לייף בייביז מתלה לעגלה
+     Brand: איתן
+     Retailer: Super-Pharm, Price points: 906
+
+VITAMINS (Count: 9):
+------------------------------------------------------------
+  1. [7290103449421] לייף ויטמין D-400 כמוסות רכות 120 יח
+     Brand: לייף
+     Retailer: Super-Pharm, Price points: 912
+  2. [7290019444138] אלטמן ביוטין גלי בינס 1000 מקג 60 סוכריו
+     Brand: אלטמן
+     Retailer: Super-Pharm, Price points: 911
+  3. [0033984010741] סולגר מולטי פימייל 60 טבליות
+     Brand: אמברוזיה/סולגר
+     Retailer: Super-Pharm, Price points: 911
+
+================================================================================
+RETAILER-SPECIFIC BREAKDOWN
+================================================================================
+
+Super-Pharm:
+  uncategorized        147 ( 29.4%)
+  skincare             117 ( 23.4%)
+  cosmetics             87 ( 17.4%)
+  hair_care             47 (  9.4%)
+  oral_care             26 (  5.2%)
+
+================================================================================
+SPECIFIC PATTERN ANALYSIS
+================================================================================
+
+Top Hebrew/Local Brands Not Scraped:
+----------------------------------------
+  לא ידוע                        5416 products
+  מיננה                           716 products
+  אלפא                            653 products
+  כללי                            632 products
+  לייף                            627 products
+  דיפלומט                         568 products
+  שסטוביץ                         473 products
+  לוריאל                          455 products
+  שמחה זה אנחנו                   350 products
+  לילית                           253 products
+  אסתי לאודר                      231 products
+  לנקום                           199 products
+  יוניליוור                       189 products
+  רייס                            186 products
+  גייד                            168 products
+  נורוליס                         166 products
+  אלקליל                          150 products
+  כמיפל                           127 products
+  רבלון                           126 products
+  קוסנובה                         105 products
+
+------------------------------------------------------------
+Keyword Pattern Analysis:
+------------------------------------------------------------
+  Generic/Store Brand        1,853 products
+  International Brands           2 products
+  Food Items                   663 products
+  Non-Pharmacy Items           252 products
+
+================================================================================
+ANALYSIS COMPLETE
+================================================================================

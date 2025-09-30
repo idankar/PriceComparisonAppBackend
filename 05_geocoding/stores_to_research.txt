@@ -1,0 +1,22 @@
+Stores with potential location info in name: 114
+
+1. Be Pharm        | ID: 7678835    | BE אוסישקין
+2. Be Pharm        | ID: 7696681    | BE אפרת
+3. Be Pharm        | ID: 7695467    | BE אריאל
+4. Be Pharm        | ID: 7493106    | BE באר שבע
+5. Be Pharm        | ID: 12398859   | BE בלוך גבעתיים
+6. Be Pharm        | ID: 12398862   | BE דיזנגוף סנטר
+7. Be Pharm        | ID: 7693109    | BE מעלה אדומים
+8. Be Pharm        | ID: 7444642    | BE נתיבות
+9. Be Pharm        | ID: 12398876   | BE נתניה
+10. Be Pharm        | ID: 7505954    | BE עיןשמר
+11. Be Pharm        | ID: 7694327    | BE קרית גת-כרמי גת
+12. Be Pharm        | ID: 12398878   | BE ראש העין
+13. Be Pharm        | ID: 12633086   | BE ראשי
+14. Be Pharm        | ID: 7600463    | BE רמלה נווה דורון
+15. Be Pharm        | ID: 12398879   | BE רמת גן
+16. Be Pharm        | ID: 16678063   | Be Pharm Store 017
+17. Be Pharm        | ID: 17100928   | Be Pharm Store 020
+18. Be Pharm        | ID: 7661630    | Be Pharm Store 703
+19. Be Pharm        | ID: 7687784    | Be Pharm Store 779
+20. Be Pharm        | ID: 7700040    | Be Pharm Store 819

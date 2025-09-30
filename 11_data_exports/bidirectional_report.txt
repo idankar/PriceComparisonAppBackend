@@ -1,0 +1,167 @@
+
+================================================================================
+BIDIRECTIONAL LINKAGE ANALYSIS
+================================================================================
+Generated: 2025-09-28 13:12:07
+
+================================================================================
+1. COMMERCIAL PRODUCTS WITHOUT PRICE LISTINGS
+================================================================================
+
+Commercial Products Status by Scraper:
+----------------------------------------------------------------------
+
+Super-Pharm:
+  Total scraped products: 15,203
+  Without ANY price listing: 7,453 (49.0%)
+  Without current price: 0
+  With images: 15,203 (100.0%)
+
+Be Pharm:
+  Total scraped products: 7,772
+  Without ANY price listing: 3,070 (39.5%)
+  Without current price: 0
+  With images: 7,772 (100.0%)
+
+Good Pharm:
+  Total scraped products: 359
+  Without ANY price listing: 0 (0.0%)
+  Without current price: 3
+  With images: 0 (0.0%)
+
+📊 TOTAL: 10,523 out of 23,334 commercial products have NO price listings (45.1%)
+
+Sample of commercial products with NO price listings:
+  1. 7290008015561 - קלו-קוט תרסיס מסייע במניעה וטיפול בצלקות גדולות או (Super-Pharm)
+     Image: Yes
+  2. 721749654926 - מפיץ ריח עם מקלות- לקשרי (Be Pharm)
+     Image: Yes
+  3. 7290111069987 - לייף גומיות קטנות לשיער של תינוקות בצבעוניות מתחלפ (Super-Pharm)
+     Image: Yes
+  4. 1225225210143 - סבון טבעי זרעי רימון (Super-Pharm)
+     Image: Yes
+  5. 5715239214498 - Frigg מוצץ גומי קרואסון נייט דייזי מידה 1 (Super-Pharm)
+     Image: Yes
+  6. 7290014298439 - לייף כפפת רחצה טבעית (Super-Pharm)
+     Image: Yes
+  7. 7290014298361 - לייף רצועת עיסוי (Super-Pharm)
+     Image: Yes
+  8. 7290109315300 - לייף מברשת לשיער רחבה ורודה Wet brush (Super-Pharm)
+     Image: Yes
+  9. 7290114703253 - Hola נשכן בצורת מחזיק מפתחות מוזיקלי לרכב עם אורות (Super-Pharm)
+     Image: Yes
+  10. 1265865810952 - א.א היגיינה ספוג ללא סבון שק של (Super-Pharm)
+     Image: Yes
+
+================================================================================
+2. PRICE LISTINGS WITHOUT COMMERCIAL PRODUCTS
+================================================================================
+
+Price Listings Status by Retailer:
+----------------------------------------------------------------------
+
+Super-Pharm:
+  Products with prices: 19,621
+  Not in canonical at all: 0 (0.0%)
+  In canonical (ETL only): 11,161 (56.9%)
+  Linked to commercial: 8,460 (43.1%)
+  Total price points: 7,164,851
+
+Good Pharm:
+  Products with prices: 12,131
+  Not in canonical at all: 0 (0.0%)
+  In canonical (ETL only): 6,772 (55.8%)
+  Linked to commercial: 5,359 (44.2%)
+  Total price points: 1,455,678
+
+Be Pharm:
+  Products with prices: 12,023
+  Not in canonical at all: 0 (0.0%)
+  In canonical (ETL only): 5,564 (46.3%)
+  Linked to commercial: 6,459 (53.7%)
+  Total price points: 151,450
+
+📊 SUMMARY:
+  - 0 products with prices are NOT in canonical table at all
+  - 23,497 products with prices are in canonical but from ETL fallback only
+  - 23,497 total products with prices but NO commercial scraper data
+
+================================================================================
+3. IMAGE COMPLETENESS VS PRODUCT COMPLETENESS
+================================================================================
+
+Product Completeness Analysis:
+----------------------------------------------------------------------
+
+Commercial Products:
+  Total: 30,804
+  With price listings: 20,281 (65.8%)
+  With images: 30,445 (98.8%)
+  With names: 30,804 (100.0%)
+  With brands: 5,946 (19.3%)
+  Have name but NO image: 359
+  Complete (price + image): 19,922
+
+ETL Fallback Products:
+  Total: 23,826
+  With price listings: 23,497 (98.6%)
+  With images: 0 (0.0%)
+  With names: 23,826 (100.0%)
+  With brands: 23,762 (99.7%)
+  Have name but NO image: 23,826
+  Complete (price + image): 0
+
+⚠️  Commercial products with names but NO images (indicates scraper issue):
+  Good Pharm: 359 products
+
+================================================================================
+4. BARCODE MATCHING ANALYSIS
+================================================================================
+
+Barcode Length Distribution Comparison:
+Length | Retailer Products | Canonical Products | Difference
+------------------------------------------------------------
+     5 |                 0 |                 17 |         17 
+     6 |                 0 |                102 |        102 ⚠️
+     7 |                 0 |                558 |        558 ⚠️
+     8 |               987 |                588 |        399 ⚠️
+     9 |                 3 |                 13 |         10 
+    10 |                35 |                 44 |          9 
+    11 |               768 |                885 |        117 ⚠️
+    12 |             3,043 |              4,235 |      1,192 ⚠️
+    13 |            38,942 |             37,631 |      1,311 ⚠️
+    14 |                 0 |                 43 |         43 
+    15 |                 0 |                 21 |         21 
+    16 |                 0 |                 47 |         47 
+    17 |                 0 |                 99 |         99 
+    18 |                 0 |                 25 |         25 
+    19 |                 0 |                  1 |          1 
+    20 |                 0 |                  9 |          9 
+    26 |                 0 |                  3 |          3 
+    27 |                 0 |                 12 |         12 
+    28 |                 0 |                  5 |          5 
+    56 |                 0 |                  1 |          1 
+
+================================================================================
+FINAL SUMMARY AND RECOMMENDATIONS
+================================================================================
+
+📊 KEY METRICS:
+  Commercial products scraped: 23,334
+  Commercial products WITH price listings: 12,811
+  Commercial products WITHOUT price listings: 10,523
+  ETL fallback products: 21,005
+  Total products with prices: 33,484
+  Total products with images: 22,975
+
+🎯 KEY FINDINGS:
+  1. 10,523 (45.1%) commercial products have NO price listings
+     → These are orphaned scraper results not matching government data
+  2. 21,005 (47.4%) products are ETL fallbacks with no scraper data
+     → These products exist in government data but scrapers aren't finding them
+  3. Image coverage is only 68.6%
+     → Major gap in visual product data
+
+================================================================================
+ANALYSIS COMPLETE
+================================================================================

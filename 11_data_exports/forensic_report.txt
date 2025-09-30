@@ -1,0 +1,350 @@
+
+================================================================================
+PHARMMATE DATA FORENSICS ANALYSIS
+================================================================================
+Starting deep forensic analysis of database linkage issues...
+
+================================================================================
+1. PRODUCTS WITH PRICES BUT MISSING IMAGES
+================================================================================
+Found 20 products (showing top 20):
+
+  1. Barcode: 3337871320362
+     Product: וישי דאודורנט רול און לגבר 72 שעות
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: וישי דאודורנט רול און לגבר 72 שעות
+
+  2. Barcode: 3337871322595
+     Product: וישי דאודורנט רול און ללא אלומיניום 24 ש
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: וישי דאודורנט רול און ללא אלומיניום 24 ש
+
+  3. Barcode: 3337875597197
+     Product: סרווה גל מקציף לניקוי העור רגיל-שמן 236
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: סרווה גל מקציף לניקוי העור רגיל-שמן 236
+
+  4. Barcode: 3337875598996
+     Product: סרווה קרם לחות לעור יבש-יבש מאוד 177
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: סרווה קרם לחות לעור יבש-יבש מאוד 177
+
+  5. Barcode: 3337875684101
+     Product: קרם לחות להחלקת העור חומצה סיליצילית 340
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: קרם לחות להחלקת העור חומצה סיליצילית 340
+
+  6. Barcode: 7290000288659
+     Product: סנו די רול און גונגל 50 מל
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: סנו די רול און גונגל 50 מל
+
+  7. Barcode: 7290008017916
+     Product: מורז משחת פוליגונום לעור פגום (משושת)
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: מורז משחת פוליגונום לעור פגום (משושת)
+
+  8. Barcode: 7290103446758
+     Product: לייף איזי פלקס MSM שלישיה 220+110
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: לייף איזי פלקס MSM שלישיה 220+110
+
+  9. Barcode: 7290103449421
+     Product: לייף ויטמין D-400 כמוסות רכות 120 יח
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: לייף ויטמין D-400 כמוסות רכות 120 יח
+
+  10. Barcode: 7290111604904
+     Product: לייף סטרונג-הייר שמפו ביוטין 500 מל
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: לייף סטרונג-הייר שמפו ביוטין 500 מל
+
+  11. Barcode: 7290114965170
+     Product: לייף קופסת אחסנה לשיניים תותבות
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: לייף קופסת אחסנה לשיניים תותבות
+
+  12. Barcode: 7290118202578
+     Product: לייף מקלוני אוזניים לב ורוד 200 י
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: לייף מקלוני אוזניים לב ורוד 200 י
+
+  13. Barcode: 7290118209720
+     Product: לייף פייס איט - מסכת לחות
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: לייף פייס איט - מסכת לחות
+
+  14. Barcode: 7290119919932
+     Product: לייף מקלוני אוזניים פלסטיק קופסא 400 יחי
+     Retailer: Super-Pharm
+     Price Entries: 912
+     Canonical Name: לייף מקלוני אוזניים פלסטיק קופסא 400 יחי
+
+  15. Barcode: 0033984010741
+     Product: סולגר מולטי פימייל 60 טבליות
+     Retailer: Super-Pharm
+     Price Entries: 911
+     Canonical Name: סולגר מולטי פימייל 60 טבליות
+
+  16. Barcode: 3282770100914
+     Product: אוון B-Protect קרם הגנה מהשמש +SPF50 עם
+     Retailer: Super-Pharm
+     Price Entries: 911
+     Canonical Name: אוון B-Protect קרם הגנה מהשמש +SPF50 עם
+
+  17. Barcode: 3337871324001
+     Product: וישי דאודורנט רול און סטרס רזיסט 72 שעות
+     Retailer: Super-Pharm
+     Price Entries: 911
+     Canonical Name: וישי דאודורנט רול און סטרס רזיסט 72 שעות
+
+  18. Barcode: 4001638099226
+     Product: וולדה שמן עיסוי עם ארניקה
+     Retailer: Super-Pharm
+     Price Entries: 911
+     Canonical Name: וולדה שמן עיסוי עם ארניקה
+
+  19. Barcode: 7290013859419
+     Product: סבוקלם דיילי רו סבון פנים קמומיל 170מל
+     Retailer: Super-Pharm
+     Price Entries: 911
+     Canonical Name: סבוקלם דיילי רו סבון פנים קמומיל 170מל
+
+  20. Barcode: 7290019444138
+     Product: אלטמן ביוטין גלי בינס 1000 מקג 60 סוכריו
+     Retailer: Super-Pharm
+     Price Entries: 911
+     Canonical Name: אלטמן ביוטין גלי בינס 1000 מקג 60 סוכריו
+
+
+================================================================================
+2. CANONICAL DATA SOURCE ANALYSIS
+================================================================================
+
+OVERALL STATISTICS:
+  Total Products: 44,339
+  With Images: 22,975 (51.8%)
+  From Scrapers: 23,334 (52.6%)
+  From ETL Fallback: 21,005 (47.4%)
+
+BREAKDOWN BY SOURCE:
+
+  ETL Fallback (No Scraper):
+    - Total Products: 21,005
+    - Unique Barcodes: 21,005
+    - With Images: 0 (0.0%)
+
+  Super-Pharm:
+    - Total Products: 15,203
+    - Unique Barcodes: 15,203
+    - With Images: 15,203 (100.0%)
+
+  Be Pharm:
+    - Total Products: 7,772
+    - Unique Barcodes: 7,772
+    - With Images: 7,772 (100.0%)
+
+  Good Pharm:
+    - Total Products: 359
+    - Unique Barcodes: 359
+    - With Images: 0 (0.0%)
+
+================================================================================
+3. BARCODES IN PRICE DATA BUT MISSING FROM COMMERCIAL SCRAPERS
+================================================================================
+
+Total unscraped barcodes: 20,676
+Showing top 20 by price entry count:
+
+  1. Barcode: 3337871320362
+     Product: וישי דאודורנט רול און לגבר 72 שעות
+     Source: Super-Pharm
+     Price Entries: 912
+
+  2. Barcode: 3337871322595
+     Product: וישי דאודורנט רול און ללא אלומיניום 24 ש
+     Source: Super-Pharm
+     Price Entries: 912
+
+  3. Barcode: 3337875597197
+     Product: סרווה גל מקציף לניקוי העור רגיל-שמן 236
+     Source: Super-Pharm
+     Price Entries: 912
+
+  4. Barcode: 3337875598996
+     Product: סרווה קרם לחות לעור יבש-יבש מאוד 177
+     Source: Super-Pharm
+     Price Entries: 912
+
+  5. Barcode: 3337875684101
+     Product: קרם לחות להחלקת העור חומצה סיליצילית 340
+     Source: Super-Pharm
+     Price Entries: 912
+
+  6. Barcode: 7290000288659
+     Product: סנו די רול און גונגל 50 מל
+     Source: Super-Pharm
+     Price Entries: 912
+
+  7. Barcode: 7290008017916
+     Product: מורז משחת פוליגונום לעור פגום (משושת)
+     Source: Super-Pharm
+     Price Entries: 912
+
+  8. Barcode: 7290103446758
+     Product: לייף איזי פלקס MSM שלישיה 220+110
+     Source: Super-Pharm
+     Price Entries: 912
+
+  9. Barcode: 7290103449421
+     Product: לייף ויטמין D-400 כמוסות רכות 120 יח
+     Source: Super-Pharm
+     Price Entries: 912
+
+  10. Barcode: 7290111604904
+     Product: לייף סטרונג-הייר שמפו ביוטין 500 מל
+     Source: Super-Pharm
+     Price Entries: 912
+
+  11. Barcode: 7290114965170
+     Product: לייף קופסת אחסנה לשיניים תותבות
+     Source: Super-Pharm
+     Price Entries: 912
+
+  12. Barcode: 7290118202578
+     Product: לייף מקלוני אוזניים לב ורוד 200 י
+     Source: Super-Pharm
+     Price Entries: 912
+
+  13. Barcode: 7290118209720
+     Product: לייף פייס איט - מסכת לחות
+     Source: Super-Pharm
+     Price Entries: 912
+
+  14. Barcode: 7290119919932
+     Product: לייף מקלוני אוזניים פלסטיק קופסא 400 יחי
+     Source: Super-Pharm
+     Price Entries: 912
+
+  15. Barcode: 0033984010741
+     Product: סולגר מולטי פימייל 60 טבליות
+     Source: Super-Pharm
+     Price Entries: 911
+
+  16. Barcode: 3282770100914
+     Product: אוון B-Protect קרם הגנה מהשמש +SPF50 עם
+     Source: Super-Pharm
+     Price Entries: 911
+
+  17. Barcode: 3337871324001
+     Product: וישי דאודורנט רול און סטרס רזיסט 72 שעות
+     Source: Super-Pharm
+     Price Entries: 911
+
+  18. Barcode: 4001638099226
+     Product: וולדה שמן עיסוי עם ארניקה
+     Source: Super-Pharm
+     Price Entries: 911
+
+  19. Barcode: 7290013859419
+     Product: סבוקלם דיילי רו סבון פנים קמומיל 170מל
+     Source: Super-Pharm
+     Price Entries: 911
+
+  20. Barcode: 7290019444138
+     Product: אלטמן ביוטין גלי בינס 1000 מקג 60 סוכריו
+     Source: Super-Pharm
+     Price Entries: 911
+
+
+================================================================================
+4. BARCODE FORMAT ANALYSIS
+================================================================================
+
+canonical_products:
+  Format: numeric, Length: 13, Count: 37,631
+  Format: numeric, Length: 12, Count: 4,235
+  Format: numeric, Length: 11, Count: 884
+  Format: numeric, Length: 8, Count: 588
+  Format: numeric, Length: 7, Count: 558
+  Format: numeric, Length: 6, Count: 102
+  Format: other, Length: 17, Count: 99
+  Format: other, Length: 16, Count: 45
+  Format: numeric, Length: 10, Count: 44
+  Format: numeric, Length: 14, Count: 41
+  Format: other, Length: 18, Count: 25
+  Format: numeric, Length: 15, Count: 19
+  Format: numeric, Length: 5, Count: 17
+  Format: numeric, Length: 9, Count: 13
+  Format: other, Length: 27, Count: 12
+  Format: other, Length: 20, Count: 9
+  Format: other, Length: 28, Count: 5
+  Format: other, Length: 26, Count: 3
+  Format: hyphenated, Length: 16, Count: 2
+  Format: hyphenated, Length: 15, Count: 2
+  Format: other, Length: 14, Count: 2
+  Format: other, Length: 19, Count: 1
+  Format: other, Length: 56, Count: 1
+  Format: other, Length: 11, Count: 1
+
+retailer_products:
+  Format: numeric, Length: 13, Count: 38,942
+  Format: numeric, Length: 12, Count: 3,043
+  Format: numeric, Length: 8, Count: 987
+  Format: numeric, Length: 11, Count: 768
+  Format: numeric, Length: 10, Count: 35
+  Format: numeric, Length: 9, Count: 3
+
+================================================================================
+5. RETAILER COVERAGE ANALYSIS
+================================================================================
+
+Retailer                       Type             Total Products     With Images    Not in Canon   % Images
+----------------------------------------------------------------------------------------------------
+Super-Pharm                    Commercial               19,621           8,460               0      43.1%
+Good Pharm                     Commercial               12,134           5,003               0      41.2%
+Be Pharm                       Commercial               12,023           6,459               0      53.7%
+
+================================================================================
+FORENSIC ANALYSIS SUMMARY REPORT
+================================================================================
+Generated: 2025-09-28 13:04:37
+
+================================================================================
+
+KEY METRICS:
+  Total Products in System: 33,487
+  Products with Price Data: 33,484
+  Products in Canonical Table: 44,339
+  Canonical Products with Images: 22,975
+  Products Linked (Price + Image): 12,452
+
+  📊 IMAGE COVERAGE RATE: 37.2%
+     (12,452 out of 33,484 products with prices)
+
+================================================================================
+DIAGNOSIS:
+================================================================================
+
+🔴 PRIMARY ISSUE: 21,364 products in canonical table are missing images
+   → This suggests the canonical table is being populated with ETL fallback data
+
+================================================================================
+ANALYSIS COMPLETE
+================================================================================
+
+✅ Forensic analysis completed successfully.
+   Review the findings above to identify the root cause of image coverage issues.

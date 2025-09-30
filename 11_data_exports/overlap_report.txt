@@ -1,0 +1,97 @@
+Traceback (most recent call last):
+  File "/Users/idankarbat/Documents/noa_recovery/Desktop/PriceComparisonApp/retailer_overlap_analysis.py", line 369, in main
+    get_sample_comparable_products(cursor)
+  File "/Users/idankarbat/Documents/noa_recovery/Desktop/PriceComparisonApp/retailer_overlap_analysis.py", line 232, in get_sample_comparable_products
+    cursor.execute(query)
+  File "/Users/idankarbat/Library/Python/3.9/lib/python/site-packages/psycopg2/extras.py", line 146, in execute
+    return super().execute(query, vars)
+psycopg2.errors.GroupingError: aggregate function calls cannot be nested
+LINE 9: ...ING_AGG(DISTINCT r.retailername || ': ₪' || ROUND(MIN(p.pric...
+                                                             ^
+
+
+================================================================================
+PHARMMATE RETAILER OVERLAP & PRICE COMPARISON RELIABILITY
+================================================================================
+Generated: 2025-09-28 13:32:16
+
+================================================================================
+RETAILER PRODUCT OVERLAP ANALYSIS
+================================================================================
+
+📊 OVERALL PRODUCT AVAILABILITY:
+------------------------------------------------------------
+Total unique products with prices: 33,484
+Available in ALL 3 retailers: 2,286 (6.8%)
+Available in EXACTLY 2 retailers: 5,719 (17.1%)
+Available in ONLY 1 retailer: 25,479 (76.1%)
+
+------------------------------------------------------------
+DETAILED BREAKDOWN:
+------------------------------------------------------------
+
+Be Pharm, Good Pharm, Super-Pharm:
+  Products: 2,286 (6.8%)
+  Price points: 2,122,400
+
+Be Pharm, Good Pharm:
+  Products: 2,203 (6.6%)
+  Price points: 247,653
+
+Be Pharm, Super-Pharm:
+  Products: 1,865 (5.6%)
+  Price points: 843,099
+
+Good Pharm, Super-Pharm:
+  Products: 1,651 (4.9%)
+  Price points: 1,130,945
+
+Super-Pharm:
+  Products: 13,819 (41.3%)
+  Price points: 3,830,142
+
+Good Pharm:
+  Products: 5,991 (17.9%)
+  Price points: 559,659
+
+Be Pharm:
+  Products: 5,669 (16.9%)
+  Price points: 38,081
+
+================================================================================
+PRICE COMPARISON RELIABILITY ASSESSMENT
+================================================================================
+
+🎯 COMPARISON METRICS:
+------------------------------------------------------------
+Products comparable (2+ retailers): 8,005 (23.9%)
+Products NOT comparable (1 retailer): 25,479 (76.1%)
+
+📈 PRICE VARIANCE ANALYSIS (Products in all 3 retailers):
+------------------------------------------------------------
+Average price difference: 69.5%
+Median price difference: 55.3%
+Maximum price difference: 5555.6%
+Products with >10% price difference: 2,279 (99.7%)
+Products with >20% price difference: 2,170 (94.9%)
+
+Score Components:
+  Coverage Score: 29.9 (weight: 40%)
+  Overlap Score: 20.5 (weight: 30%)
+  Variance Score: 20.0 (weight: 30%)
+
+================================================================================
+RELIABILITY SCORE
+================================================================================
+
+⭐ Overall Reliability Score: 24.1/100
+🔴 Rating: POOR - Insufficient overlap for reliable comparison
+
+================================================================================
+SAMPLE COMPARABLE PRODUCTS
+================================================================================
+
+❌ Error during analysis: aggregate function calls cannot be nested
+LINE 9: ...ING_AGG(DISTINCT r.retailername || ': ₪' || ROUND(MIN(p.pric...
+                                                             ^
+

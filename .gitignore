@@ -52,3 +52,34 @@ fresh_env/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Log files
+*.log
+
+# Process files
+*.pid
+
+# Debug HTML files
+*.html
+
+# Database backups and SQL files
+*.sql
+*.sql.gz
+
+# Temporary and debug output
+*_dry_run_*.json
+*_backup_*.json
+*_diagnostics_*.json
+*_state.json
+
+# Large archive files
+*.zip
+*.gz
+*.tar
+*.tar.gz
+*.bak
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
