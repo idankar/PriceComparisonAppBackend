@@ -280,7 +280,11 @@ class GoodPharmScraper:
                         if img_url and not img_url.startswith('http'):
                             img_url = urljoin(BASE_URL, img_url)
                         product_data['image_url'] = img_url
-                    except:
+                    except NoSuchElementException:
+                        logger.debug(f"    ⚠️ Product {i}: No image found with selector img.attachment-woocommerce_thumbnail")
+                        product_data['image_url'] = None
+                    except Exception as e:
+                        logger.debug(f"    ⚠️ Product {i}: Image extraction error: {e}")
                         product_data['image_url'] = None
 
                     # Extract product URL
@@ -369,12 +373,12 @@ class GoodPharmScraper:
         else:
             try:
                 upsert_query = """
-                    INSERT INTO canonical_products (barcode, name, brand, image_url, category, description, source_retailer_id, last_scraped_at, created_at)
-                    VALUES (%(barcode)s, %(name)s, %(brand)s, %(image_url)s, %(category)s, %(description)s, %(source_retailer_id)s, NOW(), NOW())
+                    INSERT INTO canonical_products (barcode, name, brand, image_url, category, description, source_retailer_id, last_scraped_at, created_at, is_active)
+                    VALUES (%(barcode)s, %(name)s, %(brand)s, %(image_url)s, %(category)s, %(description)s, %(source_retailer_id)s, NOW(), NOW(), TRUE)
                     ON CONFLICT (barcode) DO UPDATE SET
                         name = EXCLUDED.name, brand = EXCLUDED.brand, image_url = EXCLUDED.image_url,
                         category = EXCLUDED.category, description = EXCLUDED.description,
-                        source_retailer_id = EXCLUDED.source_retailer_id, last_scraped_at = NOW();
+                        source_retailer_id = EXCLUDED.source_retailer_id, last_scraped_at = NOW(), is_active = TRUE;
                 """
                 self.cursor.execute(upsert_query, cleaned_data)
                 self.total_products_processed += 1

@@ -90,14 +90,15 @@ class BeStoreScraperEnhanced:
     def _define_sql_commands(self):
         """Define SQL commands for database operations"""
         # This command will INSERT a new product or UPDATE it if the barcode already exists.
+        # Commercial scrapers ACTIVATE products when found
         self.SQL_UPSERT_CANONICAL = """
             INSERT INTO canonical_products (
-                barcode, name, brand, description, image_url,
-                source_retailer_id, last_scraped_at, created_at
+                barcode, name, brand, description, image_url, category,
+                source_retailer_id, last_scraped_at, created_at, is_active
             )
             VALUES (
-                %(barcode)s, %(name)s, %(brand)s, %(description)s, %(image_url)s,
-                %(source_retailer_id)s, NOW(), NOW()
+                %(barcode)s, %(name)s, %(brand)s, %(description)s, %(image_url)s, %(category)s,
+                %(source_retailer_id)s, NOW(), NOW(), TRUE
             )
             ON CONFLICT (barcode) DO UPDATE SET
                 name = EXCLUDED.name,
@@ -106,7 +107,8 @@ class BeStoreScraperEnhanced:
                 image_url = EXCLUDED.image_url,
                 category = EXCLUDED.category,
                 source_retailer_id = EXCLUDED.source_retailer_id,
-                last_scraped_at = NOW();
+                last_scraped_at = NOW(),
+                is_active = TRUE;
         """
 
     def _setup_driver(self):

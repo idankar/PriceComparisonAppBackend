@@ -101,7 +101,8 @@ class ImageBackfiller:
         options.page_load_strategy = 'eager'  # Don't wait for full page load
 
         self.driver = webdriver.Chrome(options=options)
-        self.driver.implicitly_wait(2)  # Reduced from 5
+        self.driver.set_page_load_timeout(15)  # Max 15 seconds for page load
+        self.driver.implicitly_wait(2)
         logging.info("✅ WebDriver initialized")
 
     def load_checkpoint(self):
@@ -204,30 +205,26 @@ class ImageBackfiller:
             logging.error(f"  ❌ {retailer['name']}: Error searching {barcode}: {str(e)}")
             return None, None
 
-    def batch_update_images(self):
-        """Flush pending updates to database in batch"""
-        if not self.pending_updates:
-            return
-
+    def update_image_immediately(self, barcode, image_url, source_id):
+        """Update database immediately for a single product"""
         conn = psycopg2.connect(**DB_CONFIG)
         cur = conn.cursor()
 
         try:
-            execute_batch(cur, """
+            cur.execute("""
                 UPDATE canonical_products
                 SET image_url = %s,
                     source_retailer_id = %s,
                     last_scraped_at = %s
                 WHERE barcode = %s
-            """, self.pending_updates, page_size=100)
+            """, (image_url, source_id, datetime.now(), barcode))
 
             conn.commit()
-            logging.info(f"  💾 Batch updated {len(self.pending_updates)} products")
-            self.pending_updates = []
+            logging.info(f"  💾 Updated database for barcode {barcode}")
 
         except Exception as e:
             conn.rollback()
-            logging.error(f"  ❌ Database batch update error: {str(e)}")
+            logging.error(f"  ❌ Database update error for {barcode}: {str(e)}")
 
         finally:
             cur.close()
@@ -241,10 +238,10 @@ class ImageBackfiller:
         image_url, source_id = self.search_product_on_retailer(barcode, 'super_pharm')
 
         if image_url:
-            self.pending_updates.append((image_url, source_id, datetime.now(), barcode))
+            logging.info(f"  ✅ Super-Pharm: Found image for {barcode}")
+            self.update_image_immediately(barcode, image_url, source_id)
             self.stats['images_found'] += 1
             self.stats['super_pharm_success'] += 1
-            logging.info(f"  ✅ Found on Super-Pharm")
             return True
 
         # If not found on Super-Pharm, try Be Pharm
@@ -252,15 +249,15 @@ class ImageBackfiller:
         image_url, source_id = self.search_product_on_retailer(barcode, 'be_pharm')
 
         if image_url:
-            self.pending_updates.append((image_url, source_id, datetime.now(), barcode))
+            logging.info(f"  ✅ Be Pharm: Found image for {barcode}")
+            self.update_image_immediately(barcode, image_url, source_id)
             self.stats['images_found'] += 1
             self.stats['be_pharm_success'] += 1
-            logging.info(f"  ✅ Found on Be Pharm")
             return True
 
         # Not found on either site
         self.stats['not_found'] += 1
-        logging.warning(f"  ❌ No image found")
+        logging.warning(f"  ❌ No image found on any retailer for {barcode}")
         return False
 
     def run(self, limit=None):
@@ -287,10 +284,6 @@ class ImageBackfiller:
                     self.stats['processed'] += 1
                     self.last_processed_barcode = barcode
 
-                    # Batch update every batch_size products
-                    if len(self.pending_updates) >= self.batch_size:
-                        self.batch_update_images()
-
                     # Save checkpoint every checkpoint_interval products
                     if self.stats['processed'] % self.checkpoint_interval == 0:
                         self.save_checkpoint(barcode)
@@ -300,16 +293,13 @@ class ImageBackfiller:
                         self.print_progress()
 
                     # Minimal delay
-                    time.sleep(0.2)
+                    time.sleep(1)
 
                 except Exception as e:
                     logging.error(f"❌ Error processing {barcode}: {str(e)}")
                     self.stats['errors'] += 1
 
         finally:
-            # Final batch update
-            self.batch_update_images()
-
             if self.driver:
                 self.driver.quit()
                 logging.info("🛑 WebDriver closed")

@@ -453,13 +453,13 @@ class GoodPharmBarcodeETL:
                         self.stats['products_matched_existing'] += 1
                         logger.debug(f"Found existing product for barcode {barcode}: product_id={product_id}")
                     else:
-                        # No existing product with this barcode - create ONE canonical entry
+                        # No existing product with this barcode - create ONE canonical entry (INACTIVE until commercial scraper finds it)
                         # Use manufacturer name as brand, not retailer name
                         brand = product.get('manufacturer', '')
 
                         self.cursor.execute("""
-                            INSERT INTO canonical_products (barcode, canonical_name, brand, category, image_url)
-                            VALUES (%s, %s, %s, %s, %s)
+                            INSERT INTO canonical_products (barcode, canonical_name, brand, category, image_url, is_active)
+                            VALUES (%s, %s, %s, %s, %s, FALSE)
                             ON CONFLICT (barcode) DO NOTHING
                             RETURNING id
                         """, (

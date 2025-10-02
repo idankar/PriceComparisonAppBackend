@@ -517,6 +517,30 @@ class SuperPharmScraper:
         
         return product_data
 
+    def _scrape_online_price(self, driver, product_url):
+        """Navigates to a product page and extracts its online price."""
+        if not product_url:
+            return None
+        try:
+            logger.info(f"    Navigating to product page: {product_url}")
+            driver.get(product_url)
+            # Wait for the price element to be visible
+            price_selector = "[class*='product-price'] [class*='price_'], .product-price .price, [class*='Price']"
+            price_element = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, price_selector))
+            )
+            price_text = price_element.text.strip()
+            price_match = re.search(r'[\d\.]+', price_text)
+            if price_match:
+                price = float(price_match.group())
+                logger.info(f"    ✅ Found online price: {price}")
+                return price
+        except (TimeoutException, NoSuchElementException):
+            logger.warning(f"    ⚠️ Could not find price element on page: {product_url}")
+        except Exception as e:
+            logger.error(f"    ❌ Error scraping price from {product_url}: {e}")
+        return None
+
     def _process_product(self, product_data):
         barcode = product_data.get('barcode')
 
@@ -539,11 +563,12 @@ class SuperPharmScraper:
         else:
             try:
                 upsert_query = """
-                    INSERT INTO canonical_products (barcode, name, brand, image_url, category, description, source_retailer_id, last_scraped_at)
-                    VALUES (%(barcode)s, %(name)s, %(brand)s, %(image_url)s, %(category)s, %(description)s, %(source_retailer_id)s, NOW())
+                    INSERT INTO canonical_products (barcode, name, brand, image_url, category, description, source_retailer_id, last_scraped_at, is_active, url)
+                    VALUES (%(barcode)s, %(name)s, %(brand)s, %(image_url)s, %(category)s, %(description)s, %(source_retailer_id)s, NOW(), TRUE, %(url)s)
                     ON CONFLICT (barcode) DO UPDATE SET
                         name = EXCLUDED.name, brand = EXCLUDED.brand, image_url = EXCLUDED.image_url,
-                        category = EXCLUDED.category, source_retailer_id = EXCLUDED.source_retailer_id, last_scraped_at = NOW();
+                        category = EXCLUDED.category, source_retailer_id = EXCLUDED.source_retailer_id,
+                        last_scraped_at = NOW(), is_active = TRUE, url = EXCLUDED.url;
                 """
                 self.cursor.execute(upsert_query, cleaned_data)
                 self.total_products_processed += 1
