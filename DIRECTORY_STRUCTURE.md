@@ -27,6 +27,9 @@
 - Configuration JSONs (pharma keywords, insights config)
 - Enrichment scripts
 - Image processing utilities
+- Price normalization tools (GPT-4 analyzer, normalization scripts)
+- Brand classification
+- Data quality fixes
 - General helper functions
 
 ### 📍 05_geocoding/
@@ -70,6 +73,20 @@
 - CSV files
 - Processed datasets
 - Raw scraper outputs
+- GPT-4 analysis results
+- Data quality audit reports
+
+### 📚 12_documentation/
+**Project documentation and reports**
+- Technical reports and guides
+- Architecture documentation
+- Implementation handoff documents
+- Feature blueprints
+- Data quality reports
+- API endpoint documentation
+- ETL pipeline guides
+- Database schema documentation
+- Project status reports
 
 ## 🔑 Key Files in Root
 - `README.md` - Main project documentation

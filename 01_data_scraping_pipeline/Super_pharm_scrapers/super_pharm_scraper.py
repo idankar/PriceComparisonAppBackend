@@ -79,12 +79,18 @@ class SuperPharmScraper:
         if self.headless:
             options.add_argument("--headless=new")
         options.add_argument("--start-maximized")
+        # Add stability options
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")
 
         logger.info("🚀 Initializing undetected-chromedriver...")
         try:
             # Try undetected-chromedriver first
             driver = uc.Chrome(options=options, use_subprocess=False)
-            logger.info("✅ Successfully initialized undetected-chromedriver")
+            # Set increased timeouts for resilience
+            driver.set_page_load_timeout(120)  # 2 minutes for page loads
+            driver.implicitly_wait(1)  # OPTIMIZED: 1 second implicit wait (down from 10s)
+            logger.info("✅ Successfully initialized undetected-chromedriver with optimized timeouts")
             return driver
         except Exception as e:
             logger.warning(f"⚠️ Undetected-chromedriver failed: {e}")
@@ -104,11 +110,17 @@ class SuperPharmScraper:
                 regular_options.add_experimental_option("excludeSwitches", ["enable-automation"])
                 regular_options.add_experimental_option('useAutomationExtension', False)
                 regular_options.add_argument("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+                # Add stability options
+                regular_options.add_argument("--disable-dev-shm-usage")
+                regular_options.add_argument("--no-sandbox")
 
                 service = Service(ChromeDriverManager().install())
                 driver = webdriver.Chrome(service=service, options=regular_options)
                 driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-                logger.info("✅ Successfully initialized regular Selenium WebDriver")
+                # Set increased timeouts for resilience
+                driver.set_page_load_timeout(120)  # 2 minutes for page loads
+                driver.implicitly_wait(1)  # OPTIMIZED: 1 second implicit wait (down from 10s)
+                logger.info("✅ Successfully initialized regular Selenium WebDriver with optimized timeouts")
                 return driver
             except Exception as e2:
                 logger.error(f"❌ Both drivers failed. Error: {e2}")
@@ -143,13 +155,27 @@ class SuperPharmScraper:
                 logger.warning(f"⚠️ Could not read checkpoint file, starting fresh. Error: {e}")
         return False
 
-    def save_checkpoint(self, category_name=None):
+    def save_checkpoint(self, category_name=None, current_page=None):
+        """Save checkpoint with category and page-level granularity"""
         if category_name and category_name not in self.completed_categories:
             self.completed_categories.append(category_name)
-        state = {'completed_categories': self.completed_categories, 'total_products_processed': self.total_products_processed, 'discovered_categories': self.categories, 'last_updated': datetime.now().isoformat()}
+
+        state = {
+            'completed_categories': self.completed_categories,
+            'total_products_processed': self.total_products_processed,
+            'discovered_categories': self.categories,
+            'current_category': category_name,
+            'current_page': current_page,
+            'last_updated': datetime.now().isoformat()
+        }
+
         with open(CHECKPOINT_FILE, 'w', encoding='utf-8') as f:
             json.dump(state, f, indent=4, ensure_ascii=False)
-        logger.info(f"💾 Checkpoint saved. {len(self.completed_categories)} categories completed.")
+
+        if current_page:
+            logger.info(f"💾 Checkpoint saved: Category '{category_name}', Page {current_page}")
+        else:
+            logger.info(f"💾 Checkpoint saved. {len(self.completed_categories)} categories completed.")
 
     def _get_pharmacy_categories(self):
         """Get hardcoded pharmacy-relevant categories"""
@@ -309,7 +335,7 @@ class SuperPharmScraper:
 
         try:
             # Wait for page to load
-            time.sleep(5)
+            time.sleep(2)  # Optimized: reduced from 5s to 2s
 
             # Log page info
             logger.info(f"  📍 Page title: {driver.title}")
@@ -415,26 +441,46 @@ class SuperPharmScraper:
                         product_data['image_url'] = image_url
 
                         # Extract product URL
+                        # The anchor tag is the PARENT of the product container
                         try:
-                            link = product_container.find_element(By.CSS_SELECTOR, "a[href]")
-                            product_url = link.get_attribute('href')
-                            if product_url and not product_url.startswith('http'):
-                                product_url = urljoin(BASE_URL, product_url)
-                            product_data['url'] = product_url
-                        except:
+                            # Navigate up to parent element (should be the anchor tag)
+                            link = product_container.find_element(By.XPATH, "..")
+                            if link.tag_name == 'a':
+                                product_url = link.get_attribute('href')
+                                if product_url and not product_url.startswith('http'):
+                                    product_url = urljoin(BASE_URL, product_url)
+                                product_data['url'] = product_url
+                                logger.debug(f"      ✅ Extracted URL: {product_url}")
+                            else:
+                                # Fallback: try to find anchor as parent using JavaScript
+                                link = driver.execute_script("return arguments[0].parentElement;", product_container)
+                                if link and link.tag_name == 'a':
+                                    product_url = link.get_attribute('href')
+                                    if product_url:
+                                        product_data['url'] = urljoin(BASE_URL, product_url) if not product_url.startswith('http') else product_url
+                                        logger.debug(f"      ✅ Extracted URL (fallback): {product_url}")
+                                else:
+                                    logger.info(f"      ⚠️  Parent is not an anchor tag: {link.tag_name if link else 'None'}")
+                                    product_data['url'] = None
+                        except Exception as url_err:
+                            logger.info(f"      ⚠️  Could not extract URL: {url_err}")
                             product_data['url'] = None
 
-                        # Extract price (for reference, not stored in canonical_products)
+                        # Extract price - OPTIMIZED: use find_elements to avoid implicit wait
                         price = None
                         try:
-                            price_elem = product_container.find_element(By.XPATH, "//*[contains(text(), '₪')]")
-                            price_text = price_elem.text.strip()
-                            import re
-                            price_match = re.search(r'([\d,]+\.?\d*)', price_text.replace(',', ''))
-                            if price_match:
-                                price = float(price_match.group())
-                        except:
-                            pass
+                            price_elems = product_container.find_elements(By.XPATH, ".//*[contains(text(), '₪')]")
+                            if price_elems:
+                                price_text = price_elems[0].text.strip()
+                                import re
+                                price_match = re.search(r'([\d,]+\.?\d*)', price_text.replace(',', ''))
+                                if price_match:
+                                    price = float(price_match.group())
+                                    logger.debug(f"      💰 Extracted price: ₪{price}")
+                        except Exception as e:
+                            logger.debug(f"      ⚠️  Could not extract price: {e}")
+
+                        product_data['price'] = price
 
                     except Exception as e:
                         # If we can't find the product container, use the element itself
@@ -442,6 +488,7 @@ class SuperPharmScraper:
                         product_data['name'] = f"Product {barcode}"
                         product_data['image_url'] = None
                         product_data['url'] = None
+                        product_data['price'] = None
 
                     # Set standard fields
                     product_data['brand'] = None  # Would need deeper analysis to extract
@@ -462,7 +509,9 @@ class SuperPharmScraper:
         except Exception as e:
             logger.error(f"  ❌ Error during product extraction: {e}")
 
-        logger.info(f"  ✅ Successfully extracted {len(products)} products")
+        # Log summary statistics
+        products_with_prices = [p for p in products if p.get('price') is not None]
+        logger.info(f"  ✅ Successfully extracted {len(products)} products ({len(products_with_prices)} with prices from listing)")
         return products
 
     def _clean_product_data(self, product_data: dict) -> dict:
@@ -474,72 +523,200 @@ class SuperPharmScraper:
 
         # If brand is missing, try to extract it from the name
         if not brand and name:
-            # --- NEW: Extended list of known brands ---
-            known_brands = [
-                "NEUTROGENA", "HAAN", "NIVEA", "MORAZ", "DOVE", "OLD SPICE", "LIFE", "URIAGE", "AVENE",
-                "Drizzilicious", "NESTLE", "FITNESS", "לייף וולנס", "נסטלה", "אנרג'י", "סאפורה"
+            # Extract brand from the beginning of the product name
+            # Strategy: The brand is typically the first 1-3 words before the actual product description
+
+            # First, try to extract any word/phrase at the start that looks like a brand
+            # Brands can be: English words, Hebrew words, mixed, with numbers, etc.
+            brand_patterns = [
+                # Pattern 1: Multi-word brands (e.g., "BEAUTY OF JOSEON", "Old Spice")
+                r'^([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,2})\s+',
+                # Pattern 2: All-caps brands (e.g., "NEUTROGENA", "HAAN")
+                r'^([A-Z]{2,})\s+',
+                # Pattern 3: Hebrew brands (e.g., "לייף וולנס", "מאמי קר", "בייביביס")
+                r'^([\u0590-\u05FF]+(?:\s+[\u0590-\u05FF]+)?)\s+',
+                # Pattern 4: Mixed alphanumeric brands (e.g., "iO9", "so.ko")
+                r'^([a-zA-Z0-9\.]+)\s+',
+                # Pattern 5: Brands with special characters (e.g., "Dr.", "L'Oreal")
+                r"^([A-Z][a-z]*(?:['\.]?[A-Z][a-z]*)?)\s+",
             ]
 
-            brand_found = False
-            # Pattern 1: Look for known brands at the start of the string (case-insensitive)
-            for b in known_brands:
-                if name.lower().startswith(b.lower()):
-                    # Find the actual brand casing from the name
-                    brand = name[:len(b)]
-                    name = name[len(b):].strip()
-                    brand_found = True
-                    break
-            
-            # Pattern 2: Fallback to any all-caps word at the beginning
-            if not brand_found:
-                match = re.match(r'^([A-Z][A-Z\s&]{2,})', name)
+            for pattern in brand_patterns:
+                match = re.match(pattern, name)
                 if match:
                     potential_brand = match.group(1).strip()
-                    if len(potential_brand) <= 20: # Avoid capturing long uppercase titles
+                    # Validate it's a reasonable brand name (not too long, not common words)
+                    if 2 <= len(potential_brand) <= 25 and potential_brand not in ['מחית', 'קרם', 'שמן', 'סבון']:
                         brand = potential_brand
                         name = name[len(brand):].strip()
+                        break
 
-        # --- NEW: More comprehensive cleaning patterns ---
+        # --- More comprehensive cleaning patterns ---
         # Clean up size/unit info (e.g., "500 מ"ל", "113 גרם", "18 פרוסות")
-        name = re.sub(r'\n?[\d\.,]+\s*(מ"ל|מ\'\'ל|גרם|ג\'|יחידות|פרוסות|אריזות|פ\'|\'|מ"ג|מ\'ג)', '', name, flags=re.IGNORECASE).strip()
-        
+        name = re.sub(r'\n?[\d\.,]+\s*(מ"ל|מ\'\'ל|גרם|ג\'|יחידות|פרוסות|אריזות|פ\'|\'|מ"ג|מ\'ג|ליטר|ל\'|קג|ק"ג)', '', name, flags=re.IGNORECASE).strip()
+
         # Clean up unit price in parentheses (e.g., "(₪19.38 ל-100 גרם)")
-        name = re.sub(r'\s*\(\s*₪?[\d\.,]+\s*ל-?\d*\s*(מ"ל|גרם|יח\')\s*\)', '', name, flags=re.IGNORECASE).strip()
+        name = re.sub(r'\s*\(\s*₪?[\d\.,]+\s*ל-?\d*\s*(מ"ל|גרם|יח\'|ליטר)\s*\)', '', name, flags=re.IGNORECASE).strip()
 
         # Clean up remaining hyphens or separators at the beginning of the name
         name = re.sub(r'^\s*-\s*', '', name).strip()
-        
+
         # Final cleanup for whitespace
         name = ' '.join(name.split())
 
         product_data['name'] = name
         product_data['brand'] = brand
-        
+
         return product_data
 
     def _scrape_online_price(self, driver, product_url):
-        """Navigates to a product page and extracts its online price."""
+        """Navigates to a product page and extracts its online price and brand.
+
+        Returns:
+            dict: {'price': float, 'brand': str} or None if extraction fails
+        """
         if not product_url:
             return None
+
+        result = {'price': None, 'brand': None}
+
+        # Retry mechanism for product detail pages
+        max_retries = 2
+        for attempt in range(max_retries):
+            try:
+                if attempt > 0:
+                    logger.debug(f"    🔄 Retry {attempt}/{max_retries-1} for product page")
+                    time.sleep(5)
+
+                logger.debug(f"    Navigating to product page: {product_url}")
+                driver.get(product_url)
+                break  # Success, exit retry loop
+
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    logger.warning(f"    ⚠️ Failed to load product page after {max_retries} attempts: {e}")
+                    return None
+                logger.debug(f"    ⚠️ Error loading product page (attempt {attempt+1}): {e}")
+
         try:
-            logger.info(f"    Navigating to product page: {product_url}")
-            driver.get(product_url)
-            # Wait for the price element to be visible
-            price_selector = "[class*='product-price'] [class*='price_'], .product-price .price, [class*='Price']"
-            price_element = WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, price_selector))
-            )
-            price_text = price_element.text.strip()
-            price_match = re.search(r'[\d\.]+', price_text)
-            if price_match:
-                price = float(price_match.group())
-                logger.info(f"    ✅ Found online price: {price}")
-                return price
-        except (TimeoutException, NoSuchElementException):
+
+            # Wait for page to load
+            time.sleep(3)
+
+            # Extract brand from JSON-LD structured data (most reliable)
+            try:
+                brand_script = driver.find_element(By.XPATH, "//script[@type='application/ld+json']")
+                json_text = brand_script.get_attribute('innerHTML')
+                import json
+                json_data = json.loads(json_text)
+                if 'brand' in json_data and 'name' in json_data['brand']:
+                    result['brand'] = json_data['brand']['name']
+                    logger.debug(f"    ✅ Found brand from JSON-LD: {result['brand']}")
+            except Exception as e:
+                logger.debug(f"    Could not extract brand from JSON-LD: {e}")
+
+            # Strategy 1: Try to get price from data-price attribute (most reliable)
+            try:
+                price_element = driver.find_element(By.CSS_SELECTOR, "div.item-price[data-price]")
+                price_text = price_element.get_attribute('data-price')
+                if price_text:
+                    result['price'] = float(price_text)
+                    logger.info(f"    ✅ Found online price from data-price attribute: ₪{result['price']}")
+                    return result
+            except (NoSuchElementException, ValueError):
+                pass
+
+            # Strategy 2: Try to get price from .shekels.money-sign element
+            try:
+                price_element = driver.find_element(By.CSS_SELECTOR, "div.shekels.money-sign")
+                price_text = price_element.text.strip()
+                if price_text:
+                    result['price'] = float(price_text.replace(',', ''))
+                    logger.info(f"    ✅ Found online price from shekels element: ₪{result['price']}")
+                    return result
+            except (NoSuchElementException, ValueError):
+                pass
+
+            # Strategy 3: Try to get price from .item-price text
+            try:
+                price_element = driver.find_element(By.CSS_SELECTOR, "div.item-price")
+                price_text = price_element.text.strip()
+                price_match = re.search(r'[\d\.]+', price_text)
+                if price_match:
+                    result['price'] = float(price_match.group())
+                    logger.info(f"    ✅ Found online price from item-price text: ₪{result['price']}")
+                    return result
+            except (NoSuchElementException, ValueError):
+                pass
+
+            # Strategy 4: Fallback - search for any element containing shekel sign
+            try:
+                price_element = driver.find_element(By.XPATH, "//*[contains(@class, 'price-container')]//*[contains(text(), '.')]")
+                price_text = price_element.text.strip()
+                price_match = re.search(r'[\d\.]+', price_text)
+                if price_match:
+                    result['price'] = float(price_match.group())
+                    logger.info(f"    ✅ Found online price from fallback search: ₪{result['price']}")
+                    return result
+            except (NoSuchElementException, ValueError):
+                pass
+
             logger.warning(f"    ⚠️ Could not find price element on page: {product_url}")
+
         except Exception as e:
             logger.error(f"    ❌ Error scraping price from {product_url}: {e}")
         return None
+
+    def _get_or_create_retailer_product(self, barcode, product_name):
+        """Finds or creates a retailer_products entry and returns its ID."""
+        if self.dry_run:
+            return -1  # Return a dummy ID for dry runs
+
+        try:
+            # First, try to find it
+            self.cursor.execute(
+                "SELECT retailer_product_id FROM retailer_products WHERE barcode = %s AND retailer_id = %s",
+                (barcode, SUPER_PHARM_RETAILER_ID)
+            )
+            result = self.cursor.fetchone()
+            if result:
+                return result['retailer_product_id']
+
+            # If not found, create it
+            self.cursor.execute(
+                """
+                INSERT INTO retailer_products (barcode, retailer_id, retailer_item_code, original_retailer_name)
+                VALUES (%s, %s, %s, %s)
+                RETURNING retailer_product_id;
+                """,
+                (barcode, SUPER_PHARM_RETAILER_ID, barcode, product_name)
+            )
+            result = self.cursor.fetchone()
+            self.conn.commit()
+            return result['retailer_product_id']
+        except Exception as e:
+            logger.error(f"Error getting/creating retailer_product for barcode {barcode}: {e}")
+            self.conn.rollback()
+            return None
+
+    def _insert_online_price(self, retailer_product_id, price):
+        """Inserts a new price record for the Super-Pharm Online store."""
+        if self.dry_run or price is None:
+            return
+
+        try:
+            self.cursor.execute(
+                """
+                INSERT INTO prices (retailer_product_id, store_id, price, price_timestamp, scraped_at)
+                VALUES (%s, 52001, %s, NOW(), NOW())
+                ON CONFLICT (retailer_product_id, store_id, price_timestamp) DO NOTHING;
+                """,
+                (retailer_product_id, price)
+            )
+            # Committed in batches in the main loop
+        except Exception as e:
+            logger.error(f"Error inserting price for retailer_product_id {retailer_product_id}: {e}")
+            self.conn.rollback()
 
     def _process_product(self, product_data):
         barcode = product_data.get('barcode')
@@ -563,14 +740,30 @@ class SuperPharmScraper:
         else:
             try:
                 upsert_query = """
-                    INSERT INTO canonical_products (barcode, name, brand, image_url, category, description, source_retailer_id, last_scraped_at, is_active, url)
-                    VALUES (%(barcode)s, %(name)s, %(brand)s, %(image_url)s, %(category)s, %(description)s, %(source_retailer_id)s, NOW(), TRUE, %(url)s)
+                    INSERT INTO canonical_products (barcode, name, brand, image_url, category, description, source_retailer_id, last_scraped_at, url)
+                    VALUES (%(barcode)s, %(name)s, %(brand)s, %(image_url)s, %(category)s, %(description)s, %(source_retailer_id)s, NOW(), %(url)s)
                     ON CONFLICT (barcode) DO UPDATE SET
-                        name = EXCLUDED.name, brand = EXCLUDED.brand, image_url = EXCLUDED.image_url,
-                        category = EXCLUDED.category, source_retailer_id = EXCLUDED.source_retailer_id,
-                        last_scraped_at = NOW(), is_active = TRUE, url = EXCLUDED.url;
+                        name = EXCLUDED.name,
+                        brand = EXCLUDED.brand,
+                        image_url = EXCLUDED.image_url,
+                        category = EXCLUDED.category,
+                        description = EXCLUDED.description,
+                        url = EXCLUDED.url,
+                        last_scraped_at = NOW();
                 """
                 self.cursor.execute(upsert_query, cleaned_data)
+
+                # Handle price insertion for online store
+                price = product_data.get('price')
+                if price is not None and price > 0:
+                    logger.info(f"      💰 Processing price ₪{price} for barcode {barcode}")
+                    retailer_product_id = self._get_or_create_retailer_product(barcode, cleaned_data.get('name'))
+                    if retailer_product_id:
+                        self._insert_online_price(retailer_product_id, price)
+                        logger.info(f"      ✅ Price inserted for retailer_product_id {retailer_product_id}")
+                else:
+                    logger.info(f"      ⚠️  No valid price for barcode {barcode} (price={price})")
+
                 self.total_products_processed += 1
                 return True
             except Exception as e:
@@ -612,28 +805,80 @@ class SuperPharmScraper:
                 current_url = category['url']
                 category_products = []
                 max_pages = 20  # Allow up to 20 pages for all categories
+                consecutive_all_duplicates = 0  # Track pages with 100% duplicates
 
                 while current_url and page_num <= max_pages:
-                    logger.info(f"   📄 Navigating to page {page_num}: {current_url}")
-                    driver.get(current_url)
+                    # Retry mechanism for page processing
+                    max_retries = 3
+                    retry_count = 0
+                    page_success = False
 
-                    try:
-                        # Wait for the product grid to be present on the current page
-                        WebDriverWait(driver, 20).until(
-                            EC.presence_of_element_located((By.CSS_SELECTOR, "div.add-to-basket[data-ean]"))
-                        )
-                        logger.info("   ✅ Page loaded and product grid is present.")
+                    while retry_count < max_retries and not page_success:
+                        try:
+                            if retry_count > 0:
+                                logger.warning(f"   🔄 Retry attempt {retry_count}/{max_retries} for page {page_num}")
+                                time.sleep(10)  # Wait before retry
 
-                        # Get a reference to the first product on the CURRENT page (for staleness check)
-                        first_product_on_page = driver.find_element(By.CSS_SELECTOR, "div.add-to-basket[data-ean]")
+                            logger.info(f"   📄 Navigating to page {page_num}: {current_url}")
+                            driver.get(current_url)
 
-                    except TimeoutException:
-                        logger.warning("   ⚠️ No products found on this page or page failed to load. Ending category.")
+                            # Wait for the product grid to be present on the current page
+                            WebDriverWait(driver, 60).until(
+                                EC.presence_of_element_located((By.CSS_SELECTOR, "div.add-to-basket[data-ean]"))
+                            )
+                            logger.info("   ✅ Page loaded and product grid is present.")
+                            page_success = True
+
+                        except TimeoutException as e:
+                            retry_count += 1
+                            if retry_count >= max_retries:
+                                logger.error(f"   ❌ Page {page_num} failed after {max_retries} attempts. Skipping to next page/category.")
+                                logger.error(f"   ❌ Error: {e}")
+                                break
+                            else:
+                                logger.warning(f"   ⚠️ Timeout on page {page_num}, attempt {retry_count}/{max_retries}")
+
+                        except Exception as e:
+                            retry_count += 1
+                            if retry_count >= max_retries:
+                                logger.error(f"   ❌ Unexpected error on page {page_num} after {max_retries} attempts: {e}")
+                                break
+                            else:
+                                logger.warning(f"   ⚠️ Error on page {page_num} (attempt {retry_count}/{max_retries}): {e}")
+
+                    if not page_success:
+                        logger.error(f"   ❌ Skipping page {page_num} after all retry attempts failed")
                         break
 
                     # Extract products from the current page
                     products_on_page = self._extract_products_from_page(driver, category['name'])
                     logger.info(f"   ✅ Extracted {len(products_on_page)} products from page {page_num}.")
+
+                    # OPTIMIZATION: Skip detail page scraping to massively improve performance
+                    # Products without listing prices will be scraped in a separate, dedicated run
+                    products_with_no_price = [p for p in products_on_page if p.get('price') is None]
+                    products_with_no_url = [p for p in products_on_page if not p.get('url')]
+
+                    logger.info(f"   📊 Price extraction stats: {len(products_with_no_price)} without price, {len(products_with_no_url)} without URL")
+                    logger.info(f"   ⚡ OPTIMIZATION: Skipping detail page scraping for faster bulk collection")
+
+                    # COMMENTED OUT FOR PERFORMANCE - detail page scraping takes 10+ min per page
+                    # if products_without_price:
+                    #     logger.info(f"   🔍 Scraping individual product pages for {len(products_without_price)} products without listing prices...")
+                    #     for idx, product in enumerate(products_without_price, 1):
+                    #         if idx % 10 == 0:
+                    #             logger.info(f"      Progress: {idx}/{len(products_without_price)} detail pages scraped")
+                    #
+                    #         # Scrape price and brand from product detail page
+                    #         online_data = self._scrape_online_price(driver, product['url'])
+                    #         if online_data and online_data.get('price'):
+                    #             product['price'] = online_data['price']
+                    #             # Update brand if extracted and not already set
+                    #             if online_data.get('brand') and not product.get('brand'):
+                    #                 product['brand'] = online_data['brand']
+                    #                 logger.debug(f"      Updated brand to: {product['brand']}")
+                    #
+                    #     logger.info(f"   ✅ Completed detail page scraping for products without listing prices")
 
                     # Process each product (deduplication happens here)
                     unique_products = 0
@@ -644,36 +889,50 @@ class SuperPharmScraper:
 
                     logger.info(f"   📦 Added {unique_products} unique products (skipped {len(products_on_page) - unique_products} duplicates)")
 
-                    # Find the next page link to determine the next URL
-                    try:
-                        # Look for the hidden next link element
-                        next_page_element = driver.find_element(By.CSS_SELECTOR, "a#nextHiddenLink[href]")
-                        next_url = next_page_element.get_attribute('href')
-
-                        if next_url and next_url != current_url:
-                            logger.info(f"   🔄 Found next page link: {next_url}")
-
-                            # Navigate to next page
-                            driver.get(next_url)
-
-                            # --- THE FIX: Wait for old content to disappear ---
-                            try:
-                                logger.info("   ⏳ Waiting for old page content to disappear...")
-                                WebDriverWait(driver, 15).until(
-                                    EC.staleness_of(first_product_on_page)
-                                )
-                                logger.info("   ✅ Old content cleared, ready for new page")
-                            except:
-                                logger.info("   ⚠️ Staleness check timed out, proceeding anyway")
-
-                            current_url = next_url
-                            page_num += 1
-                        else:
-                            logger.info("   ✅ No valid next page found. Reached the last page.")
+                    # Check if entire page was duplicates (pagination may not be working)
+                    if len(products_on_page) > 0 and unique_products == 0:
+                        consecutive_all_duplicates += 1
+                        logger.warning(f"   ⚠️  Page {page_num} had 100% duplicates ({consecutive_all_duplicates} consecutive)")
+                        if consecutive_all_duplicates >= 2:
+                            logger.warning(f"   ⚠️  2 consecutive pages of all duplicates - pagination appears broken or end reached")
                             break
+                    else:
+                        consecutive_all_duplicates = 0  # Reset counter
 
-                    except NoSuchElementException:
-                        logger.info("   ✅ No next page link found. Reached the last page for this category.")
+                    # Commit to database after each page for safety
+                    if not self.dry_run and self.conn:
+                        try:
+                            self.conn.commit()
+                            logger.debug(f"   💾 Database committed for page {page_num}")
+                        except Exception as e:
+                            logger.error(f"   ❌ Database commit failed: {e}")
+                            self.conn.rollback()
+
+                    # Save checkpoint after each successful page
+                    self.save_checkpoint(category['name'], page_num)
+
+                    # Scroll to bottom to trigger pagination element to load
+                    logger.info("   📜 Scrolling to bottom to load pagination elements...")
+                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                    time.sleep(1)  # Optimized: reduced from 2s to 1s
+                    # Scroll up slightly and back down to trigger lazy loading
+                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight - 500);")
+                    time.sleep(0.5)  # Optimized: reduced from 1s to 0.5s
+                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                    time.sleep(1)  # Optimized: reduced from 3s to 1s
+
+                    # Find the next page link using the robust _handle_pagination method
+                    next_url = self._handle_pagination(driver, current_url)
+
+                    if next_url and next_url != current_url:
+                        logger.info(f"   🔄 Found next page link: {next_url}")
+                        logger.info(f"   ➡️  Will navigate to page {page_num + 1} on next iteration")
+
+                        # Update for next iteration (let the loop handle navigation)
+                        current_url = next_url
+                        page_num += 1
+                    else:
+                        logger.info("   ✅ No next page found. Reached the last page for this category.")
                         break
 
                 # Category complete - show statistics
@@ -682,12 +941,16 @@ class SuperPharmScraper:
                 logger.info(f"      - Unique products: {len(category_products)}")
                 logger.info(f"      - Total processed: {self.total_products_processed}")
 
-                # Commit and save checkpoint after each category
+                # Final commit and checkpoint for category completion
                 if not self.dry_run and self.conn:
-                    self.conn.commit()
-                    logger.info(f"   💾 Committed to database")
+                    try:
+                        self.conn.commit()
+                        logger.info(f"   💾 Final commit for category '{category['name']}'")
+                    except Exception as e:
+                        logger.error(f"   ❌ Final commit failed: {e}")
 
-                self.save_checkpoint(category['name'])
+                # Mark category as complete (removes current_page from checkpoint)
+                self.save_checkpoint(category['name'], current_page=None)
         except Exception as e:
             logger.error(f"❌ Error during scraping: {e}")
         finally:

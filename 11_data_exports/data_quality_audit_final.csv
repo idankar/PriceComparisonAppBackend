@@ -1,0 +1,2 @@
+﻿barcode,product_name,retailer_name,suspicious_price,median_price_for_barcode,price_ratio,retailer_count,reason_for_flag
+7296168131110,איתן מזרק ללא מחט יחידה אחת,Super-Pharm,0.9,1.0,0.9,2,Suspiciously Low Price for High-Value Category (בריאות/ציוד רפואי/מזרקים ומחטים)

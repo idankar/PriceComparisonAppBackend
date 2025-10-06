@@ -79,6 +79,13 @@ class ProductSummary(BaseModel):
     image_url: str  # Always non-null with fallback
     lowest_price: float  # Calculated minimum price across all retailers
 
+class PaginatedProductResponse(BaseModel):
+    """Paginated response for product search results"""
+    total_results: int
+    page: int
+    page_size: int
+    total_pages: int
+    results: List[ProductSummary]
 
 class NearbyStore(BaseModel):
     store_id: int
@@ -180,22 +187,36 @@ def get_current_user(authorization: Optional[str] = Header(None), db: RealDictCu
     Dependency to get the current authenticated user from JWT token.
     Returns user_id.
     """
+    print(f"[AUTH DEBUG] Received authorization header: {authorization[:50] if authorization else 'None'}...")
+
     if not authorization:
+        print("[AUTH DEBUG] Authorization header is missing")
         raise HTTPException(status_code=401, detail="Authorization header missing")
 
     try:
         # Expected format: "Bearer <token>"
         scheme, token = authorization.split()
+        print(f"[AUTH DEBUG] Scheme: {scheme}, Token preview: {token[:20]}...")
+
         if scheme.lower() != "bearer":
+            print(f"[AUTH DEBUG] Invalid scheme: {scheme}")
             raise HTTPException(status_code=401, detail="Invalid authentication scheme")
-    except ValueError:
+    except ValueError as e:
+        print(f"[AUTH DEBUG] Failed to split authorization header: {e}")
         raise HTTPException(status_code=401, detail="Invalid authorization header format")
 
     # Verify token
-    payload = verify_token(token)
+    try:
+        payload = verify_token(token)
+        print(f"[AUTH DEBUG] Token verified successfully. Payload: {payload}")
+    except HTTPException as e:
+        print(f"[AUTH DEBUG] Token verification failed: {e.detail}")
+        raise
+
     user_id = payload.get("user_id")
 
     if user_id is None:
+        print("[AUTH DEBUG] user_id not found in token payload")
         raise HTTPException(status_code=401, detail="Invalid token payload")
 
     # Verify user exists in database
@@ -203,8 +224,10 @@ def get_current_user(authorization: Optional[str] = Header(None), db: RealDictCu
     user = db.fetchone()
 
     if not user:
+        print(f"[AUTH DEBUG] User {user_id} not found in database")
         raise HTTPException(status_code=401, detail="User not found")
 
+    print(f"[AUTH DEBUG] Successfully authenticated user_id: {user_id}")
     return user_id
 
 # --- Helper Functions for User Preferences ---
@@ -404,32 +427,42 @@ def login_user(request: LoginRequest, db: RealDictCursor = Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Login failed: {str(e)}")
 
-@app.get("/api/search", response_model=List[ProductSummary], tags=["Products"])
+@app.get("/api/search", response_model=PaginatedProductResponse, tags=["Products"])
 def search_products(
     q: Optional[str] = None,
     category: Optional[str] = None,
-    limit: int = Query(50, ge=1, le=200),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(20, ge=1, le=100),
     db: RealDictCursor = Depends(get_db)
 ):
     """
     Performs a search on products with optional text and category filters.
+    Returns paginated results.
 
     Parameters:
     - q: Optional text search on product names and brands
     - category: Optional exact category match (use Hebrew category strings)
-    - limit: Maximum number of results (default: 50, max: 200)
+    - page: Page number (default: 1)
+    - page_size: Number of items per page (default: 20, max: 100)
 
-    Returns a simplified list of products with their pre-calculated lowest prices.
+    Returns paginated results with metadata.
 
     Examples:
-    - /api/search?q=shampoo - Text search
+    - /api/search?q=shampoo - Text search, first page
+    - /api/search?q=shampoo&page=2&page_size=10 - Text search, second page with 10 items
     - /api/search?category=טיפוח/הגנה מהשמש - Category filter
     - /api/search?q=cream&category=טיפוח/טיפוח פנים/קרם פנים - Combined filter
     """
 
-    # If neither parameter provided, return empty list
+    # If neither parameter provided, return empty result
     if not q and not category:
-        return []
+        return PaginatedProductResponse(
+            total_results=0,
+            page=page,
+            page_size=page_size,
+            total_pages=0,
+            results=[]
+        )
 
     # Build dynamic query based on parameters
     query_conditions = [
@@ -438,25 +471,41 @@ def search_products(
         "image_url IS NOT NULL",
         "image_url NOT LIKE '%%placeholder%%'"
     ]
-    query_params = []
+    count_params = []
 
     # Add text search condition if q is provided
     if q:
         search_query = f"%{q}%"
         query_conditions.append("(name ILIKE %s OR brand ILIKE %s)")
-        query_params.extend([search_query, search_query])
+        count_params.extend([search_query, search_query])
 
     # Add category filter if category is provided
     # Use LIKE for prefix matching to support hierarchical categories (e.g., "טיפוח/הגנה מהשמש")
     if category:
         query_conditions.append("category LIKE %s")
-        query_params.append(f"{category}%")
+        count_params.append(f"{category}%")
 
-    # Add limit parameter
-    query_params.append(limit)
-
-    # Construct final query
+    # Construct WHERE clause
     where_clause = " AND ".join(query_conditions)
+
+    # Get total count
+    count_query = f"""
+        SELECT COUNT(*) as total
+        FROM canonical_products
+        WHERE {where_clause};
+    """
+    db.execute(count_query, tuple(count_params))
+    total_results = db.fetchone()['total']
+
+    # Calculate pagination values
+    total_pages = (total_results + page_size - 1) // page_size  # Ceiling division
+    offset = (page - 1) * page_size
+
+    # Build query parameters for main query
+    query_params = count_params.copy()
+    query_params.extend([page_size, offset])
+
+    # Construct main query with pagination
     query = f"""
         SELECT
             barcode as product_id,
@@ -468,13 +517,19 @@ def search_products(
         FROM canonical_products
         WHERE {where_clause}
         ORDER BY name
-        LIMIT %s;
+        LIMIT %s OFFSET %s;
     """
 
     db.execute(query, tuple(query_params))
     results = db.fetchall()
 
-    return results
+    return PaginatedProductResponse(
+        total_results=total_results,
+        page=page,
+        page_size=page_size,
+        total_pages=total_pages,
+        results=results
+    )
 
 
 @app.get("/api/products/by-barcode/{barcode}", response_model=ProductSearchResult, tags=["Products"])
