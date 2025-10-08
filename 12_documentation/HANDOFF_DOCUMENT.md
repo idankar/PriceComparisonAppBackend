@@ -105,7 +105,7 @@ python3 normalize_per_unit_prices.py --apply
 ### Step 1: Test Improved GPT-4o Prompt
 
 ```bash
-export OPENAI_API_KEY="***REMOVED***-TSybPJY6Yt9JIJ4k066J06XvV_Vz1E0QasT8jEEx6tZw70bg9RRMZQ-3oBBSjT3BlbkFJ2sUCNgLmgep2y2wrGb39IeJsJiVeEyLqiI_ufaK30DByYW6hkcyDdCx-Gsa0W63EmLZmy-bI4A"
+export OPENAI_API_KEY="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"
 
 python3 gpt4_price_analyzer.py --sample 50 --batch-size 50 --delay 0.5 --no-confirm
 ```
@@ -233,7 +233,7 @@ Location: `.env` file
 - Host: localhost:5432
 - Database: price_comparison_app_v2
 - User: postgres
-- Password: ***REMOVED***
+- Password: 025655358
 
 ---
 
@@ -251,7 +251,7 @@ python3 gpt4_price_analyzer.py --sample 50 --no-confirm
 python3 normalize_per_unit_prices.py --apply
 
 # Check database state
-PGPASSWORD=***REMOVED*** /Library/PostgreSQL/17/bin/psql -h localhost -p 5432 -d price_comparison_app_v2 -U postgres
+PGPASSWORD=025655358 /Library/PostgreSQL/17/bin/psql -h localhost -p 5432 -d price_comparison_app_v2 -U postgres
 ```
 
 ---

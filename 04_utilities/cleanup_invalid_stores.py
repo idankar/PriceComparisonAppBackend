@@ -18,7 +18,7 @@ def cleanup_invalid_stores():
         port=5432,
         database="price_comparison_app_v2",
         user="postgres",
-        password="***REMOVED***"
+        password="025655358"
     )
     cursor = conn.cursor(cursor_factory=RealDictCursor)
 

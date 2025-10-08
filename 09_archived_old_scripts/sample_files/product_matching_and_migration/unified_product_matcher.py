@@ -508,7 +508,7 @@ if __name__ == "__main__":
         'host': 'localhost',
         'database': 'price_comparison_app_v2',
         'user': 'postgres',
-        'password': '***REMOVED***',
+        'password': '025655358',
         'port': 5432
     }
     

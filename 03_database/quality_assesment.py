@@ -6,10 +6,10 @@ import json
 
 # --- 1. Configuration ---
 # --- Please fill in your database password ---
-DB_PASSWORD = '***REMOVED***' # IMPORTANT: Replace with your actual password
+DB_PASSWORD = '025655358' # IMPORTANT: Replace with your actual password
 
 # --- OpenAI API Key and Model ---
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "***REMOVED***-TSybPJY6Yt9JIJ4k066J06XvV_Vz1E0QasT8jEEx6tZw70bg9RRMZQ-3oBBSjT3BlbkFJ2sUCNgLmgep2y2wrGb39IeJsJiVeEyLqiI_ufaK30DByYW6hkcyDdCx-Gsa0W63EmLZmy-bI4A")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "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")
 LLM_MODEL = "gpt-4o"
 
 # --- Database Connection Details ---

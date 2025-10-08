@@ -55,7 +55,7 @@ class BePharmETL:
                 port=5432,
                 database="price_comparison_app_v2",
                 user="postgres",
-                password="***REMOVED***"
+                password="025655358"
             )
             self.cursor = self.conn.cursor()
             logger.info("Connected to database successfully")

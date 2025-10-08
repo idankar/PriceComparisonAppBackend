@@ -7,7 +7,7 @@ conn = psycopg2.connect(
     port=5432,
     database="price_comparison_app_v2",  # CRITICAL: Use v2, not price_comparison_app
     user="postgres",
-    password="***REMOVED***"
+    password="025655358"
 )
 ```
 

@@ -6,22 +6,22 @@ import openai
 import re
 import argparse
 import csv
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # --- Configuration ---
-# (API Key loading and DB credentials remain the same)
 api_key = os.environ.get("OPENAI_API_KEY")
 if not api_key:
-    # Replace this with your key if you are not using environment variables
-    api_key = "***REMOVED***-TSybPJY6Yt9JIJ4k066J06XvV_Vz1E0QasT8jEEx6tZw70bg9RRMZQ-3oBBSjT3BlbkFJ2sUCNgLmgep2y2wrGb39IeJsJiVeEyLqiI_ufaK30DByYW6hkcyDdCx-Gsa0W63EmLZmy-bI4A"
-if not api_key:
-    raise Exception("CRITICAL: OPENAI_API_KEY is not set.")
+    raise Exception("CRITICAL: OPENAI_API_KEY is not set in .env file.")
 openai.api_key = api_key
 
-PG_HOST = "localhost"
-PG_PORT = "5432"
-PG_DATABASE = "price_comparison_app_v2"
-PG_USER = "postgres"
-PG_PASSWORD = "***REMOVED***"
+PG_HOST = os.environ.get("PG_HOST", "localhost")
+PG_PORT = os.environ.get("PG_PORT", "5432")
+PG_DATABASE = os.environ.get("PG_DATABASE", "price_comparison_app_v2")
+PG_USER = os.environ.get("PG_USER", "postgres")
+PG_PASSWORD = os.environ.get("PG_PASSWORD")
 BATCH_SIZE = 500
 
 

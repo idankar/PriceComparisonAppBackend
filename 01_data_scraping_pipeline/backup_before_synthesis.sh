@@ -21,7 +21,7 @@ BACKUP_DIR="./backups"
 mkdir -p $BACKUP_DIR
 
 # Export password to avoid prompt
-export PGPASSWORD="***REMOVED***"
+export PGPASSWORD="025655358"
 
 echo "Creating backups at $BACKUP_DIR"
 echo ""

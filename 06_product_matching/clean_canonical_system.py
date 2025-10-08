@@ -25,7 +25,7 @@ class CleanCanonicalSystem:
             port="5432",
             database="price_comparison_app_v2",
             user="postgres",
-            password="***REMOVED***"
+            password="025655358"
         )
         
     def step1_create_canonical_from_commercial(self):

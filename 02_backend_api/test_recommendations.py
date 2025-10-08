@@ -23,7 +23,7 @@ def create_test_user(username: str, email: str, password: str):
     conn = psycopg2.connect(
         dbname="price_comparison_app_v2",
         user="postgres",
-        password="***REMOVED***",
+        password="025655358",
         host="localhost",
         port="5432"
     )
@@ -82,7 +82,7 @@ def get_sample_products():
     conn = psycopg2.connect(
         dbname="price_comparison_app_v2",
         user="postgres",
-        password="***REMOVED***",
+        password="025655358",
         host="localhost",
         port="5432"
     )

@@ -7,7 +7,7 @@ PG_HOST = "localhost"
 PG_PORT = "5432"
 PG_DATABASE = "price_comparison_app_v2"
 PG_USER = "postgres"
-PG_PASSWORD = "***REMOVED***" # Your actual password
+PG_PASSWORD = "025655358" # Your actual password
 
 def get_db_connection():
     """Establishes a connection to the PostgreSQL database."""

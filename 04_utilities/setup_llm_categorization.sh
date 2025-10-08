@@ -78,7 +78,7 @@ echo "==========================================================================
 echo ""
 
 # Check database status
-PGPASSWORD=***REMOVED*** /Library/PostgreSQL/17/bin/psql -h localhost -p 5432 -d price_comparison_app_v2 -U postgres -c "
+PGPASSWORD=025655358 /Library/PostgreSQL/17/bin/psql -h localhost -p 5432 -d price_comparison_app_v2 -U postgres -c "
 SELECT
     COUNT(*) as total_active,
     COUNT(CASE WHEN category IS NOT NULL AND category <> '' THEN 1 END) as with_category,

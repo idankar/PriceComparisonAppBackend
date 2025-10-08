@@ -7,14 +7,19 @@ Then run geocoding for the newly updated stores
 import csv
 import psycopg2
 import sys
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Database connection
 PG_CONFIG = {
-    'host': 'localhost',
-    'port': '5432',
-    'database': 'price_comparison_app_v2',
-    'user': 'postgres',
-    'password': '***REMOVED***'
+    'host': os.environ.get('PG_HOST', 'localhost'),
+    'port': os.environ.get('PG_PORT', '5432'),
+    'database': os.environ.get('PG_DATABASE', 'price_comparison_app_v2'),
+    'user': os.environ.get('PG_USER', 'postgres'),
+    'password': os.environ.get('PG_PASSWORD')
 }
 
 def import_store_data(csv_file='completed_store_data.csv'):
@@ -82,7 +87,7 @@ def import_store_data(csv_file='completed_store_data.csv'):
     if updated_count > 0:
         print(f"\n✓ Successfully updated {updated_count} stores!")
         print("\nNext step: Run geocoding for newly updated stores:")
-        print("  python3 pharmacy_only_geocoding.py --google-key '***REMOVED***'")
+        print("  python3 pharmacy_only_geocoding.py")
 
     return updated_count
 

@@ -11,7 +11,7 @@ import time
 # --- Configuration ---
 api_key = os.environ.get("OPENAI_API_KEY")
 if not api_key:
-    api_key = "***REMOVED***-TSybPJY6Yt9JIJ4k066J06XvV_Vz1E0QasT8jEEx6tZw70bg9RRMZQ-3oBBSjT3BlbkFJ2sUCNgLmgep2y2wrGb39IeJsJiVeEyLqiI_ufaK30DByYW6hkcyDdCx-Gsa0W63EmLZmy-bI4A"
+    api_key = "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"
 if not api_key:
     raise Exception("CRITICAL: OPENAI_API_KEY is not set.")
 openai.api_key = api_key
@@ -20,7 +20,7 @@ PG_HOST = "localhost"
 PG_PORT = "5432"
 PG_DATABASE = "price_comparison_app_v2"
 PG_USER = "postgres"
-PG_PASSWORD = "***REMOVED***"
+PG_PASSWORD = "025655358"
 
 BATCH_SIZE = 500
 CACHE_FILE = "enrichment_cache.json"

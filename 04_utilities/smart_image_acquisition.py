@@ -35,7 +35,7 @@ class SmartImageAcquisition:
             port="5432",
             database="price_comparison_app_v2",
             user="postgres",
-            password="***REMOVED***"
+            password="025655358"
         )
         self.google_api_key = google_api_key
         self.search_engine_id = search_engine_id or "5480c9ffa13474272"  # Your CSE ID

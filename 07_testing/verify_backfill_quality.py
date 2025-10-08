@@ -10,7 +10,7 @@ import re
 DB_CONFIG = {
     'dbname': 'price_comparison_app_v2',
     'user': 'postgres',
-    'password': '***REMOVED***',
+    'password': '025655358',
     'host': 'localhost',
     'port': 5432
 }

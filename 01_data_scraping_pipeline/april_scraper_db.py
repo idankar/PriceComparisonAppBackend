@@ -22,7 +22,7 @@ DB_CONFIG = {
     'port': 5432,
     'database': 'price_comparison_app_v2',
     'user': 'postgres',
-    'password': '***REMOVED***'
+    'password': '025655358'
 }
 
 # April retailer and store IDs

@@ -12,7 +12,7 @@ PG_HOST = "localhost"
 PG_PORT = "5432"
 PG_DATABASE = "price_comparison_app_v2"
 PG_USER = "postgres"
-PG_PASSWORD = "***REMOVED***"
+PG_PASSWORD = "025655358"
 
 # --- FastAPI App Setup ---
 app = FastAPI()

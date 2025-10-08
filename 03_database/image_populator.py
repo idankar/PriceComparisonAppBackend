@@ -7,6 +7,10 @@ import psycopg2
 import logging
 import re
 from urllib.parse import urlparse
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # --- CONFIGURATION ---
 logging.basicConfig(
@@ -20,10 +24,10 @@ PG_HOST = os.environ.get("PG_HOST", "localhost")
 PG_PORT = os.environ.get("PG_PORT", "5432")
 PG_DATABASE = os.environ.get("PG_DATABASE", "price_comparison_app")
 PG_USER = os.environ.get("PG_USER", "postgres")
-PG_PASSWORD = os.environ.get("PG_PASSWORD", "***REMOVED***")
+PG_PASSWORD = os.environ.get("PG_PASSWORD")
 
-GOOGLE_API_KEY = "***REMOVED***"
-GOOGLE_CSE_ID = "a0839837ed26b48f9"
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+GOOGLE_CSE_ID = os.environ.get("GOOGLE_CSE_ID")
 
 MIN_IMAGE_WIDTH = 400
 MIN_IMAGE_HEIGHT = 400
@@ -160,8 +164,8 @@ def write_not_found_csv(not_found_list: list, filename: str):
 def main():
     logging.info("--- Starting Image Acquisition Script (V6 - Prioritized) ---")
     print("--- Starting Image Acquisition Script (V6 - Prioritized) ---")
-    if GOOGLE_API_KEY == "YOUR_API_KEY_HERE" or GOOGLE_CSE_ID == "YOUR_CSE_ID_HERE":
-        print("FATAL: Please update the GOOGLE_API_KEY and GOOGLE_CSE_ID in the script.")
+    if not GOOGLE_API_KEY or not GOOGLE_CSE_ID:
+        print("FATAL: Please set GOOGLE_API_KEY and GOOGLE_CSE_ID in your .env file.")
         logging.critical("API Keys not set. Exiting.")
         return
 

@@ -8,7 +8,7 @@ def check_schema():
         port=5432,
         database="price_comparison_app_v2",
         user="postgres",
-        password="***REMOVED***",
+        password="025655358",
         cursor_factory=DictCursor
     )
     cursor = conn.cursor()

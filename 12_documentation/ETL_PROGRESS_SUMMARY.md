@@ -120,7 +120,7 @@
 ### **Database**:
 - **Name**: `price_comparison_app_v2`
 - **Connection**: `localhost:5432`
-- **Password**: `***REMOVED***`
+- **Password**: `025655358`
 - **Status**: Actively loading data
 
 ### **Active Logs**:

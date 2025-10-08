@@ -18,7 +18,7 @@ def update_schema():
         port=5432,
         database="price_comparison_app_v2",
         user="postgres",
-        password="***REMOVED***"
+        password="025655358"
     )
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cursor = conn.cursor()

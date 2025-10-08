@@ -10,7 +10,7 @@ import os
 # Database configuration
 DB_NAME = "price_comparison_app_v2"
 DB_USER = "postgres"
-DB_PASSWORD = "***REMOVED***"
+DB_PASSWORD = "025655358"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 

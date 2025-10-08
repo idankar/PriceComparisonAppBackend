@@ -43,7 +43,7 @@ class LLMProductMatcher:
             port="5432", 
             database="price_comparison_app_v2",
             user="postgres",
-            password="***REMOVED***"
+            password="025655358"
         )
         
         # OpenAI client for GPT-3.5-Turbo

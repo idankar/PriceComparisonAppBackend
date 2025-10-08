@@ -9,7 +9,7 @@ PG_HOST = os.environ.get("PG_HOST", "localhost")
 PG_PORT = os.environ.get("PG_PORT", "5432")
 PG_DATABASE = os.environ.get("PG_DATABASE", "price_comparison_app")
 PG_USER = os.environ.get("PG_USER", "postgres")
-PG_PASSWORD = os.environ.get("PG_PASSWORD", "***REMOVED***")
+PG_PASSWORD = os.environ.get("PG_PASSWORD", "025655358")
 
 # 1. The (stale) consolidation plan that was already applied
 CONSOLIDATION_PLAN_CSV = "duplicate_groups_pharmacy_canonical.csv"

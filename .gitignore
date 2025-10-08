@@ -83,3 +83,17 @@ Thumbs.db
 *.db
 *.sqlite
 *.sqlite3
+
+# CSV exports and data files
+*.csv
+sample_prices*.csv
+mock_prices*.csv
+final_mock_prices*.csv
+
+# Claude Code configuration (may contain sensitive data)
+.claude/
+
+# Backup files
+*.backup
+*.dump
+*_dump.*

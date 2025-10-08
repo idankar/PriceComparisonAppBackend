@@ -28,7 +28,7 @@ PG_HOST = os.environ.get("DB_HOST", "localhost")
 PG_PORT = os.environ.get("DB_PORT", "5432")
 PG_DATABASE = os.environ.get("DB_NAME", "price_comparison_app_v2")
 PG_USER = os.environ.get("DB_USER", "postgres")
-PG_PASSWORD = os.environ.get("DB_PASSWORD", "***REMOVED***")
+PG_PASSWORD = os.environ.get("DB_PASSWORD", "025655358")
 
 # --- File Paths ---
 # Update this path to your actual JSONL file location

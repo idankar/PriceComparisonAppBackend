@@ -17,6 +17,10 @@ from datetime import datetime
 from tqdm import tqdm
 from openai import OpenAI  # For LLM matching
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -32,7 +36,7 @@ class UnifiedProductMatcher:
     def __init__(self, db_config: Dict[str, str], openai_api_key: Optional[str] = None):
         self.db_config = db_config
         self.conn = None
-        self.openai_api_key = openai_api_key or os.getenv('OPENAI_API_KEY', "***REMOVED***-TSybPJY6Yt9JIJ4k066J06XvV_Vz1E0QasT8jEEx6tZw70bg9RRMZQ-3oBBSjT3BlbkFJ2sUCNgLmgep2y2wrGb39IeJsJiVeEyLqiI_ufaK30DByYW6hkcyDdCx-Gsa0W63EmLZmy-bI4A")
+        self.openai_api_key = openai_api_key or os.getenv('OPENAI_API_KEY')
         self.llm_client = OpenAI(api_key=self.openai_api_key) if self.openai_api_key else None
         
         # Statistics tracking
@@ -509,18 +513,18 @@ class UnifiedProductMatcher:
 
 if __name__ == "__main__":
     import argparse
-    
+
     parser = argparse.ArgumentParser(description='Unified product matching system')
     parser.add_argument('--openai-key', help='OpenAI API key for LLM matching')
     args = parser.parse_args()
-    
+
     db_config = {
-        'host': 'localhost',
-        'database': 'price_comparison_app_v2',
-        'user': 'postgres',
-        'password': '***REMOVED***',
-        'port': 5432
+        'host': os.environ.get('PG_HOST', 'localhost'),
+        'database': os.environ.get('PG_DATABASE', 'price_comparison_app_v2'),
+        'user': os.environ.get('PG_USER', 'postgres'),
+        'password': os.environ.get('PG_PASSWORD'),
+        'port': int(os.environ.get('PG_PORT', '5432'))
     }
-    
+
     matcher = UnifiedProductMatcher(db_config, openai_api_key=args.openai_key)
     matcher.run_complete_matching()

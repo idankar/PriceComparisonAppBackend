@@ -196,7 +196,7 @@ After running, verify the results:
 
 ```bash
 # Check overall coverage
-PGPASSWORD=***REMOVED*** psql -h localhost -p 5432 -d price_comparison_app_v2 -U postgres -c "
+PGPASSWORD=025655358 psql -h localhost -p 5432 -d price_comparison_app_v2 -U postgres -c "
 SELECT
     COUNT(*) as total,
     COUNT(CASE WHEN category IS NOT NULL THEN 1 END) as categorized,

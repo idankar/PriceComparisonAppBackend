@@ -46,7 +46,7 @@ This will:
 After importing, geocode the newly updated stores:
 ```bash
 rm -f geocoding_progress.json
-python3 pharmacy_only_geocoding.py --google-key "***REMOVED***" > geocoding_round2.log 2>&1 &
+python3 pharmacy_only_geocoding.py --google-key "AIzaSyDIL93TFVbv7hWkNOKCfIwhYgRF--MmNKM" > geocoding_round2.log 2>&1 &
 ```
 
 Monitor progress:
@@ -60,7 +60,7 @@ Check final geocoding status:
 ```bash
 python3 -c "
 import psycopg2
-conn = psycopg2.connect(host='localhost', port=5432, database='price_comparison_app_v2', user='postgres', password='***REMOVED***')
+conn = psycopg2.connect(host='localhost', port=5432, database='price_comparison_app_v2', user='postgres', password='025655358')
 cur = conn.cursor()
 cur.execute('SELECT r.retailername, COUNT(*) FROM stores s JOIN retailers r ON s.retailerid=r.retailerid WHERE s.retailerid IN (52,150,97) AND s.latitude IS NOT NULL GROUP BY r.retailername')
 for row in cur.fetchall(): print(f'{row[0]}: {row[1]} stores geocoded')
