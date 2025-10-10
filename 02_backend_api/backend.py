@@ -575,8 +575,21 @@ def get_product_by_barcode(barcode: str, db: RealDictCursor = Depends(get_db)):
     """
     Used by the barcode scanner for an exact product match.
     Returns a single product with full price comparison data.
+    Optimized with CTE and window function for fast performance.
     """
     query = """
+        WITH latest_prices AS (
+            SELECT
+                p.*,
+                ROW_NUMBER() OVER(
+                    PARTITION BY p.retailer_product_id, p.store_id
+                    ORDER BY p.price_timestamp DESC
+                ) as rn
+            FROM prices p
+            JOIN retailer_products rp ON p.retailer_product_id = rp.retailer_product_id
+            WHERE rp.barcode = %s
+              AND p.price > 0
+        )
         SELECT
             cp.barcode,
             cp.name,
@@ -590,23 +603,16 @@ def get_product_by_barcode(barcode: str, db: RealDictCursor = Depends(get_db)):
                         'store_id', s.storeid,
                         'store_name', s.storename,
                         'store_address', s.address,
-                        'price', p.price,
-                        'last_updated', p.scraped_at,
+                        'price', lp.price,
+                        'last_updated', lp.scraped_at,
                         'in_stock', true
-                    ) ORDER BY p.price ASC
+                    ) ORDER BY lp.price ASC
                 )
-                FROM retailer_products rp
-                JOIN prices p ON rp.retailer_product_id = p.retailer_product_id
-                JOIN stores s ON p.store_id = s.storeid
+                FROM latest_prices lp
+                JOIN stores s ON lp.store_id = s.storeid
+                JOIN retailer_products rp ON lp.retailer_product_id = rp.retailer_product_id
                 JOIN retailers r ON s.retailerid = r.retailerid
-                WHERE rp.barcode = cp.barcode
-                  AND p.price > 0
-                  AND p.price_timestamp = (
-                      SELECT MAX(p2.price_timestamp)
-                      FROM prices p2
-                      WHERE p2.retailer_product_id = p.retailer_product_id
-                        AND p2.store_id = p.store_id
-                  )
+                WHERE lp.rn = 1
                   AND s.isactive = true
             ) as prices,
             (
@@ -630,7 +636,7 @@ def get_product_by_barcode(barcode: str, db: RealDictCursor = Depends(get_db)):
         WHERE cp.barcode = %s
           AND cp.is_active = true;
     """
-    db.execute(query, (barcode,))
+    db.execute(query, (barcode, barcode))
     result = db.fetchone()
 
     if not result:
@@ -651,8 +657,21 @@ def get_product_by_id(product_id: str, db: RealDictCursor = Depends(get_db)):
     """
     Fetches all information about a single product using its barcode as the ID.
     Returns detailed price comparison data from all retailers.
+    Optimized with CTE and window function for fast performance.
     """
     query = """
+        WITH latest_prices AS (
+            SELECT
+                p.*,
+                ROW_NUMBER() OVER(
+                    PARTITION BY p.retailer_product_id, p.store_id
+                    ORDER BY p.price_timestamp DESC
+                ) as rn
+            FROM prices p
+            JOIN retailer_products rp ON p.retailer_product_id = rp.retailer_product_id
+            WHERE rp.barcode = %s
+              AND p.price > 0
+        )
         SELECT
             cp.barcode,
             cp.name,
@@ -666,23 +685,16 @@ def get_product_by_id(product_id: str, db: RealDictCursor = Depends(get_db)):
                         'store_id', s.storeid,
                         'store_name', s.storename,
                         'store_address', s.address,
-                        'price', p.price,
-                        'last_updated', p.scraped_at,
+                        'price', lp.price,
+                        'last_updated', lp.scraped_at,
                         'in_stock', true
-                    ) ORDER BY p.price ASC
+                    ) ORDER BY lp.price ASC
                 )
-                FROM retailer_products rp
-                JOIN prices p ON rp.retailer_product_id = p.retailer_product_id
-                JOIN stores s ON p.store_id = s.storeid
+                FROM latest_prices lp
+                JOIN stores s ON lp.store_id = s.storeid
+                JOIN retailer_products rp ON lp.retailer_product_id = rp.retailer_product_id
                 JOIN retailers r ON s.retailerid = r.retailerid
-                WHERE rp.barcode = cp.barcode
-                  AND p.price > 0
-                  AND p.price_timestamp = (
-                      SELECT MAX(p2.price_timestamp)
-                      FROM prices p2
-                      WHERE p2.retailer_product_id = p.retailer_product_id
-                        AND p2.store_id = p.store_id
-                  )
+                WHERE lp.rn = 1
                   AND s.isactive = true
             ) as prices,
             (
@@ -706,7 +718,7 @@ def get_product_by_id(product_id: str, db: RealDictCursor = Depends(get_db)):
         WHERE cp.barcode = %s
           AND cp.is_active = true;
     """
-    db.execute(query, (product_id,))
+    db.execute(query, (product_id, product_id))
     result = db.fetchone()
 
     if not result:
