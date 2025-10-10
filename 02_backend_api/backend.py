@@ -1,5 +1,6 @@
 import os
 from typing import List, Optional
+from urllib.parse import urlparse
 from dotenv import load_dotenv
 import psycopg2
 from psycopg2.extras import RealDictCursor
@@ -12,12 +13,26 @@ import jwt
 import bcrypt
 
 # --- Configuration ---
-load_dotenv()
-DB_NAME = os.getenv("DB_NAME", "price_comparison_app_v2")
-DB_USER = os.getenv("DB_USER", "postgres")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "025655358")
-DB_HOST = os.getenv("DB_HOST", "localhost")
-DB_PORT = os.getenv("DB_PORT", "5432")
+load_dotenv()  # Load environment variables from .env
+
+# Get the database URL from the environment
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if not DATABASE_URL:
+    # Fallback to old variables for local development if DATABASE_URL is not set
+    DB_NAME = os.getenv("DB_NAME", "price_comparison_app_v2")
+    DB_USER = os.getenv("DB_USER", "postgres")
+    DB_PASSWORD = os.getenv("DB_PASSWORD", "025655358")
+    DB_HOST = os.getenv("DB_HOST", "localhost")
+    DB_PORT = os.getenv("DB_PORT", "5432")
+else:
+    # Parse the DATABASE_URL for production
+    result = urlparse(DATABASE_URL)
+    DB_NAME = result.path[1:]
+    DB_USER = result.username
+    DB_PASSWORD = result.password
+    DB_HOST = result.hostname
+    DB_PORT = result.port
 
 # JWT Configuration
 JWT_SECRET = os.getenv("JWT_SECRET", "your-secret-key-change-in-production")
