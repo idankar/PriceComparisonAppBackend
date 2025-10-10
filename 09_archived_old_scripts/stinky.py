@@ -11,7 +11,7 @@ import time
 # --- Configuration ---
 api_key = os.environ.get("OPENAI_API_KEY")
 if not api_key:
-    api_key = "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"
+    api_key = "YOUR_OPENAI_API_KEY_HERE"
 if not api_key:
     raise Exception("CRITICAL: OPENAI_API_KEY is not set.")
 openai.api_key = api_key

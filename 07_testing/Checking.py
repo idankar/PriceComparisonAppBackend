@@ -36,7 +36,7 @@ PG_PASSWORD = "025655358"
 # AI & File Configuration
 # It's recommended to set your OpenAI key as an environment variable
 # Example: export OPENAI_API_KEY='your_key_here'
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "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")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "YOUR_OPENAI_API_KEY_HERE")
 LLM_MODEL = "gpt-4o"
 CLASSIFICATION_VERDICTS_FILE = "classification_verdicts.json"
 JACCARD_THRESHOLD_FOR_GROUPING = 0.90
