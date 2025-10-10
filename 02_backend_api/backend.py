@@ -103,6 +103,7 @@ class Deal(BaseModel):
     product_name: Optional[str] = None
     product_brand: Optional[str] = None
     product_image_url: Optional[str] = None
+    lowest_price: float  # Mandatory field - lowest price across all retailers
     original_price: Optional[float] = None
     discounted_price: Optional[float] = None
     image_url: Optional[str] = None  # For promotional banner if different from product
@@ -151,6 +152,28 @@ class CartItemResponse(BaseModel):
     """Cart item with full product details and quantity"""
     product: ProductSummary
     quantity: int
+
+# --- Cart Recommendation Models ---
+
+class CartRecommendationRequest(BaseModel):
+    """Request model for cart recommendation endpoint"""
+    barcodes: List[str]
+
+class MissingProduct(BaseModel):
+    """Product that is not available at a retailer"""
+    barcode: str
+    name: str
+
+class RetailerRecommendation(BaseModel):
+    """Retailer recommendation with total price and missing products"""
+    retailer_name: str
+    total_price: float
+    missing_products: List[MissingProduct]
+
+class CartRecommendationResponse(BaseModel):
+    """Response model for cart recommendation endpoint"""
+    recommendation: RetailerRecommendation
+    alternatives: List[RetailerRecommendation]
 
 # --- Database Connection Dependency ---
 def get_db():
@@ -712,6 +735,7 @@ def get_all_deals(limit: Optional[int] = 50, retailer_id: Optional[int] = None, 
                 cp.name AS product_name,
                 cp.brand AS product_brand,
                 cp.image_url AS product_image_url,
+                cp.lowest_price,
                 NULL::float AS original_price,
                 NULL::float AS discounted_price,
                 NULL AS image_url
@@ -723,6 +747,7 @@ def get_all_deals(limit: Optional[int] = 50, retailer_id: Optional[int] = None, 
             WHERE (p.end_date IS NULL OR p.end_date >= NOW())
               AND cp.is_active = true
               AND cp.barcode IS NOT NULL
+              AND cp.lowest_price IS NOT NULL
               {retailer_filter}
             ORDER BY p.promotion_id
         ) AS distinct_deals
@@ -1281,6 +1306,191 @@ def sync_anonymous_data(
     except Exception as e:
         db.connection.rollback()
         raise HTTPException(status_code=500, detail=f"Sync failed: {str(e)}")
+
+@app.post("/api/cart/recommendation", response_model=CartRecommendationResponse, tags=["Cart"])
+def get_cart_recommendation(
+    request: CartRecommendationRequest,
+    db: RealDictCursor = Depends(get_db)
+):
+    """
+    Analyze a shopping cart and recommend the cheapest retailer for the entire purchase.
+
+    This endpoint compares prices across major retailers (Super-Pharm, Be Pharm, Good Pharm)
+    and returns the retailer with the lowest total price that has all products in stock.
+
+    Request body:
+    {
+        "barcodes": ["7290019075271", "3600522251750", "7290014775510"]
+    }
+
+    Response includes:
+    - recommendation: The cheapest retailer with all products available
+    - alternatives: Other retailers with their totals and missing products
+    """
+
+    try:
+        # Validate input
+        if not request.barcodes or len(request.barcodes) == 0:
+            raise HTTPException(status_code=400, detail="Barcodes list cannot be empty")
+
+        # Define major retailers to compare (Super-Pharm, Good Pharm, Be Pharm)
+        MAJOR_RETAILERS = [52, 97, 150]  # Super-Pharm, Good Pharm, Be Pharm
+
+        # Step 1: Get all product names for the barcodes (for missing product info)
+        product_names = {}
+        placeholders = ','.join(['%s'] * len(request.barcodes))
+        db.execute(f"""
+            SELECT barcode, name
+            FROM canonical_products
+            WHERE barcode IN ({placeholders})
+              AND is_active = true
+        """, tuple(request.barcodes))
+
+        for row in db.fetchall():
+            product_names[row['barcode']] = row['name']
+
+        # Check if any products were not found
+        missing_from_db = [b for b in request.barcodes if b not in product_names]
+        if missing_from_db:
+            raise HTTPException(
+                status_code=404,
+                detail=f"Products not found in database: {', '.join(missing_from_db)}"
+            )
+
+        # Step 2: Fetch all latest prices for all barcodes across all major retailers
+        # This is a single efficient query that gets the most recent price for each product at each retailer
+        query = f"""
+            SELECT
+                rp.barcode,
+                r.retailerid,
+                r.retailername,
+                p.price
+            FROM retailer_products rp
+            JOIN retailers r ON rp.retailer_id = r.retailerid
+            JOIN prices p ON rp.retailer_product_id = p.retailer_product_id
+            WHERE rp.barcode IN ({placeholders})
+              AND r.retailerid = ANY(%s)
+              AND p.price > 0
+              AND p.price_timestamp = (
+                  SELECT MAX(p2.price_timestamp)
+                  FROM prices p2
+                  WHERE p2.retailer_product_id = p.retailer_product_id
+              )
+            ORDER BY rp.barcode, r.retailerid, p.price ASC
+        """
+
+        db.execute(query, tuple(request.barcodes) + (MAJOR_RETAILERS,))
+        all_prices = db.fetchall()
+
+        # Step 3: Organize prices by retailer and barcode
+        # Structure: {retailer_id: {retailer_name: str, prices: {barcode: price}}}
+        retailer_data = {}
+        for retailer_id in MAJOR_RETAILERS:
+            retailer_data[retailer_id] = {
+                'retailer_name': None,
+                'prices': {}
+            }
+
+        for row in all_prices:
+            retailer_id = row['retailerid']
+            barcode = row['barcode']
+            price = float(row['price'])
+            retailer_name = row['retailername']
+
+            if retailer_id in retailer_data:
+                retailer_data[retailer_id]['retailer_name'] = retailer_name
+                # Keep only the lowest price if there are multiple stores
+                if barcode not in retailer_data[retailer_id]['prices']:
+                    retailer_data[retailer_id]['prices'][barcode] = price
+                else:
+                    retailer_data[retailer_id]['prices'][barcode] = min(
+                        retailer_data[retailer_id]['prices'][barcode],
+                        price
+                    )
+
+        # Step 4: Calculate totals and identify missing products for each retailer
+        retailer_results = []
+
+        for retailer_id, data in retailer_data.items():
+            retailer_name = data['retailer_name']
+
+            # Get retailer name from database if not found in prices
+            if not retailer_name:
+                db.execute("SELECT retailername FROM retailers WHERE retailerid = %s", (retailer_id,))
+                result = db.fetchone()
+                retailer_name = result['retailername'] if result else f"Retailer {retailer_id}"
+
+            total_price = 0.0
+            missing_products = []
+
+            for barcode in request.barcodes:
+                if barcode in data['prices']:
+                    total_price += data['prices'][barcode]
+                else:
+                    # Product is missing at this retailer
+                    missing_products.append(MissingProduct(
+                        barcode=barcode,
+                        name=product_names.get(barcode, "Unknown Product")
+                    ))
+
+            retailer_results.append({
+                'retailer_name': retailer_name,
+                'total_price': round(total_price, 2),
+                'missing_products': missing_products,
+                'has_all_products': len(missing_products) == 0
+            })
+
+        # Step 5: Sort retailers - first by availability (all products), then by price
+        retailer_results.sort(key=lambda x: (not x['has_all_products'], x['total_price']))
+
+        # Step 6: Determine recommendation and alternatives
+        recommendation = None
+        alternatives = []
+
+        for result in retailer_results:
+            retailer_rec = RetailerRecommendation(
+                retailer_name=result['retailer_name'],
+                total_price=result['total_price'],
+                missing_products=result['missing_products']
+            )
+
+            # The first retailer with all products is the recommendation
+            if recommendation is None and result['has_all_products']:
+                recommendation = retailer_rec
+            else:
+                alternatives.append(retailer_rec)
+
+        # If no retailer has all products, recommend the one with fewest missing items and lowest price
+        if recommendation is None:
+            if retailer_results:
+                recommendation = RetailerRecommendation(
+                    retailer_name=retailer_results[0]['retailer_name'],
+                    total_price=retailer_results[0]['total_price'],
+                    missing_products=retailer_results[0]['missing_products']
+                )
+                alternatives = [
+                    RetailerRecommendation(
+                        retailer_name=r['retailer_name'],
+                        total_price=r['total_price'],
+                        missing_products=r['missing_products']
+                    )
+                    for r in retailer_results[1:]
+                ]
+            else:
+                raise HTTPException(
+                    status_code=404,
+                    detail="No price data available for the requested products"
+                )
+
+        return CartRecommendationResponse(
+            recommendation=recommendation,
+            alternatives=alternatives
+        )
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Cart recommendation failed: {str(e)}")
 
 if __name__ == "__main__":
     print("🚀 Starting PharmMate Backend Server...")
