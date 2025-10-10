@@ -736,23 +736,42 @@ def get_product_by_id(product_id: str, db: RealDictCursor = Depends(get_db)):
 
 @app.get("/api/deals", response_model=List[Deal], tags=["Deals"])
 def get_all_deals(limit: Optional[int] = 50, retailer_id: Optional[int] = None, db: RealDictCursor = Depends(get_db)):
-    """Fetches a list of all currently active promotions with product information."""
-    # Simplified query - just get basic deal info without price calculations
-    # Price calculations on 8.6M rows are too slow - skip them for now
-    # Uses DISTINCT ON to ensure one row per promotion (no duplicates)
-    # Wrapped in subquery to enable random ordering while respecting DISTINCT ON constraint
+    """Fetches a list of all currently active promotions with product information.
+
+    Optimized query using CTE to pre-filter random promotions before joining,
+    which dramatically improves performance by reducing the working set size.
+    """
 
     # Build the WHERE clause for retailer filter
     retailer_filter = ""
     params = []
     if retailer_id:
         retailer_filter = "AND p.retailer_id = %s"
+        # For the random_promotions CTE filter
         params.append(retailer_id)
+        # For the main query filter (used in CTE)
+        retailer_filter_cte = "AND retailer_id = %s"
+    else:
+        retailer_filter_cte = ""
 
-    params.append(limit)
+    # Fetch 2x the limit to ensure we have enough after filtering for active products
+    random_limit = limit * 2
+    params_cte = []
+    if retailer_id:
+        params_cte.append(retailer_id)
+    params_cte.append(random_limit)
+    params_cte.append(limit)
 
     query = f"""
-        SELECT * FROM (
+        WITH random_promotions AS (
+            SELECT promotion_id
+            FROM promotions
+            WHERE (end_date IS NULL OR end_date >= NOW())
+              {retailer_filter_cte}
+            ORDER BY RANDOM()
+            LIMIT %s
+        ),
+        deals_with_products AS (
             SELECT DISTINCT ON (p.promotion_id)
                 p.promotion_id AS deal_id,
                 r.retailername AS retailer_name,
@@ -766,23 +785,22 @@ def get_all_deals(limit: Optional[int] = 50, retailer_id: Optional[int] = None, 
                 NULL::float AS original_price,
                 NULL::float AS discounted_price,
                 NULL AS image_url
-            FROM promotions p
+            FROM random_promotions rp
+            JOIN promotions p ON p.promotion_id = rp.promotion_id
             JOIN retailers r ON p.retailer_id = r.retailerid
             LEFT JOIN promotion_product_links ppl ON p.promotion_id = ppl.promotion_id
-            LEFT JOIN retailer_products rp ON ppl.retailer_product_id = rp.retailer_product_id
-            LEFT JOIN canonical_products cp ON rp.barcode = cp.barcode
-            WHERE (p.end_date IS NULL OR p.end_date >= NOW())
-              AND cp.is_active = true
+            LEFT JOIN retailer_products rp2 ON ppl.retailer_product_id = rp2.retailer_product_id
+            LEFT JOIN canonical_products cp ON rp2.barcode = cp.barcode
+            WHERE cp.is_active = true
               AND cp.barcode IS NOT NULL
               AND cp.lowest_price IS NOT NULL
-              {retailer_filter}
             ORDER BY p.promotion_id
-        ) AS distinct_deals
-        ORDER BY RANDOM()
+        )
+        SELECT * FROM deals_with_products
         LIMIT %s
     """
 
-    db.execute(query, tuple(params))
+    db.execute(query, tuple(params_cte))
     results = db.fetchall()
 
     return results
@@ -1385,25 +1403,30 @@ def get_cart_recommendation(
             )
 
         # Step 2: Fetch all latest prices for all barcodes across all major retailers
-        # This is a single efficient query that gets the most recent price for each product at each retailer
+        # Optimized query using CTE with window function to avoid N+1 correlated subquery
+        # This eliminates the performance bottleneck of executing a subquery for each row
         query = f"""
-            SELECT
-                rp.barcode,
-                r.retailerid,
-                r.retailername,
-                p.price
-            FROM retailer_products rp
-            JOIN retailers r ON rp.retailer_id = r.retailerid
-            JOIN prices p ON rp.retailer_product_id = p.retailer_product_id
-            WHERE rp.barcode IN ({placeholders})
-              AND r.retailerid = ANY(%s)
-              AND p.price > 0
-              AND p.price_timestamp = (
-                  SELECT MAX(p2.price_timestamp)
-                  FROM prices p2
-                  WHERE p2.retailer_product_id = p.retailer_product_id
-              )
-            ORDER BY rp.barcode, r.retailerid, p.price ASC
+            WITH latest_prices_by_retailer AS (
+                SELECT
+                    rp.barcode,
+                    r.retailerid,
+                    r.retailername,
+                    p.price,
+                    ROW_NUMBER() OVER (
+                        PARTITION BY rp.retailer_product_id
+                        ORDER BY p.price_timestamp DESC
+                    ) as rn
+                FROM retailer_products rp
+                JOIN retailers r ON rp.retailer_id = r.retailerid
+                JOIN prices p ON rp.retailer_product_id = p.retailer_product_id
+                WHERE rp.barcode IN ({placeholders})
+                  AND r.retailerid = ANY(%s)
+                  AND p.price > 0
+            )
+            SELECT barcode, retailerid, retailername, price
+            FROM latest_prices_by_retailer
+            WHERE rn = 1
+            ORDER BY barcode, retailerid, price ASC
         """
 
         db.execute(query, tuple(request.barcodes) + (MAJOR_RETAILERS,))
