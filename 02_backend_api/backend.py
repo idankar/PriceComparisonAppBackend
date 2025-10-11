@@ -772,7 +772,7 @@ def get_all_deals(limit: Optional[int] = 50, retailer_id: Optional[int] = None, 
             LIMIT %s
         ),
         deals_with_products AS (
-            SELECT DISTINCT ON (p.promotion_id)
+            SELECT DISTINCT ON (cp.barcode)
                 p.promotion_id AS deal_id,
                 r.retailername AS retailer_name,
                 p.description AS title,
@@ -794,7 +794,7 @@ def get_all_deals(limit: Optional[int] = 50, retailer_id: Optional[int] = None, 
             WHERE cp.is_active = true
               AND cp.barcode IS NOT NULL
               AND cp.lowest_price IS NOT NULL
-            ORDER BY p.promotion_id
+            ORDER BY cp.barcode, p.promotion_id
         )
         SELECT * FROM deals_with_products
         LIMIT %s
