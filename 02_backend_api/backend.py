@@ -797,6 +797,7 @@ def get_all_deals(limit: Optional[int] = 50, retailer_id: Optional[int] = None, 
             ORDER BY cp.barcode, p.promotion_id
         )
         SELECT * FROM deals_with_products
+        ORDER BY RANDOM()
         LIMIT %s
     """
 
